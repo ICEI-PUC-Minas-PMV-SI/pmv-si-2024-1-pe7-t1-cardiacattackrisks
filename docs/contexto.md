@@ -83,6 +83,7 @@ Nesta seção, você deverá estruturar o seu Canvas Analítico. O Canvas Analí
 # Referências
 
 AGÊNCIA BRASIL. Casos de infarto aumentam 25% no Brasil, em 6 anos. Portal R7 [online], publicado em 03 ago. 2023. Disponível em: <https://noticias.r7.com/saude/casos-de-infarto-aumentam-25-no-brasil-em-6-anos-03082023> Acesso em 27 fev. 2024. 
+
 ESTADO DE MINAS. Aumentam casos de infarto em todo o mundo; alerta OMS. Estado de Minas [online], publicado em 25 jul. 2023. Disponível em: <https://www.em.com.br/app/noticia/saude-e-bem-viver/2023/07/25/interna_bem_viver,1524784/aumentam-casos-de-infarto-em-todo-o-mundo-alerta-oms.shtml> Acesso em 27 fev. 2024. 
 
 > **Links Úteis**:
