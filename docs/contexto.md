@@ -4,6 +4,11 @@ Texto descritivo introdutório apresentando a visão geral do projeto a ser dese
 
 ## Problema
 
+Em um cenário do qual observa-se um auemnto de casos de infarto no mundo (ESTADO DE MINAS, 2023), é imprescindível avaliar fatores que possam ser considerados de risco e ou que corroboram para a ocorrência de problemas cardíacos. Se obervada esta realidade sob a persperctiva nacional, o Brasil viu o número de casos de infarto aumentarem cerca de 25% desde 2016 a 2022, (AGÊNCIA BRASIL, 2023), o que requer mais atenção sobre a questão, dado o fato do número crescente de casos, se tornar um problema de saúde pública. Para além de entender fatores de risco para doenças cardíacas, o conhecimento dos mesmos, pode contribuir para a elaboração de estratégias de prevenção a curto, médio e longo prazo com vistas a mitigar a ocorrência de casos de infarto, por exemplo. 
+
+É neste contexto que se insere o presente trabalho, buscando lançar luz à compreensão de fatores de risco que possam aumentar a ocorrência de ataques cardíacos, permitindo assim, traçar um perfil de pessoas mais sucetíveis a este tipo de problema de saúde. Desse modo, trazendo à compreensão, fatores de riscos e perfil de pessoas propensas à ataques cardíacos, instituições de saúde e unidades da atenção primária do Sistema Único de Saúde (SUS), por exemplo, podem criar estratégias efetivas de prevenção, campanhas educativas, atenção e foco aos grupos de pessoas com propensão a ataques cardíacos e realizar estudo demográfico para atuar diretamente com estas pessoas com a finalidade de previnir e acompanhar a população. 
+
+
 Nesta seção, você deve apresentar o problema que a sua investigação/experimentação busca resolver. Por exemplo, caso o _dataset_ selecionado, seja um _dataset_ que contenha uma série temporal com o preço de diversas ações da bolsa de valores, o problema pode estar relacionado a dificuldade em saber a melhor hora (hora certa??) de comprar ou então, de executar a venda de uma determinada ação.
 
 Descreva ainda o contexto em que essa aplicação será usada, se houver: empresa parceira, tecnologias etc. Novamente, descreva apenas o que de fato existir, pois ainda não é a hora de apresentar requisitos  detalhados ou projetos.
@@ -77,7 +82,8 @@ Nesta seção, você deverá estruturar o seu Canvas Analítico. O Canvas Analí
 
 # Referências
 
-Inclua todas as referências (livros, artigos, sites, etc) utilizados no desenvolvimento do trabalho utilizando o padrão ABNT.
+AGÊNCIA BRASIL. Casos de infarto aumentam 25% no Brasil, em 6 anos. Portal R7 [online], publicado em 03 ago. 2023. Disponível em: <https://noticias.r7.com/saude/casos-de-infarto-aumentam-25-no-brasil-em-6-anos-03082023> Acesso em 27 fev. 2024. 
+ESTADO DE MINAS. Aumentam casos de infarto em todo o mundo; alerta OMS. Estado de Minas [online], publicado em 25 jul. 2023. Disponível em: <https://www.em.com.br/app/noticia/saude-e-bem-viver/2023/07/25/interna_bem_viver,1524784/aumentam-casos-de-infarto-em-todo-o-mundo-alerta-oms.shtml> Acesso em 27 fev. 2024. 
 
 > **Links Úteis**:
 > - [Padrão ABNT PUC Minas](https://portal.pucminas.br/biblioteca/index_padrao.php?pagina=5886)
