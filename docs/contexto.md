@@ -4,7 +4,7 @@ Texto descritivo introdutório apresentando a visão geral do projeto a ser dese
 
 ## Problema
 
-Em um cenário do qual observa-se um auemnto de casos de infarto no mundo (ESTADO DE MINAS, 2023), é imprescindível avaliar fatores que possam ser considerados de risco e ou que corroboram para a ocorrência de problemas cardíacos. Se obervada esta realidade sob a persperctiva nacional, o Brasil viu o número de casos de infarto aumentarem cerca de 25% desde 2016 a 2022, (AGÊNCIA BRASIL, 2023), o que requer mais atenção sobre a questão, dado o fato do número crescente de casos, se tornar um problema de saúde pública. Para além de entender fatores de risco para doenças cardíacas, o conhecimento dos mesmos, pode contribuir para a elaboração de estratégias de prevenção a curto, médio e longo prazo com vistas a mitigar a ocorrência de casos de infarto, por exemplo. 
+Em um cenário do qual observa-se um aumento de casos de infarto no mundo (ESTADO DE MINAS, 2023), é imprescindível avaliar fatores que possam ser considerados de risco e ou que corroboram para a ocorrência de problemas cardíacos. Se obervada esta realidade sob a persperctiva nacional, o Brasil viu o número de casos de infarto aumentarem cerca de 25% desde 2016 a 2022, (AGÊNCIA BRASIL, 2023), o que requer mais atenção sobre a questão, dado o fato do número crescente de casos, se tornar um problema de saúde pública. Para além de entender fatores de risco para doenças cardíacas, o conhecimento dos mesmos, pode contribuir para a elaboração de estratégias de prevenção a curto, médio e longo prazo com vistas a mitigar a ocorrência de casos de infarto, por exemplo. 
 
 É neste contexto que se insere o presente trabalho, buscando lançar luz à compreensão de fatores de risco que possam aumentar a ocorrência de ataques cardíacos, permitindo assim, traçar um perfil de pessoas mais sucetíveis a este tipo de problema de saúde. Desse modo, trazendo à compreensão, fatores de riscos e perfil de pessoas propensas à ataques cardíacos, instituições de saúde e unidades da atenção primária do Sistema Único de Saúde (SUS), por exemplo, podem criar estratégias efetivas de prevenção, campanhas educativas, atenção e foco aos grupos de pessoas com propensão a ataques cardíacos e realizar estudo demográfico para atuar diretamente com estas pessoas com a finalidade de previnir e acompanhar a população. 
 
@@ -42,22 +42,11 @@ Lembre-se que, à medida que a pesquisa/experimentação evolui, os objetivos po
 
 ## Justificativa
 
-Descreva a importância ou a motivação para trabalhar com o conjunto de dados escolhido. Indique as razões pelas quais você escolheu seus objetivos específicos, as razões para aprofundar o estudo do problema identificado e qual o impacto que tal problema provoca na sociedade. Lembre-se de quantificar (com dados reais e suas respectivas fontes) este impacto.
-
-> **Links Úteis**:
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
+Segundo a Associação Brasileira de Cardiologia, as doenças cardiovasculares, afecções do coração e da circulação, representam a principal causa de mortes no Brasil. São mais de 1100 mortes por dia, cerca de 46 por hora, 1 morte a cada 1,5 minutos (90 segundos). São mais de 1100 mortes por dia, cerca de 1 morte a cada 90 segundos, 2 vezes mais mortes que todos os tipos de câncer juntos. Muitas dessas mortes poderiam ser evitadas ou postergadas com cuidados preventivos e medidas terapêuticas. O alerta, a prevenção e o tratamento adequado dos fatores de risco e das doenças cardiovasculares podem reverter essa grave situação. Confira o cardiômetro em: (http://www.cardiometro.com.br/)
 
 ## Público-Alvo
 
-Descreva quem serão as pessoas que poderão se beneficiar com a sua investigação indicando os diferentes perfis. O objetivo aqui não é definir quem serão os clientes ou quais serão os papéis dos usuários na aplicação. A ideia é, dentro do possível, conhecer um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações hierárquicas, etc.
-
-Adicione informações sobre o público-alvo por meio de uma descrição textual, diagramas de personas e mapa de stakeholders.
-
-> **Links Úteis**:
-> - [Público-alvo](https://blog.hotmart.com/pt-br/publico-alvo/)
-> - [Como definir o público alvo](https://exame.com/pme/5-dicas-essenciais-para-definir-o-publico-alvo-do-seu-negocio/)
-> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
+Toda a população.
 
 ## Estado da arte
 
