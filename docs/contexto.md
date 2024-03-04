@@ -12,25 +12,11 @@ Em um cenário do qual observa-se um aumento de casos de infarto no mundo (ESTAD
 
 É neste contexto que se insere o presente trabalho, buscando lançar luz à compreensão de fatores de risco que possam aumentar a ocorrência de ataques cardíacos, permitindo assim, traçar um perfil de pessoas mais sucetíveis a este tipo de problema de saúde. Desse modo, trazendo à compreensão, fatores de riscos e perfil de pessoas propensas à ataques cardíacos, instituições de saúde e unidades da atenção primária do Sistema Único de Saúde (SUS), por exemplo, podem criar estratégias efetivas de prevenção, campanhas educativas, atenção e foco aos grupos de pessoas com propensão a ataques cardíacos e realizar estudo demográfico para atuar diretamente com estas pessoas com a finalidade de previnir e acompanhar a população. 
 
-
-Nesta seção, você deve apresentar o problema que a sua investigação/experimentação busca resolver. Por exemplo, caso o _dataset_ selecionado, seja um _dataset_ que contenha uma série temporal com o preço de diversas ações da bolsa de valores, o problema pode estar relacionado a dificuldade em saber a melhor hora (hora certa??) de comprar ou então, de executar a venda de uma determinada ação.
-
-Descreva ainda o contexto em que essa aplicação será usada, se houver: empresa parceira, tecnologias etc. Novamente, descreva apenas o que de fato existir, pois ainda não é a hora de apresentar requisitos  detalhados ou projetos.
-
-> **Links Úteis**:
-> - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-> - [Matriz Certezas, Suposições e Dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-> - [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
-
 ## Questão de pesquisa
 
 Com base na consideração de que, doenças cardíacas possam estar relacionadas ao contexto, hábitos e comportamentos das pessoas, questiona-se: _quais são os fatores de maior risco e que configuram em predisposição para ocorrência de ataques cardíacos nas pessoas?_
 
 A questão de pesquisa é a base de todo o trabalho que será desenvolvido. É ela que motiva a realização da pesquisa e deverá ser adequada ao problema identificado. Ao término de sua pesquisa/experimentação, o objetivo é que seja encontrada a resposta da questão de pesquisa previamente definida.
-
-> **Links Úteis**:
-> - [Questão de pesquisa](https://www.enago.com.br/academy/how-to-develop-good-research-question-types-examples/)
-> - [Problema de pesquisa](https://blog.even3.com.br/problema-de-pesquisa/)
 
 ## Objetivos preliminares
 
