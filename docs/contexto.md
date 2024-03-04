@@ -36,7 +36,7 @@ Segundo a Associação Brasileira de Cardiologia, as doenças cardiovasculares, 
 
 ## Público-Alvo
 
-Toda a população.
+Toda a população, independente do conhecimento em tecnologia, irá se beneficiar desse estudo. Especialmente aqueles que querem adotar práticas saudáveis para evitar doenças cardíacas, como alimentação ou exercícios físicos.
 
 ## Estado da arte
 
