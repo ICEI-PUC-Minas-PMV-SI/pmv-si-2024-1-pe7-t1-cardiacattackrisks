@@ -47,7 +47,39 @@ Nesta seção, deverão ser descritas outras abordagens identificadas na literat
 
 # Descrição do _dataset_ selecionado
 
-Nesta seção, você deverá descrever detalhadamente o _dataset_ selecionado. Lembre-se de informar o link de acesso a ele, bem como, de descrever cada um dos seus atributos (a que se refere, tipo etc.), se existem atributos faltantes etc.
+Descrição do Dataset
+
+O conjunto de dados ["Heart Attack Risk Prediction Dataset"](https://www.kaggle.com/datasets/iamsouravbanerjee/heart-attack-prediction-dataset) é uma compilação fornecida pelo cientista de dados Sourav Banerjee, destinada a facilitar o desenvolvimento e a avaliação de modelos de aprendizado de máquina para prever ataques cardíacos. Este conjunto de dados foi gerado utilizando dados sintéticos criados pelo ChatGPT, um modelo de inteligência artificial. 
+Este conjunto de dados contém uma ampla gama de atributos relevantes para a saúde cardíaca e escolhas de estilo de vida, abrangendo detalhes específicos do paciente. Abaixo está a descrição detalhada de cada um dos atributos presentes no dataset:
+
+- ID do Paciente: Identificador exclusivo para cada paciente.
+- Idade: Idade do paciente (tipo: numérico).
+- Sexo: Gênero do paciente (Masculino/Feminino).
+- Colesterol: Níveis de colesterol do paciente (tipo: numérico).
+- Pressão Arterial: Pressão arterial do paciente (sistólica/diastólica) (tipo: numérico).
+- Frequência Cardíaca: Frequência cardíaca do paciente (tipo: numérico).
+- Diabetes: Se o paciente tem diabetes (Sim/Não).
+- História Familiar: História familiar de problemas cardíacos (1: Sim, 0: Não).
+- Tabagismo: Tabagismo do paciente (1: Fumante, 0: Não fumante).
+- Obesidade: Estado de obesidade do paciente (1: Obeso, 0: Não obeso).
+- Consumo de Álcool: Nível de consumo de álcool pelo paciente (Nenhum/Leve/Moderado/Pesado).
+- Horas de exercício por semana: Número de horas de exercício por semana (tipo: numérico).
+- Dieta: Hábitos alimentares do paciente (Saudável/Médio/Não saudável).
+- Problemas Cardíacos Anteriores: Problemas cardíacos anteriores do paciente (1: Sim, 0: Não).
+- Uso de Medicamentos: Uso de medicamentos pelo paciente (1: Sim, 0: Não).
+- Nível de Estresse: Nível de estresse relatado pelo paciente (escala de 1 a 10).
+- Horas sedentárias por dia: Horas de atividade sedentária por dia (tipo: numérico).
+- Renda: Nível de renda do paciente (tipo: numérico).
+- IMC: Índice de Massa Corporal (IMC) do paciente (tipo: numérico).
+- Triglicerídeos: Níveis de triglicerídeos do paciente (tipo: numérico).
+- Dias de atividade física por semana: Dias de atividade física por semana (tipo: numérico).
+- Horas de sono por dia: Horas de sono por dia (tipo: numérico).
+- País: País do paciente.
+- Continente: Continente onde o paciente reside.
+- Hemisfério: Hemisfério onde o paciente reside.
+- Risco de ataque cardíaco: Presença de risco de ataque cardíaco (1: Sim, 0: Não).
+
+Este conjunto de dados possui 8.763 registros de pacientes em todo o mundo. Os atributos são predominantemente numéricos, com algumas variáveis categóricas.
 
 # Canvas analítico
 
