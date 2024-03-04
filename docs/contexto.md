@@ -20,15 +20,12 @@ A questão de pesquisa é a base de todo o trabalho que será desenvolvido. É e
 
 ## Objetivos preliminares
 
-Aqui você deve descrever os objetivos preliminares do trabalho indicando que o objetivo geral é experimentar modelos de aprendizado de máquina adequados para solucionar o problema apresentado acima. 
+Como objetivo geral, buscamos experimentar e avaliar modelos de aprendizado de máquina adequados para solucionar o problema apresentado, visando desenvolver um modelo capaz de prever com precisão o risco de ataque cardíaco com base em uma ampla gama de atributos relacionados à saúde, estilo de vida e histórico médico dos pacientes. Utilizando para este trabalho uma base sólida para a investigação do padrão de características e fatores de risco associados à ocorrência de ataques cardíacos, o conjunto de dados "Heart Attack Risk Prediction Dataset".
 
-Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
+Objetivos Específicos:
 
-Por exemplo: um objetivo específico pode estar relacionado a predizer a tendência de alta, estabilidade ou queda de uma determinada ação em uma determinada janela do tempo ou então, predizer o valor exato de uma determinada ação.
-Lembre-se que, à medida que a pesquisa/experimentação evolui, os objetivos podem evoluir também, portanto, não se esqueça de fazer as atualizações necessárias.
- 
-> **Links Úteis**:
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
+1.	Investigar padrões e correlações entre os diferentes atributos presentes no conjunto de dados "Heart Attack Risk Prediction Dataset" e a incidência de ataques cardíacos, utilizando técnicas de análise de dados que possam ser capazes de trazer um modelo eficaz e confiável para prever o risco.
+2.	Identificar quais atributos exercem maior influência nas previsões de risco de ataque cardíaco feitas pelos modelos de aprendizado de máquina mais promissores, visando compreender como esses atributos se relacionam com o problema em questão e fornecendo informações relevantes para a prevenção e o manejo da condição cardíaca.
 
 ## Justificativa
 
