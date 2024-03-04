@@ -1,6 +1,10 @@
 # Introdução
 
-Texto descritivo introdutório apresentando a visão geral do projeto a ser desenvolvido considerando o contexto em que ele se insere, os objetivos gerais, a justificativa e o público-alvo do projeto.
+A prevenção e os cuidados relacionados a ataques cardíacos são grandes desafios para a saúde pública em todo o mundo. Compreender os fatores de risco e possíveis mitigadores é fundamental para a tomada de decisões mais assertivas, visando. Nesse contexto, a análise de dados e a descoberta de conhecimento são ferramentas essenciais para tomadas de decisão mais assertivas para melhorar a resposta aos tratamentos e à prevenção do risco. Este projeto de pesquisa e experimentação em sistemas de informação se propõe a explorar o conjunto de dados de predição de risco de ataque cardíaco para investigar a saúde do coração e seus fatores de risco.
+
+O dataset "Heart Attack Risk Prediction Dataset" abrange uma ampla gama de atributos, como idade, níveis de colesterol, pressão arterial, hábitos de fumo, padrões de exercício, preferências alimentares e outros, com o objetivo de evidenciar possiveis interações dessas variáveis na determinação da probabilidade de um ataque cardíaco.
+
+Com base nesse contexto, este trabalho tem como objetivo analisar e interpretar os dados desse dataset, visando identificar padrões e tendências que possam contribuir para aprimorar a prevenção e o tratamento de doenças cardíacas.
 
 ## Problema
 
@@ -20,7 +24,7 @@ Descreva ainda o contexto em que essa aplicação será usada, se houver: empres
 
 ## Questão de pesquisa
 
-Com base na consideração de que, doenças cardíacas possam estar relacionadas ao conntexo, hábitos e comportamentos das pessoas, questiona-se: _quais são os fatores de maior risco e que configuram em predisposição para ocorrência de ataques cardíacos nas pessoas?_
+Com base na consideração de que, doenças cardíacas possam estar relacionadas ao contexto, hábitos e comportamentos das pessoas, questiona-se: _quais são os fatores de maior risco e que configuram em predisposição para ocorrência de ataques cardíacos nas pessoas?_
 
 A questão de pesquisa é a base de todo o trabalho que será desenvolvido. É ela que motiva a realização da pesquisa e deverá ser adequada ao problema identificado. Ao término de sua pesquisa/experimentação, o objetivo é que seja encontrada a resposta da questão de pesquisa previamente definida.
 
