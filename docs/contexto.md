@@ -136,7 +136,7 @@ AGÊNCIA BRASIL. Casos de infarto aumentam 25% no Brasil, em 6 anos. Portal R7 [
 ESTADO DE MINAS. Aumentam casos de infarto em todo o mundo; alerta OMS. Estado de Minas [online], publicado em 25 jul. 2023. Disponível em: <https://www.em.com.br/app/noticia/saude-e-bem-viver/2023/07/25/interna_bem_viver,1524784/aumentam-casos-de-infarto-em-todo-o-mundo-alerta-oms.shtml> Acesso em 27 fev. 2024. 
 
 
-N. Louridi, M. Amar and B. E. Ouahidi, "Identification of Cardiovascular Diseases Using Machine Learning," 2019 7th Mediterranean Congress of Telecommunications (CMT), Fez, Morocco, 2019, pp. 1-6, doi: 10.1109/CMT.2019.8931411. keywords: {Heart;Diseases;Support vector machines;Machine learning algorithms;Machine learning;Classification algorithms;Blood pressure;Heart disease;Support vector machine (SVM);Naïve Bayes (NB);K-nearest neighbors (KNN);Normalization},
+N. Louridi, M. Amar and B. E. Ouahidi, "Identification of Cardiovascular Diseases Using Machine Learning," 2019 7th Mediterranean Congress of Telecommunications (CMT), Fez, Morocco, 2019, pp. 1-6, doi: 10.1109/CMT.2019.8931411. keywords: {Heart;Diseases;Support vector machines;Machine learning algorithms;Machine learning;Classification algorithms;Blood pressure;Heart disease;Support vector machine (SVM);Naïve Bayes (NB);K-nearest neighbors (KNN);Normalization},  Acesso em 04 mar. 2024.
 
 
 
