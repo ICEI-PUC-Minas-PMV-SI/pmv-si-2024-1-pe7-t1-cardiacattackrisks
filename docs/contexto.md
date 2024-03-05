@@ -37,6 +37,45 @@ Toda a população, independente do conhecimento em tecnologia, irá se benefici
 
 ## Estado da arte
 
+
+Identification of Cardiovascular Diseases Using Machine Learning 
+
+Contexto 
+
+A doença cardiovascular, ou doença cardíaca, é uma das principais causas de morte em todo o mundo, com um aumento contínuo previsto nas próximas décadas  Diversos fatores de risco estão associados ao desenvolvimento de doenças cardíacas, incluindo mudanças no estilo de vida, tabagismo, dieta, atividade física, obesidade e condições bioquímicas como pressão arterial e níveis de glicose. 
+
+Para lidar com o desafio do diagnóstico preciso e eficiente das doenças cardíacas, várias abordagens de análise de dados e algoritmos de aprendizado de máquina têm sido explorados. Um estudo recente de Louridi, Amar e Ouahidi (2019) apresentou uma investigação importante nesse campo. Os autores propuseram um modelo de identificação de doenças cardiovasculares utilizando técnicas de aprendizado de máquina. 
+
+Dataset Utilizado 
+
+No estudo de Louridi et al. (2019), foi utilizado um conjunto de dados específico para identificação de doenças cardiovasculares. Este dataset consistiu em 303 instâncias e 13 atributos relevantes para fatores de risco cardíaco. Os dados foram obtidos a partir do repositório de aprendizado de máquina da UCI, contribuído por Robert Detrano, M.D, Ph.D. 
+
+Abordagens/Algoritmos Utilizados 
+
+Para a tarefa de identificação de doenças cardíacas, os pesquisadores empregaram uma variedade de algoritmos de aprendizado de máquina, incluindo Máquinas de Vetores de Suporte (SVM), Naïve Bayes (NB) e K-vizinhos mais próximos (KNN). 
+
+Máquinas de Vetores de Suporte (SVM): Este algoritmo foi utilizado para criar um hiperplano no espaço de características que pudesse separar os dados de forma distinta. O SVM foi configurado com um kernel linear, pois os dados mostraram-se linearmente separáveis . 
+
+Naïve Bayes (NB): Um classificador popular de aprendizado de máquina baseado no teorema de Bayes, assumindo independência entre as características [3]. 
+
+K-vizinhos mais próximos (KNN): Um algoritmo que utiliza a proximidade entre os vizinhos para classificação. 
+
+Métricas de Avaliação 
+
+As métricas de avaliação utilizadas pelos pesquisadores incluíram especificidade, sensibilidade e precisão. A especificidade avalia a proporção de casos negativos corretamente identificados, enquanto a sensibilidade (recall) mede a proporção de amostras positivas corretamente identificadas. Já a precisão verifica a eficiência do modelo construído. 
+
+Resultados Obtidos 
+
+Os resultados experimentais do estudo de Louridi et al. (2019) indicaram que o algoritmo SVM com kernel linear obteve a melhor precisão, atingindo um valor de 86,8% na identificação de doenças cardiovasculares. 
+
+Esta pesquisa evidencia a importância do uso de técnicas de aprendizado de máquina na identificação e previsão de doenças cardíacas, fornecendo insights valiosos para a melhoria contínua da detecção precoce e tratamento dessas condições. 
+
+ 
+
+
+
+
+
 Nesta seção, deverão ser descritas outras abordagens identificadas na literatura que foram utilizadas para resolver problemas similares ao problema em questão. Para isso, faça uma pesquisa detalhada e identifique, no mínimo, 3 trabalhos que tenham utilizado dados em contexto similares e então, detalhe: detalhe e contextualize o problema, descreva o _dataset_ utilizado, detalhe quais abordagens/algoritmos foram utilizados (e seus parâmetros), identifique as métricas de avaliação empregadas e fale sobre os resultados obtidos. 
 
 > **Links Úteis**:
@@ -44,6 +83,8 @@ Nesta seção, deverão ser descritas outras abordagens identificadas na literat
 > - [IEEE Xplore](https://ieeexplore.ieee.org/Xplore/home.jsp)
 > - [Science Direct](https://www.sciencedirect.com/)
 > - [ACM Digital Library](https://dl.acm.org/)
+>
+
 
 # Descrição do _dataset_ selecionado
 
@@ -93,6 +134,12 @@ Nesta seção, você deverá estruturar o seu Canvas Analítico. O Canvas Analí
 AGÊNCIA BRASIL. Casos de infarto aumentam 25% no Brasil, em 6 anos. Portal R7 [online], publicado em 03 ago. 2023. Disponível em: <https://noticias.r7.com/saude/casos-de-infarto-aumentam-25-no-brasil-em-6-anos-03082023> Acesso em 27 fev. 2024. 
 
 ESTADO DE MINAS. Aumentam casos de infarto em todo o mundo; alerta OMS. Estado de Minas [online], publicado em 25 jul. 2023. Disponível em: <https://www.em.com.br/app/noticia/saude-e-bem-viver/2023/07/25/interna_bem_viver,1524784/aumentam-casos-de-infarto-em-todo-o-mundo-alerta-oms.shtml> Acesso em 27 fev. 2024. 
+
+
+N. Louridi, M. Amar and B. E. Ouahidi, "Identification of Cardiovascular Diseases Using Machine Learning," 2019 7th Mediterranean Congress of Telecommunications (CMT), Fez, Morocco, 2019, pp. 1-6, doi: 10.1109/CMT.2019.8931411. keywords: {Heart;Diseases;Support vector machines;Machine learning algorithms;Machine learning;Classification algorithms;Blood pressure;Heart disease;Support vector machine (SVM);Naïve Bayes (NB);K-nearest neighbors (KNN);Normalization},
+
+
+
 
 > **Links Úteis**:
 > - [Padrão ABNT PUC Minas](https://portal.pucminas.br/biblioteca/index_padrao.php?pagina=5886)
