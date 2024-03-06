@@ -38,19 +38,19 @@ Toda a população, independente do conhecimento em tecnologia, irá se benefici
 ## Estado da arte
 
 
-Identification of Cardiovascular Diseases Using Machine Learning 
+### Identification of Cardiovascular Diseases Using Machine Learning 
 
-Contexto 
+#### Contexto 
 
-A doença cardiovascular, ou doença cardíaca, é uma das principais causas de morte em todo o mundo, com um aumento contínuo previsto nas próximas décadas  Diversos fatores de risco estão associados ao desenvolvimento de doenças cardíacas, incluindo mudanças no estilo de vida, tabagismo, dieta, atividade física, obesidade e condições bioquímicas como pressão arterial e níveis de glicose. 
+A doença cardiovascular, ou doença cardíaca, é uma das principais causas de morte em todo o mundo, com um aumento contínuo previsto nas próximas décadas.  Diversos fatores de risco estão associados ao desenvolvimento de doenças cardíacas, incluindo mudanças no estilo de vida, tabagismo, dieta, atividade física, obesidade e condições bioquímicas como pressão arterial e níveis de glicose. 
 
 Para lidar com o desafio do diagnóstico preciso e eficiente das doenças cardíacas, várias abordagens de análise de dados e algoritmos de aprendizado de máquina têm sido explorados. Um estudo recente de Louridi, Amar e Ouahidi (2019) apresentou uma investigação importante nesse campo. Os autores propuseram um modelo de identificação de doenças cardiovasculares utilizando técnicas de aprendizado de máquina. 
 
-Dataset Utilizado 
+#### Dataset Utilizado 
 
 No estudo de Louridi et al. (2019), foi utilizado um conjunto de dados específico para identificação de doenças cardiovasculares. Este dataset consistiu em 303 instâncias e 13 atributos relevantes para fatores de risco cardíaco. Os dados foram obtidos a partir do repositório de aprendizado de máquina da UCI, contribuído por Robert Detrano, M.D, Ph.D. 
 
-Abordagens/Algoritmos Utilizados 
+#### Abordagens/Algoritmos Utilizados 
 
 Para a tarefa de identificação de doenças cardíacas, os pesquisadores empregaram uma variedade de algoritmos de aprendizado de máquina, incluindo Máquinas de Vetores de Suporte (SVM), Naïve Bayes (NB) e K-vizinhos mais próximos (KNN). 
 
@@ -60,15 +60,41 @@ Naïve Bayes (NB): Um classificador popular de aprendizado de máquina baseado n
 
 K-vizinhos mais próximos (KNN): Um algoritmo que utiliza a proximidade entre os vizinhos para classificação. 
 
-Métricas de Avaliação 
+#### Métricas de Avaliação 
 
 As métricas de avaliação utilizadas pelos pesquisadores incluíram especificidade, sensibilidade e precisão. A especificidade avalia a proporção de casos negativos corretamente identificados, enquanto a sensibilidade (recall) mede a proporção de amostras positivas corretamente identificadas. Já a precisão verifica a eficiência do modelo construído. 
 
-Resultados Obtidos 
+#### Resultados Obtidos 
 
 Os resultados experimentais do estudo de Louridi et al. (2019) indicaram que o algoritmo SVM com kernel linear obteve a melhor precisão, atingindo um valor de 86,8% na identificação de doenças cardiovasculares. 
 
 Esta pesquisa evidencia a importância do uso de técnicas de aprendizado de máquina na identificação e previsão de doenças cardíacas, fornecendo insights valiosos para a melhoria contínua da detecção precoce e tratamento dessas condições. 
+
+### Cardiovascular Disease Risk Assessment using Machine Learning 
+
+#### Contexto
+
+A avaliação do risco de DCV é crucial para garantir um diagnóstico e tratamento adequados, permitindo que os pacientes com necessidades críticas tenham acesso prioritário aos médicos e sistemas de saúde. No entanto, a complexidade dos algoritmos utilizados nesse processo muitas vezes dificulta a interpretação dos resultados pelos profissionais de saúde. Nesse sentido, o uso de abordagens de aprendizado de máquina, como a Regressão Logística, tem sido explorado como uma solução promissora para prever o risco de DCV de forma precisa e eficaz.
+
+#### Dataset Utilizado 
+
+No estudo realizado por Prakash, Mahesh e Gouthaman (2023), o dataset utilizado para a avaliação do risco de DCV inclui informações de vários pacientes. Um total de 13 atributos foram utilizados para treinar o modelo de Regressão Logística, tais como idade, sexo, pressão sanguínea, níveis de colesterol, entre outros. Esses atributos foram escolhidos com base em sua relevância clínica e importância como fatores de risco para DCV.
+
+#### Abordagens/Algoritmos Utilizados 
+
+No estudo, foi empregado o algoritmo de Regressão Logística, uma técnica de aprendizado de máquina que modela a relação entre uma variável de resultado (no caso, o risco de DCV) e variáveis independentes (como idade, sexo, pressão sanguínea, etc.). A Regressão Logística é conhecida por sua simplicidade, eficiência computacional e capacidade de fornecer probabilidades como resultados.
+
+Parâmetros do Modelo:
+Os parâmetros do modelo de Regressão Logística foram ajustados durante o treinamento usando o dataset disponível. Estes incluem os coeficientes que relacionam as variáveis independentes ao risco de DCV, bem como a função de ativação sigmoidal utilizada para calcular as probabilidades.
+
+#### Métricas de Avaliação
+Para avaliar a eficácia do modelo de Regressão Logística na predição do risco de DCV, várias métricas foram empregadas, incluindo a precisão (accuracy), que representa a proporção de previsões corretas em relação ao total de previsões feitas pelo modelo.
+
+#### Resultados Obtidos
+Os resultados do estudo indicaram que o modelo de Regressão Logística alcançou uma precisão de 86.89% na predição do risco de DCV. Essa alta precisão sugere que o modelo é capaz de identificar eficientemente pacientes com alto risco de DCV, permitindo a implementação de medidas preventivas e planos de tratamento adequados.
+
+#### Conclusão
+Em conclusão, o estudo demonstra que a utilização da Regressão Logística para a avaliação do risco de DCV é uma abordagem eficaz e promissora. A alta precisão do modelo sugere sua utilidade prática na identificação precoce e no gerenciamento do risco de DCV. Esse avanço pode contribuir significativamente para a eficiência e eficácia dos sistemas de saúde, garantindo um cuidado mais personalizado e direcionado para pacientes com necessidades específicas relacionadas à DCV.
 
  
 
@@ -137,6 +163,10 @@ ESTADO DE MINAS. Aumentam casos de infarto em todo o mundo; alerta OMS. Estado d
 
 
 N. Louridi, M. Amar and B. E. Ouahidi, "Identification of Cardiovascular Diseases Using Machine Learning," 2019 7th Mediterranean Congress of Telecommunications (CMT), Fez, Morocco, 2019, pp. 1-6, doi: 10.1109/CMT.2019.8931411. keywords: {Heart;Diseases;Support vector machines;Machine learning algorithms;Machine learning;Classification algorithms;Blood pressure;Heart disease;Support vector machine (SVM);Naïve Bayes (NB);K-nearest neighbors (KNN);Normalization},  Acesso em 04 mar. 2024.
+
+N. Prakash, M. Mahesh and P. Gouthaman, "Cardiovascular Disease Risk Assessment using Machine Learning," 2023 International Conference on Inventive Computation Technologies (ICICT), Lalitpur, Nepal, 2023, pp. 249-256, doi: 10.1109/ICICT57646.2023.10133957. keywords: {Training;Machine learning algorithms;Medical services;Machine learning;Prediction algorithms;Risk management;Cardiovascular diseases;Cardiovascular Disease;Logistic Regression;Machine Learning;Risk Assessment}, Acesso em 05 mar. 2024.
+
+
 
 
 
