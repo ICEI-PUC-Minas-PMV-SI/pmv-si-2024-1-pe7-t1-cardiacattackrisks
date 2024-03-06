@@ -225,6 +225,10 @@ N. Louridi, M. Amar and B. E. Ouahidi, "Identification of Cardiovascular Disease
 
 N. Prakash, M. Mahesh and P. Gouthaman, "Cardiovascular Disease Risk Assessment using Machine Learning," 2023 International Conference on Inventive Computation Technologies (ICICT), Lalitpur, Nepal, 2023, pp. 249-256, doi: 10.1109/ICICT57646.2023.10133957. keywords: {Training;Machine learning algorithms;Medical services;Machine learning;Prediction algorithms;Risk management;Cardiovascular diseases;Cardiovascular Disease;Logistic Regression;Machine Learning;Risk Assessment}, Acesso em 05 mar. 2024.
 
+N. N. Bharathi, M. F. Shaik, T. Poojita, T. Sravanthi, M. Rafi and I. R. Raja, "Heart Attack Prediction Using Artificial Neural Networks," 2023 9th International Conference on Advanced Computing and Communication Systems (ICACCS), Coimbatore, India, 2023, pp. 304-308, doi: 10.1109/ICACCS57279.2023.10112664. keywords: {Heart;Decision support systems;Sociology;Decision making;Artificial neural networks;Cardiac arrest;Organizations;ANN;Heart attack prediction;Jupiter Lab}, Acesso em 05 mar. 2024.
+
+
+
 
 
 
