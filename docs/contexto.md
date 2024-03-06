@@ -38,7 +38,7 @@ Toda a população, independente do conhecimento em tecnologia, irá se benefici
 ## Estado da arte
 
 
-### Identification of Cardiovascular Diseases Using Machine Learning 
+### 1. Identification of Cardiovascular Diseases Using Machine Learning 
 
 #### Contexto 
 
@@ -70,7 +70,7 @@ Os resultados experimentais do estudo de Louridi et al. (2019) indicaram que o a
 
 Esta pesquisa evidencia a importância do uso de técnicas de aprendizado de máquina na identificação e previsão de doenças cardíacas, fornecendo insights valiosos para a melhoria contínua da detecção precoce e tratamento dessas condições. 
 
-### Cardiovascular Disease Risk Assessment using Machine Learning 
+### 2. Cardiovascular Disease Risk Assessment using Machine Learning 
 
 #### Contexto
 
@@ -97,7 +97,7 @@ Os resultados do estudo indicaram que o modelo de Regressão Logística alcanço
 Em conclusão, o estudo demonstra que a utilização da Regressão Logística para a avaliação do risco de DCV é uma abordagem eficaz e promissora. A alta precisão do modelo sugere sua utilidade prática na identificação precoce e no gerenciamento do risco de DCV. Esse avanço pode contribuir significativamente para a eficiência e eficácia dos sistemas de saúde, garantindo um cuidado mais personalizado e direcionado para pacientes com necessidades específicas relacionadas à DCV.
 
 
-### Heart Attack Prediction Using Artificial Neural Networks 
+### 3. Heart Attack Prediction Using Artificial Neural Networks 
 
  
 
