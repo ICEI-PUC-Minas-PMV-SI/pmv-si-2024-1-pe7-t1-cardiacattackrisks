@@ -96,20 +96,79 @@ Os resultados do estudo indicaram que o modelo de Regressão Logística alcanço
 #### Conclusão
 Em conclusão, o estudo demonstra que a utilização da Regressão Logística para a avaliação do risco de DCV é uma abordagem eficaz e promissora. A alta precisão do modelo sugere sua utilidade prática na identificação precoce e no gerenciamento do risco de DCV. Esse avanço pode contribuir significativamente para a eficiência e eficácia dos sistemas de saúde, garantindo um cuidado mais personalizado e direcionado para pacientes com necessidades específicas relacionadas à DCV.
 
+
+### Heart Attack Prediction Using Artificial Neural Networks 
+
  
 
+#### Contexto e Problema: 
 
+O problema abordado por Bharathi et al. (2023) é a previsão de ataques cardíacos, uma questão vital devido à sua relevância na identificação precoce de riscos cardiovasculares e intervenções preventivas. A importância desse problema reside na capacidade de desenvolver sistemas de suporte à decisão que identifiquem riscos de ataques cardíacos em estágios iniciais, permitindo intervenções precoces para reduzir a gravidade das doenças cardiovasculares. 
 
+#### Dataset Utilizado: 
 
+O dataset utilizado neste estudo consiste em 13 características de 1024 instâncias, incluindo informações como idade, gênero, sintomas como dor no peito e outros fatores relevantes para a previsão de ataques cardíacos. Esses dados foram coletados da UCI (University of California, Irvine), proporcionando um conjunto diversificado e rico em informações para análise. 
 
-Nesta seção, deverão ser descritas outras abordagens identificadas na literatura que foram utilizadas para resolver problemas similares ao problema em questão. Para isso, faça uma pesquisa detalhada e identifique, no mínimo, 3 trabalhos que tenham utilizado dados em contexto similares e então, detalhe: detalhe e contextualize o problema, descreva o _dataset_ utilizado, detalhe quais abordagens/algoritmos foram utilizados (e seus parâmetros), identifique as métricas de avaliação empregadas e fale sobre os resultados obtidos. 
+#### Abordagem/Algoritmos: 
 
-> **Links Úteis**:
-> - [Google Scholar](https://scholar.google.com/)
-> - [IEEE Xplore](https://ieeexplore.ieee.org/Xplore/home.jsp)
-> - [Science Direct](https://www.sciencedirect.com/)
-> - [ACM Digital Library](https://dl.acm.org/)
->
+Para abordar o problema, Bharathi et al. (2023) utilizaram diversas técnicas, incluindo: 
+
+Redes Neurais Artificiais (ANN): 
+
+ 
+
+As Redes Neurais Artificiais são estruturas de aprendizado de máquina inspiradas no funcionamento do cérebro humano. O estudo empregou modelos de ANN com diferentes configurações de camadas e neurônios, visando prever ataques cardíacos com precisão. Os parâmetros específicos das redes foram ajustados durante o treinamento para otimizar o desempenho. 
+
+ 
+
+Algoritmo de Quantização de Vetor de Aprendizado: 
+
+ 
+
+Este algoritmo é uma técnica de Rede Neural Artificial utilizada para quantizar dados de entrada em vetores. Em seguida, esses vetores são treinados para prever a ocorrência de ataques cardíacos. Os parâmetros do algoritmo foram ajustados para maximizar a precisão da previsão. 
+
+ 
+
+Support Vector Machine (SVM): 
+
+ 
+
+O SVM é um algoritmo de aprendizado de máquina utilizado para classificação e regressão. No estudo de Bharathi et al. (2023), o SVM foi empregado para treinar modelos com base nas características dos pacientes e prever a ocorrência de ataques cardíacos. Os parâmetros do SVM, como o kernel utilizado e o parâmetro de regularização, foram ajustados para melhorar a precisão da previsão. 
+
+ 
+
+Métodos de Mineração de Dados: 
+
+ 
+
+Além das técnicas baseadas em Redes Neurais e SVM, o estudo também explorou métodos de mineração de dados, como Naïve Bayes e kmeans. Esses métodos foram aplicados para prever a ocorrência de ataques cardíacos com base nas características dos pacientes. 
+
+ 
+
+#### Métricas de Avaliação: 
+
+As métricas de avaliação utilizadas para medir o desempenho dos modelos incluíram: 
+
+Matriz de Confusão: 
+
+ 
+
+Esta métrica é uma ferramenta comum para problemas de classificação, fornecendo uma visão geral dos resultados corretos e incorretos das previsões. 
+
+Precisão do Modelo: 
+
+ 
+
+A precisão do modelo foi calculada com base na matriz de confusão, representando a proporção de previsões corretas em relação ao total de previsões feitas. 
+
+ 
+
+#### Resultados: 
+
+Os resultados obtidos por Bharathi et al. (2023) demonstraram a eficácia das abordagens utilizadas na previsão de ataques cardíacos. As Redes Neurais Artificiais apresentaram uma precisão média de 84% a 88%, enquanto o SVM alcançou uma precisão de 87,5% em um estudo específico. Além disso, métodos de mineração de dados como Naïve Bayes e kmeans obtiveram uma precisão em torno de 93% na previsão de ataques cardíacos. 
+
+Em resumo, o estudo evidencia que a combinação de Redes Neurais Artificiais, SVM e métodos de mineração de dados é promissora na previsão de ataques cardíacos. A escolha adequada de algoritmos e ajuste de parâmetros influenciam diretamente na precisão dos modelos, fornecendo insights valiosos para a identificação precoce de riscos cardiovasculares e intervenções preventivas eficazes. 
+ 
 
 
 # Descrição do _dataset_ selecionado
