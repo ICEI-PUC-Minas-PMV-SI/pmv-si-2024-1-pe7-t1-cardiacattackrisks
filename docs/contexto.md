@@ -2,7 +2,7 @@
 
 A prevenção e os cuidados relacionados a ataques cardíacos são grandes desafios para a saúde pública em todo o mundo. Compreender os fatores de risco e possíveis mitigadores é fundamental para a tomada de decisões mais assertivas, visando. Nesse contexto, a análise de dados e a descoberta de conhecimento são ferramentas essenciais para tomadas de decisão mais assertivas para melhorar a resposta aos tratamentos e à prevenção do risco. Este projeto de pesquisa e experimentação em sistemas de informação se propõe a explorar o conjunto de dados de predição de risco de ataque cardíaco para investigar a saúde do coração e seus fatores de risco.
 
-O dataset "Heart Attack Risk Prediction Dataset" abrange uma ampla gama de atributos, como idade, níveis de colesterol, pressão arterial, hábitos de fumo, padrões de exercício, preferências alimentares e outros, com o objetivo de evidenciar possiveis interações dessas variáveis na determinação da probabilidade de um ataque cardíaco.
+O dataset "Heart Attack Risk Prediction Dataset" (BANERJEE, 2023) abrange uma ampla gama de atributos, como idade, níveis de colesterol, pressão arterial, hábitos de fumo, padrões de exercício, preferências alimentares e outros, com o objetivo de evidenciar possiveis interações dessas variáveis na determinação da probabilidade de um ataque cardíaco.
 
 Com base nesse contexto, este trabalho tem como objetivo analisar e interpretar os dados desse dataset, visando identificar padrões e tendências que possam contribuir para aprimorar a prevenção e o tratamento de doenças cardíacas.
 
@@ -20,7 +20,7 @@ A questão de pesquisa é a base de todo o trabalho que será desenvolvido. É e
 
 ## Objetivos preliminares
 
-Como objetivo geral, buscamos experimentar e avaliar modelos de aprendizado de máquina adequados para solucionar o problema apresentado, visando desenvolver um modelo capaz de prever com precisão o risco de ataque cardíaco com base em uma ampla gama de atributos relacionados à saúde, estilo de vida e histórico médico dos pacientes. Utilizando para este trabalho uma base sólida para a investigação do padrão de características e fatores de risco associados à ocorrência de ataques cardíacos, o conjunto de dados "Heart Attack Risk Prediction Dataset".
+Como objetivo geral se busca experimentar e avaliar modelos de aprendizado de máquina adequados para solucionar o problema apresentado, visando desenvolver um modelo capaz de prever com precisão o risco de ataque cardíaco com base em uma ampla gama de atributos relacionados à saúde, estilo de vida e histórico médico dos pacientes. Utilizando para este trabalho uma base sólida para a investigação do padrão de características e fatores de risco associados à ocorrência de ataques cardíacos, o conjunto de dados "Heart Attack Risk Prediction Dataset".
 
 Objetivos Específicos:
 
@@ -175,7 +175,7 @@ Em resumo, o estudo evidencia que a combinação de Redes Neurais Artificiais, S
 
 Descrição do Dataset
 
-O conjunto de dados ["Heart Attack Risk Prediction Dataset"](https://www.kaggle.com/datasets/iamsouravbanerjee/heart-attack-prediction-dataset) é uma compilação fornecida pelo cientista de dados Sourav Banerjee, destinada a facilitar o desenvolvimento e a avaliação de modelos de aprendizado de máquina para prever ataques cardíacos. Este conjunto de dados foi gerado utilizando dados sintéticos criados pelo ChatGPT, um modelo de inteligência artificial. 
+O conjunto de dados "Heart Attack Risk Prediction Dataset" (BANERJEE, 2023) é uma compilação fornecida pelo cientista de dados Sourav Banerjee, destinada a facilitar o desenvolvimento e a avaliação de modelos de aprendizado de máquina para prever ataques cardíacos. Este conjunto de dados foi gerado utilizando dados sintéticos criados pelo ChatGPT, um modelo de inteligência artificial. 
 Este conjunto de dados contém uma ampla gama de atributos relevantes para a saúde cardíaca e escolhas de estilo de vida, abrangendo detalhes específicos do paciente. Abaixo está a descrição detalhada de cada um dos atributos presentes no dataset:
 
 - ID do Paciente: Identificador exclusivo para cada paciente.
@@ -217,6 +217,8 @@ Nesta seção, você deverá estruturar o seu Canvas Analítico. O Canvas Analí
 # Referências
 
 AGÊNCIA BRASIL. Casos de infarto aumentam 25% no Brasil, em 6 anos. Portal R7 [online], publicado em 03 ago. 2023. Disponível em: <https://noticias.r7.com/saude/casos-de-infarto-aumentam-25-no-brasil-em-6-anos-03082023> Acesso em 27 fev. 2024. 
+
+BANERJEE, Sourav. Heart Attack Risk Prediction Dataset: Unlocking Predictive Insights with Multifaceted Synthetic Heart Attack Dataset. Kaggle [online], publicado em nov. 2023. Disponível em: <https://www.kaggle.com/datasets/iamsouravbanerjee/heart-attack-prediction-dataset>. Acesso em 29 fev. 2024.
 
 ESTADO DE MINAS. Aumentam casos de infarto em todo o mundo; alerta OMS. Estado de Minas [online], publicado em 25 jul. 2023. Disponível em: <https://www.em.com.br/app/noticia/saude-e-bem-viver/2023/07/25/interna_bem_viver,1524784/aumentam-casos-de-infarto-em-todo-o-mundo-alerta-oms.shtml> Acesso em 27 fev. 2024. 
 
