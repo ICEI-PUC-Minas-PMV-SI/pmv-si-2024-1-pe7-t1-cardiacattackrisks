@@ -30,6 +30,7 @@ Objetivos Específicos:
 ## Justificativa
 
 Segundo a Associação Brasileira de Cardiologia, as doenças cardiovasculares, afecções do coração e da circulação, representam a principal causa de mortes no Brasil. São mais de 1100 mortes por dia, cerca de 46 por hora, 1 morte a cada 1,5 minutos (90 segundos). São mais de 1100 mortes por dia, cerca de 1 morte a cada 90 segundos, 2 vezes mais mortes que todos os tipos de câncer juntos. Muitas dessas mortes poderiam ser evitadas ou postergadas com cuidados preventivos e medidas terapêuticas. O alerta, a prevenção e o tratamento adequado dos fatores de risco e das doenças cardiovasculares podem reverter essa grave situação. Confira o cardiômetro em: (http://www.cardiometro.com.br/)
+O assunto foi escolhido devido a importância do mesmo para a sociedade e a qualidade dos dados a serem avaliados. O projeto busca contribuir para a qualidade de vida da população.
 
 ## Público-Alvo
 
