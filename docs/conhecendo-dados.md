@@ -14,3 +14,74 @@ A partir da análise descrita e exploratória realizada, descreva todos os achad
 
 Existem muitas ferramentas diferentes que podem ser utilizadas para fazer a análise dos dados. Nesta seção, descreva as ferramentas/tecnologias utilizadas e sua aplicação.
 
+### Rascunho
+
+#### Qual a relação com idade?
+- Idade e Risco de ataque cardíaco
+
+##### Possiveis correlacoes com idade
+- Idade e Colesterol
+- Idade e Pressão Arterial
+- Idade e IMC
+- Idade e Triglicerídeos
+- Idade e Horas de exercício por semana
+- Idade e Horas sedentárias por dia
+- Idade e Renda
+- Idade e Nível de Estresse
+- Idade e Horas de sono por dia
+
+#### Qual a relação com atividade fisica?
+- Horas de exercício por semana e Risco de ataque cardíaco
+- Horas sedentárias por dia e Risco de ataque cardíaco
+
+##### Possiveis correlacoes com atividade fisica
+- Horas de exercício por semana e Horas sedentárias por dia
+- Horas de exercício por semana e Renda
+- Horas de exercício por semana e Nível de Estresse
+- Horas de exercício por semana e Horas de sono por dia
+- Horas sedentárias por dia e Renda
+- Horas sedentárias por dia e Nível de Estresse
+- Horas sedentárias por dia e Horas de sono por dia
+- Nível de Estresse e Horas de sono por dia
+
+#### Renda influencia?
+- Renda e Risco de ataque cardíaco
+
+##### Possiveis correlacoes com atividade fisica
+- Renda e Nível de Estresse
+- Renda e Horas de sono por dia
+
+#### Fatores de saude influencia?
+- Colesterol e Risco de ataque cardíaco
+- Pressao Arterial e Risco de ataque cardíaco
+- IMC e Risco de ataque cardíaco
+- Triglicerideos e Risco de ataque cardíaco
+
+##### Possiveis correlacoes com saude
+- Colesterol e Pressão Arterial
+- Colesterol e IMC
+- Colesterol e Triglicerídeos
+- Colesterol e Horas de exercício por semana
+- Colesterol e Horas sedentárias por dia
+- Colesterol e Renda
+- Colesterol e Nível de Estresse
+- Colesterol e Horas de sono por dia
+- Pressão Arterial e IMC
+- Pressão Arterial e Triglicerídeos
+- Pressão Arterial e Horas de exercício por semana
+- Pressão Arterial e Horas sedentárias por dia
+- Pressão Arterial e Renda
+- Pressão Arterial e Nível de Estresse
+- Pressão Arterial e Horas de sono por dia
+- IMC e Triglicerídeos
+- IMC e Horas de exercício por semana
+- IMC e Horas sedentárias por dia
+- IMC e Renda
+- IMC e Nível de Estresse
+- IMC e Horas de sono por dia
+- Triglicerídeos e Horas de exercício por semana
+- Triglicerídeos e Horas sedentárias por dia
+- Triglicerídeos e Renda
+- Triglicerídeos e Nível de Estresse
+- Triglicerídeos e Horas de sono por dia
+
