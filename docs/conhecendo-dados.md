@@ -11,33 +11,47 @@ Inclua nesta seção, gráficos, tabelas e demais artefatos que você considere 
 
 O dataset _Heart Attack Risk Prediction Dataset_ (BANERJEE, 2023), apresenta em sua totalidade, **8763** registros de dados distribuídos em 26 colunas com seus respectivos atributos.
 
-|  Coluna   | Contagem | Tipo de Dado |
-|-----------| :------: | :----------: |
-|Idade (age) |   8763   |          | 
-|Sexo (sex)  |   8763   |           | 
-|Colesterol (Cholesterol)|   8763  |           | 
-|Pressão (Blood Pressure)|  8763   |           |   
-|Freq. Cardíaca (Heart Rate)|   8763  |           |          
-|Horas Exercício Semana (Exercise Hours Per Week)|           |           |          
-|Nível Estresse (Stress Level)|  8763    |           | 
-|Horas Sedenrárias Dia(Sedentary Hours Per Day)|
-|Renda (Income)|  8763  |            | 
-|IMC (BMI)|          |           | 
-|Triglicerídios (Triglycerides)|       8763     |           | 
-|Dias de Atividade Física Semana (Physical Activity Days Per Week)|      8763      |           | 
-|Horas de Sono Dia (Sleep Hours Per Day)|    8763        |           | 
+| Atributo | Contagem | Tipo |
+|----------|-----------|---------|
+|Patient ID  |      8763   |               object|
+|Age   |      8763   |                             int64|
+|Sex    |       8763   |                          object|
+|Cholesterol   |       8763   |                   int64|
+|Blood Pressure   |         8763   |              object|
+|Heart Rate  |        8763   |                     int64|
+|Diabetes |       8763   |                         int64|
+|Family History  |        8763   |                 int64|
+|Smoking   |      8763   |                         int64|
+|Obesity |      8763   |                           int64|
+|Alcohol Consumption  |      8763   |              int64|
+|Exercise Hours Per Week |      8763   |         float64|
+|Diet    |        8763   |                        object|
+|Previous Heart Problems   |        8763   |       int64|
+|Medication Use  |      8763   |                   int64|
+|Stress Level  |      8763   |                     int64|
+|Sedentary Hours Per Day  |     8763   |         float64|
+|Income|         8763   |                          int64|
+|BMI   |       8763   |                          float64|
+|Triglycerides |        8763   |                   int64|
+|Physical Activity Days Per Week |   8763   |      int64|
+|Sleep Hours Per Day |      8763   |               int64|
+|Country  |        8763   |                       object|
+|Continent |         8763   |                     object|
+|Hemisphere  |        8763   |                    object|
+|Heart Attack Risk   |      8763   |               int64|
 
-Em se tratando dos registros e suas medidas centrais, a tabela abaixo explicita os valores representativos de cada atrributo numérico.
+Em se tratando dos registros e suas medidas centrais, a tabela abaixo explicita os valores representativos de cada atributo.
 
-| |Idade|Colesterol|Frequência Cardíaca|Hora Exercício/Semana|Nível Estresse|Horas Sedentárias/Dia|Renda| IMC |Triglicerídios|Dias Atividade Física|Horas Sono/Dia|
-|-| :---:| :---: | :---: | :---: | :---: | :---: | :---: |  :---: |  :---:|  :---: |  :---: |
-|Média| 53,7 | 259,9 |  75  | 1,18 |  5,4  |  1,16  | 158.263,18 |   | 417,7 |  3,4 | 10 |
-|Moda| 90 | 235 | 94 |     |  2 |    |  22.527,80 |    | 799 | 3 | 10 |
-|Mínimo| 18 | 120 | 40 | 1,48 | 1 |   | 20.062,00 |    | 30 | 0 | 4 |
-|Quartil 1| 35 | 192 | 57 |  | 3 |   | 88.299,00  |    | 225 | 2 | 5 |
-|Quartil 2| 54 | 259 | 75 |  | 5 |   | 157.870,00 |    | 417 | 3 | 7 |
-|Quartil 3| 72 | 330 | 93 |  | 8 |   | 227.786,50 |    | 612 | 5 | 9 |
-|Máximo| 90 | 400 | 110 | 7,9 | 10 |   | 299.954,00 |   | 800 | 7 | 10 |
+|index|Age|Cholesterol|Heart Rate|Diabetes|Family History|Smoking|Obesity|Alcohol Consumption|Exercise Hours Per Week|Previous Heart Problems|Medication Use|Stress Level|Sedentary Hours Per Day|Income|BMI|Triglycerides|Physical Activity Days Per Week|Sleep Hours Per Day|Heart Attack Risk|
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|count|8763\.0|8763\.0|8763\.0|8763\.0|8763\.0|8763\.0|8763\.0|8763\.0|8763\.0|8763\.0|8763\.0|8763\.0|8763\.0|8763\.0|8763\.0|8763\.0|8763\.0|8763\.0|8763\.0|
+|mean|53\.70797672030127|259\.8772110007988|75\.02168207234965|0\.6522880292137396|0\.4929818555289284|0\.8968389820837612|0\.5014264521282665|0\.5980828483396097|10\.01428365521483|0\.4958347597854616|0\.49834531553121075|5\.469702156795618|5\.993690145051085|158263\.18190117538|28\.891445877259635|417\.67705123816046|3\.48967248659135|7\.0235079310738335|0\.3582106584503024|
+|std|21\.24950880221598|80\.86327610477055|20\.550947931909413|0\.47627118494942794|0\.4999792718957312|0\.3041864253995663|0\.5000264965985919|0\.49031335817956767|5\.783745486854243|0\.5000111809674499|0\.5000257933400908|2\.859621886586074|3\.4663591739806257|80575\.19080559704|6\.319181335543781|223\.7481367993549|2\.2826873241360377|1\.9884727543508285|0\.47950184613131047|
+|min|18\.0|120\.0|40\.0|0\.0|0\.0|0\.0|0\.0|0\.0|0\.0024423483189783|0\.0|0\.0|1\.0|0\.0012632057782457|20062\.0|18\.002336577801902|30\.0|0\.0|4\.0|0\.0|
+|25%|35\.0|192\.0|57\.0|0\.0|0\.0|1\.0|0\.0|0\.0|4\.981578612387105|0\.0|0\.0|3\.0|2\.998793697970296|88310\.0|23\.422985172976116|225\.5|2\.0|5\.0|0\.0|
+|50%|54\.0|259\.0|75\.0|1\.0|0\.0|1\.0|1\.0|1\.0|10\.069559015591569|0\.0|0\.0|5\.0|5\.933622031172581|157866\.0|28\.768999353101115|417\.0|3\.0|7\.0|0\.0|
+|75%|72\.0|330\.0|93\.0|1\.0|1\.0|1\.0|1\.0|1\.0|15\.050017847693944|1\.0|1\.0|8\.0|9\.019124487794615|227749\.0|34\.32459386532672|612\.0|5\.0|9\.0|1\.0|
+|max|90\.0|400\.0|110\.0|1\.0|1\.0|1\.0|1\.0|1\.0|19\.998709051535457|1\.0|1\.0|10\.0|11\.999313410370352|299954\.0|39\.99721081557256|800\.0|7\.0|10\.0|1\.0|
 
  Na análise dos dados, consta o registro de **2652** mulheres, o que corresponde a **30%** dos registros totais, ao passo que o quantitativo de homens equivale a **70%** do total de dos dados, uma vez que o sexo masculino representa **6111** registros. Estes dados estatísticos permitem dizer que existe no _dataset_ uma proporção de um registro feminino para cada dois registros masculinos. Quando separados por sexos, as comorbidades e hábitos se configuram da seguinte forma:
 
