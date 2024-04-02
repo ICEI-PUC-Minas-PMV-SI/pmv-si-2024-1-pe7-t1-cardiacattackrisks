@@ -6,6 +6,13 @@ Para isso, sugere-se que você utilize cálculos de medidas de tendência centra
 
 Inclua nesta seção, gráficos, tabelas e demais artefatos que você considere relevantes para entender os dados com os quais você irá trabalhar. 
 
+| |Idade|Colesterol|Frequência Cardíaca|Hora Exercício/Semana|Nível Estresse|Horas Sedentárias/Dia|Renda| IMC |Triglicerídios|Dias Atividade Física|Horas Sono/Dia|
+|-|-----|-----------|--------------|--------------|----------------|-----------------------|----| ---| ----| ----| -----|
+|Média| 53,7 | 259,9 |  75  | 1,18 |  5,4  |  1,16  | 158.263,18 |   | 417,7 |  3,4 | 10 |
+|Moda| 90 | 235 | 94 |     |  2 |    |  22.527,80 |    | 799 | 3 | 10 |
+|Mínimo| 18 | 120 | 40 | 1,48 | 1 |   | 20.062,00 |    | 30 | 0 | 4 |
+|Máximo| 90 | 400 | 110 | 7,9 | 10 |   | 299.954,00 |   | 800 | 7 | 10 |
+
 ## Descrição dos achados
 
 A partir da análise descrita e exploratória realizada, descreva todos os achados considerados relevantes para o contexto em que o trabalho se insere. Por exemplo: com relação à centralidade dos dados algo chamou a sua atenção? foi possível identificar correlação entre os atributos?
