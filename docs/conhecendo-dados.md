@@ -1,30 +1,45 @@
 # Conhecendo os dados
 
-Nesta seção, você deverá registrar uma detalhada análise descritiva e exploratória sobre a base de dados selecionada na Etapa 1 com o objetivo de compreender a estrutura dos dados, detectar eventuais _outliers_ e também, avaliar/detectar as relações existentes entre as variáveis analisadas.
+Nesta seção, você deverá registrar uma detalhada análise descritiva e exploratória sobre a base de dados selecionada na Etapa 1 com o objetivo de compreender a estrutura dos dados, detectar eventuais _outliers_ e também, avaliar/detectar as relações existentes entre as variáveis analisadas. 
 
 Para isso, sugere-se que você utilize cálculos de medidas de tendência central, como média, mediana e moda, para entender a centralidade dos dados; explorem medidas de dispersão como desvio padrão e intervalos interquartil para avaliar a variabilidade dos dados; utilizem gráficos descritivos como histogramas e box plots, para representar visualmente as características essenciais dos dados, pois essas visualizações podem facilitar a identificação de padrões e anomalias; analisem a relação aparente entre as variáveis por meio de análise de correlação ou gráficos de dispersões, entre outras técnicas. 
 
 Inclua nesta seção, gráficos, tabelas e demais artefatos que você considere relevantes para entender os dados com os quais você irá trabalhar. 
 
 
+# Tabelas de Dados
 
-----
+O dataset _Heart Attack Risk Prediction Dataset_ (BANERJEE, 2023), apresenta em sua totalidade, **8763** registros de dados distribuídos em 26 colunas com seus respectivos atributos.
 
+|  Coluna   | Contagem | Tipo de Dado |
+|-----------| :------: | :----------: |
+|Idade (age) |   8763   |          | 
+|Sexo (sex)  |   8763   |           | 
+|Colesterol (Cholesterol)|   8763  |           | 
+|Pressão (Blood Pressure)|  8763   |           |   
+|Freq. Cardíaca (Heart Rate)|   8763  |           |          
+|Horas Exercício Semana (Exercise Hours Per Week)|           |           |          
+|Nível Estresse (Stress Level)|  8763    |           | 
+|Horas Sedenrárias Dia(Sedentary Hours Per Day)|
+|Renda (Income)|  8763  |            | 
+|IMC (BMI)|          |           | 
+|Triglicerídios (Triglycerides)|       8763     |           | 
+|Dias de Atividade Física Semana (Physical Activity Days Per Week)|      8763      |           | 
+|Horas de Sono Dia (Sleep Hours Per Day)|    8763        |           | 
 
-O dataset _Heart Attack Risk Prediction Dataset_ (BANERJEE, 2023), apresenta em sua totalidade, **8763** registros de dados distribuídos em 26 colunas com seus respectivos atributos. Em se tratando dos registros e suas medidas centrais, a tabela abaixo explicita os valores representativos de cada atrributo numérico.
+Em se tratando dos registros e suas medidas centrais, a tabela abaixo explicita os valores representativos de cada atrributo numérico.
 
 | |Idade|Colesterol|Frequência Cardíaca|Hora Exercício/Semana|Nível Estresse|Horas Sedentárias/Dia|Renda| IMC |Triglicerídios|Dias Atividade Física|Horas Sono/Dia|
 |-| :---:| :---: | :---: | :---: | :---: | :---: | :---: |  :---: |  :---:|  :---: |  :---: |
 |Média| 53,7 | 259,9 |  75  | 1,18 |  5,4  |  1,16  | 158.263,18 |   | 417,7 |  3,4 | 10 |
 |Moda| 90 | 235 | 94 |     |  2 |    |  22.527,80 |    | 799 | 3 | 10 |
 |Mínimo| 18 | 120 | 40 | 1,48 | 1 |   | 20.062,00 |    | 30 | 0 | 4 |
+|Quartil 1| 35 | 192 | 57 |  | 3 |   | 88.299,00  |    | 225 | 2 | 5 |
+|Quartil 2| 54 | 259 | 75 |  | 5 |   | 157.870,00 |    | 417 | 3 | 7 |
+|Quartil 3| 72 | 330 | 93 |  | 8 |   | 227.786,50 |    | 612 | 5 | 9 |
 |Máximo| 90 | 400 | 110 | 7,9 | 10 |   | 299.954,00 |   | 800 | 7 | 10 |
 
-## Descrição dos achados
-
-Na análise dos dados, consta o registro de **2652** mulheres, o que corresponde a **30%** dos registros totais, ao passo que o quantitativo de homens equivale a **70%** do total de dos dados, uma vez que o sexo masculino representa **6111** registros. Estes dados estatísticos permitem dizer que existe no _dataset_ uma proporção de um registro feminino para cada dois registros masculinos.
-
-Considerando os aspectos levantados, ao serem segregados, em sexo, os dados apresentam algumas diferenças tanto em homens como mulheres. Nesse sentido, considera-se a tabela abaixo de atributos que correspondem a atributos comportamentais, que se traduzem em hábitose cotidianos e dados de saúde e ou comorbidades presentes. A tabela ainda apresenta, a porcentagem de homens e mulheres, em relação à divisão por sexo, de cada atributo apresentado.
+ Na análise dos dados, consta o registro de **2652** mulheres, o que corresponde a **30%** dos registros totais, ao passo que o quantitativo de homens equivale a **70%** do total de dos dados, uma vez que o sexo masculino representa **6111** registros. Estes dados estatísticos permitem dizer que existe no _dataset_ uma proporção de um registro feminino para cada dois registros masculinos. Quando separados por sexos, as comorbidades e hábitos se configuram da seguinte forma:
 
 |  Sexo | Idade Média | Qtde. Obesas(os) | Qtde. Diabéticas(os) | Qtde. Problemas Cardíacos Anteriores | Qtde. Usa Alcool |
 |-------| :---: | :---: | :---:|  :---: |  :---: |
@@ -32,6 +47,11 @@ Considerando os aspectos levantados, ao serem segregados, em sexo, os dados apre
 | `% Feminino` | xx | `50%` | `65%` | `49,4%` | `59,7%`|
 | Masculino | 54 | 3069 | 3993 | 3034 | 3659 |
 | `% Masculino` | xx | `50,2%` | `65,3%` | `49,6%` | `59,9%` |
+
+## Descrição dos achados
+
+
+**Tabela por Sexo**: Considerando os aspectos levantados, ao serem segregados, em sexo, os dados apresentam algumas diferenças tanto em homens como mulheres. Nesse sentido, considera-se a tabela abaixo de atributos que correspondem a atributos comportamentais, que se traduzem em hábitose cotidianos e dados de saúde e ou comorbidades presentes. A tabela ainda apresenta, a porcentagem de homens e mulheres, em relação à divisão por sexo, de cada atributo apresentado.
 
 Nota-se uma distribuição proporcional entre as porcentagens apresentadas considerando o quantitativo de homens e mulheres. Por exemplo, a diferença de idade médias entre as mulheres e homens se faz por quase um ano. Mesmo apresentando um número menor dos registros gerais, nota-se que as mulheres apresentam índices bem semelhantes, ao serem consideradas as porcentagens, em todos os atributos acima analisados. 
 
