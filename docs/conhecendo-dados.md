@@ -14,7 +14,7 @@ Inclua nesta seção, gráficos, tabelas e demais artefatos que você considere 
 O dataset _Heart Attack Risk Prediction Dataset_ (BANERJEE, 2023), apresenta em sua totalidade, **8763** registros de dados distribuídos em 26 colunas com seus respectivos atributos. Em se tratando dos registros e suas medidas centrais, a tabela abaixo explicita os valores representativos de cada atrributo numérico.
 
 | |Idade|Colesterol|Frequência Cardíaca|Hora Exercício/Semana|Nível Estresse|Horas Sedentárias/Dia|Renda| IMC |Triglicerídios|Dias Atividade Física|Horas Sono/Dia|
-|-|-----|-----------|--------------|--------------|----------------|-----------------------|----| ---| ----| ----| -----|
+|-| :---:| :---: | :---: | :---: | :---: | :---: | :---: |  :---: |  :---:|  :---: |  :---: |
 |Média| 53,7 | 259,9 |  75  | 1,18 |  5,4  |  1,16  | 158.263,18 |   | 417,7 |  3,4 | 10 |
 |Moda| 90 | 235 | 94 |     |  2 |    |  22.527,80 |    | 799 | 3 | 10 |
 |Mínimo| 18 | 120 | 40 | 1,48 | 1 |   | 20.062,00 |    | 30 | 0 | 4 |
@@ -27,7 +27,7 @@ Na análise dos dados, consta o registro de **2652** mulheres, o que corresponde
 Considerando os aspectos levantados, ao serem segregados, em sexo, os dados apresentam algumas diferenças tanto em homens como mulheres. Nesse sentido, considera-se a tabela abaixo de atributos que correspondem a atributos comportamentais, que se traduzem em hábitose cotidianos e dados de saúde e ou comorbidades presentes. A tabela ainda apresenta, a porcentagem de homens e mulheres, em relação à divisão por sexo, de cada atributo apresentado.
 
 |  Sexo | Idade Média | Qtde. Obesas(os) | Qtde. Diabéticas(os) | Qtde. Problemas Cardíacos Anteriores | Qtde. Usa Alcool |
-|-------| ------------|------------------|----------------------| -------------------------------------| ---------------- |
+|-------| :---: | :---:-| :---:|  :---: |  :---: |
 | Feminino | 53,1 | 1325 | 1723 | 1311 | 1582 |
 | `% Feminino` | xx | `50%` | `65%` | `49,4%` | `59,7%`|
 | Masculino | 54 | 3069 | 3993 | 3034 | 3659 |
