@@ -1,4 +1,4 @@
-# Conhecendo os dados
+## Conhecendo os dados
 
 Nesta seção, você deverá registrar uma detalhada análise descritiva e exploratória sobre a base de dados selecionada na Etapa 1 com o objetivo de compreender a estrutura dos dados, detectar eventuais _outliers_ e também, avaliar/detectar as relações existentes entre as variáveis analisadas. 
 
@@ -104,7 +104,7 @@ A partir da análise descrita e exploratória realizada, descreva todos os achad
 
 ## Ferramentas utilizadas
 
-Existem muitas ferramentas diferentes que podem ser utilizadas para fazer a análise dos dados. Nesta seção, descreva as ferramentas/tecnologias utilizadas e sua aplicação.
+Foi utilizado para exploração dos dados presentes do _dataset_, o Google Colab, com a linguagem _phyton_.
 
 ### Rascunho
 
