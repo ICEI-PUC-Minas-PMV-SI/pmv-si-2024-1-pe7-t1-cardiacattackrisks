@@ -6,6 +6,13 @@ Para isso, sugere-se que você utilize cálculos de medidas de tendência centra
 
 Inclua nesta seção, gráficos, tabelas e demais artefatos que você considere relevantes para entender os dados com os quais você irá trabalhar. 
 
+
+O dataset _Heart Attack Risk Prediction Dataset_ (BANERJEE, 2023), apresenta em sua totalidade, **8763** registros de dados distribuídos em 26 colunas com seus respectivos atributos. 
+
+Na análise dos dados, consta o registro de **2652** mulheres, o que corresponde a **30%** dos registros totais, ao passo que o quantitativo de homens equivale a **70%** do total de dos dados, uma vez que o sexo masculino representa **6111** registros. Estes dados estatísticos permitem dizer que existe no _dataset_ uma proporção de um registro feminino para cada dois registros masculinos.
+
+Em se tratando dos registros e suas medidas centrais, a tabela abaixo explicita os valores representativos de cada atrributo numérico.
+
 | |Idade|Colesterol|Frequência Cardíaca|Hora Exercício/Semana|Nível Estresse|Horas Sedentárias/Dia|Renda| IMC |Triglicerídios|Dias Atividade Física|Horas Sono/Dia|
 |-|-----|-----------|--------------|--------------|----------------|-----------------------|----| ---| ----| ----| -----|
 |Média| 53,7 | 259,9 |  75  | 1,18 |  5,4  |  1,16  | 158.263,18 |   | 417,7 |  3,4 | 10 |
