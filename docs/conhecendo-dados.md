@@ -8,7 +8,7 @@ Inclua nesta seção, gráficos, tabelas e demais artefatos que você considere 
 
 
 
-
+----
 
 
 O dataset _Heart Attack Risk Prediction Dataset_ (BANERJEE, 2023), apresenta em sua totalidade, **8763** registros de dados distribuídos em 26 colunas com seus respectivos atributos. Em se tratando dos registros e suas medidas centrais, a tabela abaixo explicita os valores representativos de cada atrributo numérico.
@@ -26,17 +26,17 @@ Na análise dos dados, consta o registro de **2652** mulheres, o que corresponde
 
 Considerando os aspectos levantados, ao serem segregados, em sexo, os dados apresentam algumas diferenças tanto em homens como mulheres. Nesse sentido, considera-se a tabela abaixo de atributos que correspondem a atributos comportamentais, que se traduzem em hábitose cotidianos e dados de saúde e ou comorbidades presentes. A tabela ainda apresenta, a porcentagem de homens e mulheres, em relação à divisão por sexo, de cada atributo apresentado.
 
-|  | Sexo | Idade Média | Qtde. Obesas(os) | Qtde. Diabéticas(os) | Qtde. Problemas Cardíacos Anteriores | Qtde. Usa Alcool |
-|--|------| ------------|------------------|----------------------| -------------------------------------| ---------------- |
-|Feminino| 53,1 | 1325 | 1723 | 1311 | 1582 |
-| % Feminino | xx | 50% | 65% | 49,4% | 59,7% |
-|Masculino| 54 | 3069 | 3993 | 3034 | 3659 |
-| % Masculino | xx | 50,2% | 65,3% | 49,6% | 59,9% |
+|  Sexo | Idade Média | Qtde. Obesas(os) | Qtde. Diabéticas(os) | Qtde. Problemas Cardíacos Anteriores | Qtde. Usa Alcool |
+|-------| ------------|------------------|----------------------| -------------------------------------| ---------------- |
+| Feminino | 53,1 | 1325 | 1723 | 1311 | 1582 |
+| `% Feminino` | xx | `50%` | `65%` | `49,4%` | `59,7%`|
+| Masculino | 54 | 3069 | 3993 | 3034 | 3659 |
+| `% Masculino` | xx | `50,2%` | `65,3%` | `49,6%` | `59,9%` |
 
 Nota-se uma distribuição proporcional entre as porcentagens apresentadas considerando o quantitativo de homens e mulheres. Por exemplo, a diferença de idade médias entre as mulheres e homens se faz por quase um ano. Mesmo apresentando um número menor dos registros gerais, nota-se que as mulheres apresentam índices bem semelhantes, ao serem consideradas as porcentagens, em todos os atributos acima analisados. 
 
 
-
+----
 
 A partir da análise descrita e exploratória realizada, descreva todos os achados considerados relevantes para o contexto em que o trabalho se insere. Por exemplo: com relação à centralidade dos dados algo chamou a sua atenção? foi possível identificar correlação entre os atributos?
 
