@@ -27,7 +27,7 @@ Na análise dos dados, consta o registro de **2652** mulheres, o que corresponde
 Considerando os aspectos levantados, ao serem segregados, em sexo, os dados apresentam algumas diferenças tanto em homens como mulheres. Nesse sentido, considera-se a tabela abaixo de atributos que correspondem a atributos comportamentais, que se traduzem em hábitose cotidianos e dados de saúde e ou comorbidades presentes. A tabela ainda apresenta, a porcentagem de homens e mulheres, em relação à divisão por sexo, de cada atributo apresentado.
 
 |  Sexo | Idade Média | Qtde. Obesas(os) | Qtde. Diabéticas(os) | Qtde. Problemas Cardíacos Anteriores | Qtde. Usa Alcool |
-|-------| :---: | :---:-| :---:|  :---: |  :---: |
+|-------| :---: | :---: | :---:|  :---: |  :---: |
 | Feminino | 53,1 | 1325 | 1723 | 1311 | 1582 |
 | `% Feminino` | xx | `50%` | `65%` | `49,4%` | `59,7%`|
 | Masculino | 54 | 3069 | 3993 | 3034 | 3659 |
