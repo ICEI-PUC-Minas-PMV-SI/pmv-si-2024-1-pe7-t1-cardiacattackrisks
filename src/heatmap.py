@@ -7,7 +7,13 @@ labels = ['Age','Sex','Cholesterol','Blood Pressure','Heart Rate','Diabetes','Fa
 
 heart_attack_dataset = pd.read_csv('heart_attack_prediction_dataset.csv')
 # https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.corr.html
-heart_attack_matrix = heart_attack_dataset[labels].corr(numeric_only=True)
+heart_attack_dataset['Sex'] = heart_attack_dataset['Sex'].apply(pd.to_numeric, errors='coerce')
+heart_attack_dataset['Blood Pressure'] = heart_attack_dataset['Blood Pressure'].apply(pd.to_numeric, errors='coerce')
+heart_attack_dataset['Diet'] = heart_attack_dataset['Diet'].apply(pd.to_numeric, errors='coerce')
+heart_attack_dataset['Country'] = heart_attack_dataset['Country'].apply(pd.to_numeric, errors='coerce')
+heart_attack_dataset['Continent'] = heart_attack_dataset['Continent'].apply(pd.to_numeric, errors='coerce')
+heart_attack_dataset['Hemisphere'] = heart_attack_dataset['Hemisphere'].apply(pd.to_numeric, errors='coerce')
+heart_attack_matrix = heart_attack_dataset[labels].corr(numeric_only=False)
 # heart_attack_matrix = heart_attack_dataset[labels].corr(method='spearman',numeric_only=True)
 # heart_attack_matrix = heart_attack_dataset.corr()
 
