@@ -81,6 +81,38 @@ No que tange às correçlações existentes entre as variávies, apresenta-se a 
 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe7-t1-cardiacattackrisks/assets/81273377/b647a089-7006-4184-9bd8-6b40c129239a)
 
+# Gráficos de Porcentagens - Comorbidades e Hábitos
+
+Nota-se que a quantidade de pessoas com Diabetes no dataset é 65,2%. 
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe7-t1-cardiacattackrisks/assets/81273377/f875c55b-b15e-4a81-893a-de9793c87a61)
+
+Com relação ao número de pessoas obesas, o valor corresponde a metade dos registros do dataset.
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe7-t1-cardiacattackrisks/assets/81273377/097cc5d2-2bc0-4836-94b7-425c8d901371)
+
+O número de fumantes chega próximo a 90% das pessoas registradas no dataset.
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe7-t1-cardiacattackrisks/assets/81273377/295d2aa4-a219-4bfe-b7aa-5b390e0833ba)
+
+O quantitativo de pessoas que consomem ácool corresponde a quase 60% dos registros.
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe7-t1-cardiacattackrisks/assets/81273377/530082da-0101-4d3a-95d8-739a39f874b2)
+
+Fica evidente que metade das pessoas registradas no dataset fazem uso de algum medicamento.
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe7-t1-cardiacattackrisks/assets/81273377/c3505999-0c4d-4edf-9061-7cd2a4ae177b)
+
+As pessoas com histórico de problemas cardícacos corresponde a próximo da metade dos registros.
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe7-t1-cardiacattackrisks/assets/81273377/9b35b6e8-1bf6-4a98-9658-ae00089085fb)
+
+Por fim, o quantitativo de pessoas com histórico familiar relacionado a ataques cardíacos é de 49,3%.
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe7-t1-cardiacattackrisks/assets/81273377/fbe1b844-8dc8-463d-bc9c-f0512cf686b7)
+
+
+
 ## Descrição dos achados
 
 
