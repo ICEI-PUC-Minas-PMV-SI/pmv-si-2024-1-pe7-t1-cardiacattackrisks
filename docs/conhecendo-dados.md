@@ -111,6 +111,27 @@ Por fim, o quantitativo de pessoas com histórico familiar relacionado a ataques
 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe7-t1-cardiacattackrisks/assets/81273377/fbe1b844-8dc8-463d-bc9c-f0512cf686b7)
 
+# Correlação de Atributos
+
+Colesterol e Horas Sedentárias por Dia
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe7-t1-cardiacattackrisks/assets/81273377/02788509-f308-4681-8c8b-a71f372ceef7)
+
+Idade e Colesterol
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe7-t1-cardiacattackrisks/assets/81273377/adf01297-e323-4b3e-bd4e-b8ef0e2229bc)
+
+IMC e Triglicerídios
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe7-t1-cardiacattackrisks/assets/81273377/067484ff-3d2f-40c5-a9f0-f9544e66693f)
+
+Estresse x Frequência Cardíaca
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe7-t1-cardiacattackrisks/assets/81273377/62697ebb-796f-4de8-81a5-d1dc953b20ca)
+
+Sexo x Risco Cardíaco
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe7-t1-cardiacattackrisks/assets/81273377/7c5eb97f-3bb0-4bca-a8ba-454dd38ed0ae)
 
 
 ## Descrição dos achados
@@ -129,10 +150,17 @@ Por fim, o quantitativo de pessoas com histórico familiar relacionado a ataques
 
 Nota-se uma distribuição proporcional entre as porcentagens apresentadas considerando o quantitativo de homens e mulheres. Por exemplo, a diferença de idade médias entre as mulheres e homens se faz por quase um ano. Mesmo apresentando um número menor dos registros gerais, nota-se que as mulheres apresentam índices bem semelhantes, ao serem consideradas as porcentagens, em todos os atributos acima analisados. 
 
+**Colesterol x Horas Sedentárias por Dia**: há uma correlação de que, quanto mais horas sedentárias ao dia, maior é o colesterol pela falta de atividade física que axulia na queima calórica dos estoques de gordura no corpo, dado que, o colesterol influencia no aumento de taxas de gordura armazenadas. 
 
-----
+**Idade x Colesterol**: o gráfico apresenta uma correlação de que quanto mais idade, possivelmente, maior o valor do colesterol das pessoas consideradas mais velhas, o que consequentemente, pode contribuir para o acúmulo de gordura no corpo e consequente risco de um ataque cardíaco. Esse fato pode ser considerado quando pessoas mais velhas se tornam menos ativas. 
 
-A partir da análise descrita e exploratória realizada, descreva todos os achados considerados relevantes para o contexto em que o trabalho se insere. Por exemplo: com relação à centralidade dos dados algo chamou a sua atenção? foi possível identificar correlação entre os atributos?
+**IMC e Triglicerídios**: quanto maior o índice de massa corporal, maior é o valor dos triglicerídios, que por sua vez, indicam a taxa de presença de gordura na corrente sanguínea. O fato de haver gordura no corpo já configura em predispposição a doenças cardíacas, portanto, a correlação se faz proporcionalmente.
+
+**Estresse e Frequência Cardíaca**: os dados mostram que quanto maior o nível de estresse, maior a frequência cardíaca. Este dado é importante para se considerar situações em que o corpo e o sistema circulatório suportam e como reagem a fatores estressores. É possível perceber que o estresse influencia aumenta a frequência cardíaca e consequentemente, pode colaborar para o risco do ataque cardíaco.
+
+**Sexo e Risco Cardíaco**: proporcionalmente, nota-se que a quantidade de homens e mulheres com risco cardíaco é próxima.
+
+
 
 ## Ferramentas utilizadas
 
