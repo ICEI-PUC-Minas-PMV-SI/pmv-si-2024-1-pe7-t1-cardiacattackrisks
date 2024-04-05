@@ -113,13 +113,17 @@ Por fim, o quantitativo de pessoas com histórico familiar relacionado a ataques
 
 # Correlação de Atributos
 
-Colesterol e Horas Sedentárias por Dia
+Para analisar os dados, primeiro é valido separar e entender o sexo com relação ao risco cardíaco.
 
-![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe7-t1-cardiacattackrisks/assets/81273377/02788509-f308-4681-8c8b-a71f372ceef7)
+![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe7-t1-cardiacattackrisks/assets/81273377/7c5eb97f-3bb0-4bca-a8ba-454dd38ed0ae)
 
 Idade e Colesterol
 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe7-t1-cardiacattackrisks/assets/81273377/adf01297-e323-4b3e-bd4e-b8ef0e2229bc)
+
+Colesterol e Horas Sedentárias por Dia
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe7-t1-cardiacattackrisks/assets/81273377/02788509-f308-4681-8c8b-a71f372ceef7)
 
 IMC e Triglicerídios
 
@@ -129,15 +133,11 @@ Estresse x Frequência Cardíaca
 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe7-t1-cardiacattackrisks/assets/81273377/62697ebb-796f-4de8-81a5-d1dc953b20ca)
 
-Sexo x Risco Cardíaco
-
-![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe7-t1-cardiacattackrisks/assets/81273377/7c5eb97f-3bb0-4bca-a8ba-454dd38ed0ae)
-
 
 ## Descrição dos achados
 
 
- Na análise dos dados, consta o registro de **2652** mulheres, o que corresponde a **30%** dos registros totais, ao passo que o quantitativo de homens equivale a **70%** do total de dos dados, uma vez que o sexo masculino representa **6111** registros. Estes dados estatísticos permitem dizer que existe no _dataset_ uma proporção de um registro feminino para cada dois registros masculinos. Quando separados por sexos, as comorbidades e hábitos se configuram da seguinte forma:
+Na análise dos dados, consta o registro de **2652** mulheres, o que corresponde a **30%** dos registros totais, ao passo que o quantitativo de homens equivale a **70%** do total de dos dados, uma vez que o sexo masculino representa **6111** registros. Estes dados estatísticos permitem dizer que existe no _dataset_ uma proporção de um registro feminino para cada dois registros masculinos. Quando separados por sexos, as comorbidades e hábitos se configuram da seguinte forma:
 
 |  Sexo | Idade Média | Qtde. Obesas(os) | Qtde. Diabéticas(os) | Qtde. Problemas Cardíacos Anteriores | Qtde. Usa Alcool |
 |-------| :---: | :---: | :---:|  :---: |  :---: |
@@ -148,17 +148,17 @@ Sexo x Risco Cardíaco
 
 **Tabela por Sexo**: Considerando os aspectos levantados, ao serem segregados, em sexo, os dados apresentam algumas diferenças tanto em homens como mulheres. Nesse sentido, considera-se a tabela abaixo de atributos que correspondem a atributos comportamentais, que se traduzem em hábitose cotidianos e dados de saúde e ou comorbidades presentes. A tabela ainda apresenta, a porcentagem de homens e mulheres, em relação à divisão por sexo, de cada atributo apresentado.
 
-Nota-se uma distribuição proporcional entre as porcentagens apresentadas considerando o quantitativo de homens e mulheres. Por exemplo, a diferença de idade médias entre as mulheres e homens se faz por quase um ano. Mesmo apresentando um número menor dos registros gerais, nota-se que as mulheres apresentam índices bem semelhantes, ao serem consideradas as porcentagens, em todos os atributos acima analisados. 
+Nota-se uma distribuição proporcional entre as porcentagens apresentadas considerando o quantitativo de homens e mulheres. Por exemplo, a diferença de idade médias entre as mulheres e homens se faz por quase um ano. Mesmo apresentando um número menor dos registros gerais, nota-se que as mulheres apresentam índices bem semelhantes, ao serem consideradas as porcentagens, em todos os atributos acima analisados.
 
-**Colesterol x Horas Sedentárias por Dia**: há uma correlação de que, quanto mais horas sedentárias ao dia, maior é o colesterol pela falta de atividade física que axulia na queima calórica dos estoques de gordura no corpo, dado que, o colesterol influencia no aumento de taxas de gordura armazenadas. 
+**Sexo e Risco Cardíaco**: proporcionalmente, nota-se que a quantidade de homens e mulheres com risco cardíaco é próxima.
 
 **Idade x Colesterol**: o gráfico apresenta uma correlação de que quanto mais idade, possivelmente, maior o valor do colesterol das pessoas consideradas mais velhas, o que consequentemente, pode contribuir para o acúmulo de gordura no corpo e consequente risco de um ataque cardíaco. Esse fato pode ser considerado quando pessoas mais velhas se tornam menos ativas. 
 
-**IMC e Triglicerídios**: quanto maior o índice de massa corporal, maior é o valor dos triglicerídios, que por sua vez, indicam a taxa de presença de gordura na corrente sanguínea. O fato de haver gordura no corpo já configura em predispposição a doenças cardíacas, portanto, a correlação se faz proporcionalmente.
+**Colesterol x Horas Sedentárias por Dia**: há uma correlação de que, quanto mais horas sedentárias ao dia, maior é o colesterol pela falta de atividade física que axulia na queima calórica dos estoques de gordura no corpo, dado que, o colesterol influencia no aumento de taxas de gordura armazenadas. 
 
-**Estresse e Frequência Cardíaca**: os dados mostram que quanto maior o nível de estresse, maior a frequência cardíaca. Este dado é importante para se considerar situações em que o corpo e o sistema circulatório suportam e como reagem a fatores estressores. É possível perceber que o estresse influencia aumenta a frequência cardíaca e consequentemente, pode colaborar para o risco do ataque cardíaco.
+**IMC x Triglicerídios**: quanto maior o índice de massa corporal, maior é o valor dos triglicerídios, que por sua vez, indicam a taxa de presença de gordura na corrente sanguínea. O fato de haver gordura no corpo já configura em predispposição a doenças cardíacas, portanto, a correlação se faz proporcionalmente.
 
-**Sexo e Risco Cardíaco**: proporcionalmente, nota-se que a quantidade de homens e mulheres com risco cardíaco é próxima.
+**Estresse x Frequência Cardíaca**: os dados mostram que quanto maior o nível de estresse, maior a frequência cardíaca. Este dado é importante para se considerar situações em que o corpo e o sistema circulatório suportam e como reagem a fatores estressores. É possível perceber que o estresse influencia aumenta a frequência cardíaca e consequentemente, pode colaborar para o risco do ataque cardíaco.
 
 
 
