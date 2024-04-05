@@ -6,7 +6,6 @@ Para isso, sugere-se que você utilize cálculos de medidas de tendência centra
 
 Inclua nesta seção, gráficos, tabelas e demais artefatos que você considere relevantes para entender os dados com os quais você irá trabalhar. 
 
-
 # Tabelas de Dados
 
 O dataset _Heart Attack Risk Prediction Dataset_ (BANERJEE, 2023), apresenta em sua totalidade, **8763** registros de dados distribuídos em 26 colunas com seus respectivos atributos.
@@ -111,6 +110,25 @@ Por fim, o quantitativo de pessoas com histórico familiar relacionado a ataques
 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe7-t1-cardiacattackrisks/assets/81273377/fbe1b844-8dc8-463d-bc9c-f0512cf686b7)
 
+# Dados Demográficos
+
+Idade
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe7-t1-cardiacattackrisks/assets/81273377/25445318-76c2-4d54-a131-ac464abb5156)
+
+Sexo
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe7-t1-cardiacattackrisks/assets/81273377/c605cabf-8a9f-4dba-9226-b79b633246d1)
+
+Pessoas por Países
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe7-t1-cardiacattackrisks/assets/81273377/2f1683a7-cb21-4059-beda-9ac7ed0af227)
+
+Pessoas por Continente 
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe7-t1-cardiacattackrisks/assets/81273377/cfc9b19f-171b-423b-ac34-82667f41af4b)
+
+
 # Correlação de Atributos
 
 Para analisar os dados, primeiro é valido separar e entender o sexo com relação ao risco cardíaco.
@@ -136,19 +154,11 @@ Estresse x Frequência Cardíaca
 
 ## Descrição dos achados
 
+**Mapa de Calor**: o risco de atque cardíaco tem maior correlação com diabetes, colesterol e horas de exercício por semana. Pode-se notar uma correlação do risco do ataque cardíaco também com o fumar, que tem a maior correlação, mas também com o consumo de álcool, o que nos revela causas comportamentais e menos genéticas à predispopsição de problemas cardíacos. 
 
-Na análise dos dados, consta o registro de **2652** mulheres, o que corresponde a **30%** dos registros totais, ao passo que o quantitativo de homens equivale a **70%** do total de dos dados, uma vez que o sexo masculino representa **6111** registros. Estes dados estatísticos permitem dizer que existe no _dataset_ uma proporção de um registro feminino para cada dois registros masculinos. Quando separados por sexos, as comorbidades e hábitos se configuram da seguinte forma:
+**Comorbidades e Hábitos**: as porcentagens dizem de hábitos que estariam ligados ao que foi investigado no mapa de calor, nota-se portanto, que é praticamente a metade da população dos dados que possuem hábitos que podem levar ao risco de ataque cardíaco em alguma medida.
 
-|  Sexo | Idade Média | Qtde. Obesas(os) | Qtde. Diabéticas(os) | Qtde. Problemas Cardíacos Anteriores | Qtde. Usa Alcool |
-|-------| :---: | :---: | :---:|  :---: |  :---: |
-| Feminino | 53,1 | 1325 | 1723 | 1311 | 1582 |
-| `% Feminino` | xx | `50%` | `65%` | `49,4%` | `59,7%`|
-| Masculino | 54 | 3069 | 3993 | 3034 | 3659 |
-| `% Masculino` | xx | `50,2%` | `65,3%` | `49,6%` | `59,9%` |
-
-**Tabela por Sexo**: Considerando os aspectos levantados, ao serem segregados, em sexo, os dados apresentam algumas diferenças tanto em homens como mulheres. Nesse sentido, considera-se a tabela abaixo de atributos que correspondem a atributos comportamentais, que se traduzem em hábitose cotidianos e dados de saúde e ou comorbidades presentes. A tabela ainda apresenta, a porcentagem de homens e mulheres, em relação à divisão por sexo, de cada atributo apresentado.
-
-Nota-se uma distribuição proporcional entre as porcentagens apresentadas considerando o quantitativo de homens e mulheres. Por exemplo, a diferença de idade médias entre as mulheres e homens se faz por quase um ano. Mesmo apresentando um número menor dos registros gerais, nota-se que as mulheres apresentam índices bem semelhantes, ao serem consideradas as porcentagens, em todos os atributos acima analisados.
+**Dados Demográficos**: Na análise dos dados, consta o registro de **2652** mulheres, o que corresponde a **30%** dos registros totais, ao passo que o quantitativo de homens equivale a **70%** do total de dos dados, uma vez que o sexo masculino representa **6111** registros. Estes dados estatísticos permitem dizer que existe no _dataset_ uma proporção de um registro feminino para cada dois registros masculinos. 
 
 **Sexo e Risco Cardíaco**: proporcionalmente, nota-se que a quantidade de homens e mulheres com risco cardíaco é próxima.
 
@@ -161,12 +171,9 @@ Nota-se uma distribuição proporcional entre as porcentagens apresentadas consi
 **Estresse x Frequência Cardíaca**: os dados mostram que quanto maior o nível de estresse, maior a frequência cardíaca. Este dado é importante para se considerar situações em que o corpo e o sistema circulatório suportam e como reagem a fatores estressores. É possível perceber que o estresse influencia aumenta a frequência cardíaca e consequentemente, pode colaborar para o risco do ataque cardíaco.
 
 
-
 ## Ferramentas utilizadas
 
 Foi utilizado para exploração dos dados presentes do _dataset_, o Google Colab, com a linguagem _phyton_.
-
-### Rascunho
 
 #### Qual a relação com idade?
 - Idade e Risco de ataque cardíaco
