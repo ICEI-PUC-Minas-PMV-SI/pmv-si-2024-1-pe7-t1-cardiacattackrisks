@@ -40,14 +40,12 @@ Toda a população, independente do conhecimento em tecnologia, irá se benefici
 ### 1. Identification of Cardiovascular Diseases Using Machine Learning 
 
 #### Contexto 
+Este estudo aborda a previsão de ataques cardíacos usando redes neurais artificiais. O contexto é a crescente incidência de doenças cardíacas e a necessidade de métodos eficazes de previsão para intervenções precoces.
 
-A doença cardiovascular, ou doença cardíaca, é uma das principais causas de morte em todo o mundo, com um aumento contínuo previsto nas próximas décadas.  Diversos fatores de risco estão associados ao desenvolvimento de doenças cardíacas, incluindo mudanças no estilo de vida, tabagismo, dieta, atividade física, obesidade e condições bioquímicas como pressão arterial e níveis de glicose. 
-
-Para lidar com o desafio do diagnóstico preciso e eficiente das doenças cardíacas, várias abordagens de análise de dados e algoritmos de aprendizado de máquina têm sido explorados. Um estudo recente de Louridi, Amar e Ouahidi (2019) apresentou uma investigação importante nesse campo. Os autores propuseram um modelo de identificação de doenças cardiovasculares utilizando técnicas de aprendizado de máquina. 
 
 #### Dataset Utilizado 
 
-No estudo de Louridi et al. (2019), foi utilizado um conjunto de dados específico para identificação de doenças cardiovasculares. Este dataset consistiu em 303 instâncias e 13 atributos relevantes para fatores de risco cardíaco. Os dados foram obtidos a partir do repositório de aprendizado de máquina da UCI, contribuído por Robert Detrano, M.D, Ph.D. 
+No estudo de Louridi et al. (2019), foi utilizado um conjunto de dados específico para identificação de doenças cardiovasculares. Este dataset consistiu em 303 instâncias e 13 atributos para a previsão de ataques cardíacos, incluindo idade, sexo, colesterol, pressão sanguínea, frequência cardíaca, histórico familiar e hábitos como fumar e beber. Os dados foram obtidos a partir do repositório de aprendizado de máquina da UCI, contribuído por Robert Detrano, M.D, Ph.D. 
 
 #### Abordagens/Algoritmos Utilizados 
 
@@ -68,6 +66,10 @@ As métricas de avaliação utilizadas pelos pesquisadores incluíram especifici
 Os resultados experimentais do estudo de Louridi et al. (2019) indicaram que o algoritmo SVM com kernel linear obteve a melhor precisão, atingindo um valor de 86,8% na identificação de doenças cardiovasculares. 
 
 Esta pesquisa evidencia a importância do uso de técnicas de aprendizado de máquina na identificação e previsão de doenças cardíacas, fornecendo insights valiosos para a melhoria contínua da detecção precoce e tratamento dessas condições. 
+
+#### Comparação com o Dataset do grupo:
+O estudo utiliza atributos semelhantes aos do conjunto de dados, como idade, sexo, colesterol, pressão sanguínea e histórico familiar.
+As descobertas podem ser comparadas diretamente com o conjunto de dados, ajudando a validar a eficácia do modelo proposto.
 
 ### 2. Cardiovascular Disease Risk Assessment using Machine Learning 
 
@@ -167,7 +169,12 @@ A precisão do modelo foi calculada com base na matriz de confusão, representan
 Os resultados obtidos por Bharathi et al. (2023) demonstraram a eficácia das abordagens utilizadas na previsão de ataques cardíacos. As Redes Neurais Artificiais apresentaram uma precisão média de 84% a 88%, enquanto o SVM alcançou uma precisão de 87,5% em um estudo específico. Além disso, métodos de mineração de dados como Naïve Bayes e kmeans obtiveram uma precisão em torno de 93% na previsão de ataques cardíacos. 
 
 Em resumo, o estudo evidencia que a combinação de Redes Neurais Artificiais, SVM e métodos de mineração de dados é promissora na previsão de ataques cardíacos. A escolha adequada de algoritmos e ajuste de parâmetros influenciam diretamente na precisão dos modelos, fornecendo insights valiosos para a identificação precoce de riscos cardiovasculares e intervenções preventivas eficazes. 
- 
+
+#### Relacionamento com o estado atual:
+
+O conjunto de dados que será utilizado neste estudo compartilha muitas semelhanças com os fatores considerados nos trabalhos revisados.
+Nosso estudo visa complementar o conhecimento existente, explorando ainda mais a relação entre esses fatores e a probabilidade de ocorrência de um ataque cardíaco.
+Além disso, buscamos identificar novos padrões e tendências que podem não ter sido abordados nos estudos anteriores.
 
 
 # Descrição do _dataset_ selecionado
