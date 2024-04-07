@@ -76,9 +76,84 @@ No que tange às correçlações existentes entre as variávies, apresenta-se a 
 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe7-t1-cardiacattackrisks/assets/81273377/b647a089-7006-4184-9bd8-6b40c129239a)
 
+# Possíveis Correlações 
+
+Ao obter as Correlações, infere-se algumas possibilidades de análise entre as variáveis, como exemplo:
+
+_Qual a relação com idade?_
+- Idade e Risco de ataque cardíaco
+
+_Possiveis correlacoes com idade_
+- Idade e Colesterol
+- Idade e Pressão Arterial
+- Idade e IMC
+- Idade e Triglicerídeos
+- Idade e Horas de exercício por semana
+- Idade e Horas sedentárias por dia
+- Idade e Renda
+- Idade e Nível de Estresse
+- Idade e Horas de sono por dia
+
+_Qual a relação com atividade fisica?_
+- Horas de exercício por semana e Risco de ataque cardíaco
+- Horas sedentárias por dia e Risco de ataque cardíaco
+
+_Possiveis correlacoes com atividade fisica_
+- Horas de exercício por semana e Horas sedentárias por dia
+- Horas de exercício por semana e Renda
+- Horas de exercício por semana e Nível de Estresse
+- Horas de exercício por semana e Horas de sono por dia
+- Horas sedentárias por dia e Renda
+- Horas sedentárias por dia e Nível de Estresse
+- Horas sedentárias por dia e Horas de sono por dia
+- Nível de Estresse e Horas de sono por dia
+
+_Renda influencia?_
+- Renda e Risco de ataque cardíaco
+
+_Possiveis correlacoes com atividade fisica_
+- Renda e Nível de Estresse
+- Renda e Horas de sono por dia
+
+_Fatores de saude influencia?_
+- Colesterol e Risco de ataque cardíaco
+- Pressao Arterial e Risco de ataque cardíaco
+- IMC e Risco de ataque cardíaco
+- Triglicerideos e Risco de ataque cardíaco
+
+_Possiveis correlacoes com saude_
+- Colesterol e Pressão Arterial
+- Colesterol e IMC
+- Colesterol e Triglicerídeos
+- Colesterol e Horas de exercício por semana
+- Colesterol e Horas sedentárias por dia
+- Colesterol e Renda
+- Colesterol e Nível de Estresse
+- Colesterol e Horas de sono por dia
+- Pressão Arterial e IMC
+- Pressão Arterial e Triglicerídeos
+- Pressão Arterial e Horas de exercício por semana
+- Pressão Arterial e Horas sedentárias por dia
+- Pressão Arterial e Renda
+- Pressão Arterial e Nível de Estresse
+- Pressão Arterial e Horas de sono por dia
+- IMC e Triglicerídeos
+- IMC e Horas de exercício por semana
+- IMC e Horas sedentárias por dia
+- IMC e Renda
+- IMC e Nível de Estresse
+- IMC e Horas de sono por dia
+- Triglicerídeos e Horas de exercício por semana
+- Triglicerídeos e Horas sedentárias por dia
+- Triglicerídeos e Renda
+- Triglicerídeos e Nível de Estresse
+- Triglicerídeos e Horas de sono por dia
+
 # Gráficos de Porcentagens - Comorbidades e Hábitos
 
-Nota-se que a quantidade de pessoas com Diabetes no dataset é 65,2%. 
+Diante de questões que avaliam variáveis, torna-se necessário avaliar elementos como comorbidades e hábitos relacionados ao risco de ataque cardíaco.
+
+O primeiro gráfico trata das pessoas com diabetes. Nota-se que a quantidade de pessoas com Diabetes no dataset é 65,2%. 
 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe7-t1-cardiacattackrisks/assets/81273377/f875c55b-b15e-4a81-893a-de9793c87a61)
 
@@ -171,72 +246,4 @@ Estresse x Frequência Cardíaca
 
 Foi utilizado para exploração dos dados presentes do _dataset_, o Google Colab, com a linguagem _phyton_.
 
-#### Qual a relação com idade?
-- Idade e Risco de ataque cardíaco
-
-##### Possiveis correlacoes com idade
-- Idade e Colesterol
-- Idade e Pressão Arterial
-- Idade e IMC
-- Idade e Triglicerídeos
-- Idade e Horas de exercício por semana
-- Idade e Horas sedentárias por dia
-- Idade e Renda
-- Idade e Nível de Estresse
-- Idade e Horas de sono por dia
-
-#### Qual a relação com atividade fisica?
-- Horas de exercício por semana e Risco de ataque cardíaco
-- Horas sedentárias por dia e Risco de ataque cardíaco
-
-##### Possiveis correlacoes com atividade fisica
-- Horas de exercício por semana e Horas sedentárias por dia
-- Horas de exercício por semana e Renda
-- Horas de exercício por semana e Nível de Estresse
-- Horas de exercício por semana e Horas de sono por dia
-- Horas sedentárias por dia e Renda
-- Horas sedentárias por dia e Nível de Estresse
-- Horas sedentárias por dia e Horas de sono por dia
-- Nível de Estresse e Horas de sono por dia
-
-#### Renda influencia?
-- Renda e Risco de ataque cardíaco
-
-##### Possiveis correlacoes com atividade fisica
-- Renda e Nível de Estresse
-- Renda e Horas de sono por dia
-
-#### Fatores de saude influencia?
-- Colesterol e Risco de ataque cardíaco
-- Pressao Arterial e Risco de ataque cardíaco
-- IMC e Risco de ataque cardíaco
-- Triglicerideos e Risco de ataque cardíaco
-
-##### Possiveis correlacoes com saude
-- Colesterol e Pressão Arterial
-- Colesterol e IMC
-- Colesterol e Triglicerídeos
-- Colesterol e Horas de exercício por semana
-- Colesterol e Horas sedentárias por dia
-- Colesterol e Renda
-- Colesterol e Nível de Estresse
-- Colesterol e Horas de sono por dia
-- Pressão Arterial e IMC
-- Pressão Arterial e Triglicerídeos
-- Pressão Arterial e Horas de exercício por semana
-- Pressão Arterial e Horas sedentárias por dia
-- Pressão Arterial e Renda
-- Pressão Arterial e Nível de Estresse
-- Pressão Arterial e Horas de sono por dia
-- IMC e Triglicerídeos
-- IMC e Horas de exercício por semana
-- IMC e Horas sedentárias por dia
-- IMC e Renda
-- IMC e Nível de Estresse
-- IMC e Horas de sono por dia
-- Triglicerídeos e Horas de exercício por semana
-- Triglicerídeos e Horas sedentárias por dia
-- Triglicerídeos e Renda
-- Triglicerídeos e Nível de Estresse
-- Triglicerídeos e Horas de sono por dia
 
