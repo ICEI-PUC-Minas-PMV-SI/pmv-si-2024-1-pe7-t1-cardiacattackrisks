@@ -214,20 +214,17 @@ Este conjunto de dados possui 8.763 registros de pacientes em todo o mundo. Os a
 
 # Referências
 
-AGÊNCIA BRASIL. Casos de infarto aumentam 25% no Brasil, em 6 anos. Portal R7 [online], publicado em 03 ago. 2023. Disponível em: <https://noticias.r7.com/saude/casos-de-infarto-aumentam-25-no-brasil-em-6-anos-03082023> Acesso em 27 fev. 2024. 
+1 AGÊNCIA BRASIL. Casos de infarto aumentam 25% no Brasil, em 6 anos. Portal R7 [online], publicado em 03 ago. 2023. Disponível em: <https://noticias.r7.com/saude/casos-de-infarto-aumentam-25-no-brasil-em-6-anos-03082023> Acesso em 27 fev. 2024. 
 
-BANERJEE, Sourav. Heart Attack Risk Prediction Dataset: Unlocking Predictive Insights with Multifaceted Synthetic Heart Attack Dataset. Kaggle [online], publicado em nov. 2023. Disponível em: <https://www.kaggle.com/datasets/iamsouravbanerjee/heart-attack-prediction-dataset>. Acesso em 29 fev. 2024.
+2 BANERJEE, Sourav. Heart Attack Risk Prediction Dataset: Unlocking Predictive Insights with Multifaceted Synthetic Heart Attack Dataset. Kaggle [online], publicado em nov. 2023. Disponível em: <https://www.kaggle.com/datasets/iamsouravbanerjee/heart-attack-prediction-dataset>. Acesso em 29 fev. 2024.
 
-ESTADO DE MINAS. Aumentam casos de infarto em todo o mundo; alerta OMS. Estado de Minas [online], publicado em 25 jul. 2023. Disponível em: <https://www.em.com.br/app/noticia/saude-e-bem-viver/2023/07/25/interna_bem_viver,1524784/aumentam-casos-de-infarto-em-todo-o-mundo-alerta-oms.shtml> Acesso em 27 fev. 2024. 
+3 ESTADO DE MINAS. Aumentam casos de infarto em todo o mundo; alerta OMS. Estado de Minas [online], publicado em 25 jul. 2023. Disponível em: <https://www.em.com.br/app/noticia/saude-e-bem-viver/2023/07/25/interna_bem_viver,1524784/aumentam-casos-de-infarto-em-todo-o-mundo-alerta-oms.shtml> Acesso em 27 fev. 2024. 
 
+4 LOURIDI, N.; AMAR, M.; OUAHIDI, B. E. Identification of Cardiovascular Diseases Using Machine Learning. In: 2019 7th Mediterranean Congress of Telecommunications (CMT), Fez, Morocco, 2019. p. 1-6. DOI: 10.1109/CMT.2019.8931411.
 
-N. Louridi, M. Amar and B. E. Ouahidi, "Identification of Cardiovascular Diseases Using Machine Learning," 2019 7th Mediterranean Congress of Telecommunications (CMT), Fez, Morocco, 2019, pp. 1-6, doi: 10.1109/CMT.2019.8931411. keywords: {Heart;Diseases;Support vector machines;Machine learning algorithms;Machine learning;Classification algorithms;Blood pressure;Heart disease;Support vector machine (SVM);Naïve Bayes (NB);K-nearest neighbors (KNN);Normalization},  Acesso em 04 mar. 2024.
+5 PRAKASH, N.; MAHESH, M.; GOUTHAMAN, P. Cardiovascular Disease Risk Assessment using Machine Learning. In: 2023 International Conference on Inventive Computation Technologies (ICICT), Lalitpur, Nepal, 2023. p. 249-256. DOI: 10.1109/ICICT57646.2023.10133957.
 
-N. Prakash, M. Mahesh and P. Gouthaman, "Cardiovascular Disease Risk Assessment using Machine Learning," 2023 International Conference on Inventive Computation Technologies (ICICT), Lalitpur, Nepal, 2023, pp. 249-256, doi: 10.1109/ICICT57646.2023.10133957. keywords: {Training;Machine learning algorithms;Medical services;Machine learning;Prediction algorithms;Risk management;Cardiovascular diseases;Cardiovascular Disease;Logistic Regression;Machine Learning;Risk Assessment}, Acesso em 05 mar. 2024.
-
-N. N. Bharathi, M. F. Shaik, T. Poojita, T. Sravanthi, M. Rafi and I. R. Raja, "Heart Attack Prediction Using Artificial Neural Networks," 2023 9th International Conference on Advanced Computing and Communication Systems (ICACCS), Coimbatore, India, 2023, pp. 304-308, doi: 10.1109/ICACCS57279.2023.10112664. keywords: {Heart;Decision support systems;Sociology;Decision making;Artificial neural networks;Cardiac arrest;Organizations;ANN;Heart attack prediction;Jupiter Lab}, Acesso em 05 mar. 2024.
-
-
+6 BHARATHI, N. N. et al. Heart Attack Prediction Using Artificial Neural Networks. In: 2023 9th International Conference on Advanced Computing and Communication Systems (ICACCS), Coimbatore, India, 2023. p. 304-308. DOI: 10.1109/ICACCS57279.2023.10112664.
 
 
 
