@@ -14,9 +14,7 @@ Em um cenário do qual observa-se um aumento de casos de infarto no mundo (ESTAD
 
 ## Questão de pesquisa
 
-Com base na consideração de que, doenças cardíacas possam estar relacionadas ao contexto, hábitos e comportamentos das pessoas, questiona-se: _quais são os fatores de maior risco e que configuram em predisposição para ocorrência de ataques cardíacos nas pessoas?_
-
-A questão de pesquisa é a base de todo o trabalho que será desenvolvido. É ela que motiva a realização da pesquisa e deverá ser adequada ao problema identificado. Ao término de sua pesquisa/experimentação, o objetivo é que seja encontrada a resposta da questão de pesquisa previamente definida.
+Considerando os atributos relacionados à saúde, estilo de vida e histórico médico dos pacientes presentes no dataset, quais são os principais fatores de risco que configuram a predisposição para a ocorrência de ataques cardíacos?
 
 ## Objetivos preliminares
 
