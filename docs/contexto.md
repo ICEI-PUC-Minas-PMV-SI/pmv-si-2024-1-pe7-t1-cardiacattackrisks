@@ -210,7 +210,10 @@ Este conjunto de dados possui 8.763 registros de pacientes em todo o mundo. Os a
 
 # Canvas analítico
 
-![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe7-t1-cardiacattackrisks/assets/81273377/fe39e792-bc1c-44e6-8dae-49eb5895fdd3)
+![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe7-t1-cardiacattackrisks/assets/81273042/1d5e974f-f2c7-459d-b236-89c98a3cf539)
+
+
+
 
 # Referências
 
