@@ -1,11 +1,22 @@
 # Instruções de utilização
 
-## Instalação do Site
+## Instalação dos Requisitos
 
-O site em HTML/CSS/JS é um projeto estático, logo pode ser utilizado tanto em servidores...
+pip install -r requirements.txt
+
+## Utilização
+
+### Heat Maps
+
+python .\heatmap.py
+
+### Scatter Plots
+
+python .\scatterplot.py
 
 ## Histórico de versões
 
-### [0.1.0] - DD/MM/AAAA
+### [0.1.0] - 07/04/2024
 #### Adicionado
-- Adicionado ...
+- Adicionado heatmap.py
+- Adicionado scatterplot.py
