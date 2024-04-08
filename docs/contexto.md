@@ -228,7 +228,7 @@ AGÊNCIA BRASIL. Casos de infarto aumentam 25% no Brasil, em 6 anos. Portal R7 [
 
 SILVA, Miguel Morita Fernandes da. Um brasileiro morre a cada 90 segundos por doença cardiovascular. Disponível em: https://www.crmpr.org.br/Um-brasileiro-morre-a-cada-90-segundos-por-doenca-cardiovascular-13-56898.shtml. Acesso em: 2 abr. 2024.
 
-SBC. Sociedade Brasileira de Cardiologia. Disponível em: http://www.cardiometro.com.br/. Acesso em: 07 abr. 2024.
+SBC. Sociedade Brasileira de Cardiologia. Cardiômetro. Disponível em: http://www.cardiometro.com.br/. Acesso em: 07 abr. 2024.
 
 OPAS. Organização Pan-Americana da Saúde. Doenças cardiovasculares. Disponível em: https://www.paho.org/pt/topicos/doencas-cardiovasculares. Acesso em: 07 abr. 2024.
 
