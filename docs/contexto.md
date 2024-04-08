@@ -27,8 +27,7 @@ Objetivos Específicos:
 
 ## Justificativa
 
-Segundo a Associação Brasileira de Cardiologia, as doenças cardiovasculares, afecções do coração e da circulação, representam a principal causa de mortes no Brasil. São mais de 1100 mortes por dia, cerca de 46 por hora, 1 morte a cada 1,5 minutos (90 segundos). São mais de 1100 mortes por dia, cerca de 1 morte a cada 90 segundos, 2 vezes mais mortes que todos os tipos de câncer juntos. Muitas dessas mortes poderiam ser evitadas ou postergadas com cuidados preventivos e medidas terapêuticas. O alerta, a prevenção e o tratamento adequado dos fatores de risco e das doenças cardiovasculares podem reverter essa grave situação. Confira o cardiômetro em: (http://www.cardiometro.com.br/)
-O assunto foi escolhido devido a importância do mesmo para a sociedade e a qualidade dos dados a serem avaliados. O projeto busca contribuir para a qualidade de vida da população.
+Segundo a Associação Brasileira de Cardiologia (SBC), as doenças cardiovasculares, incluindo afecções do coração e da circulação, representam a principal causa de mortes no Brasil, com mais de 1100 óbitos atribuídos a essas condições diariamente (SILVA, [s.d.]). Essa estatística alarmante equivale a aproximadamente 46 mortes por hora ou uma morte a cada 90 segundos, superando em número de óbitos todos os tipos de câncer combinados. Estudos têm demonstrado que a implementação de cuidados preventivos, como dieta saudável, atividade física regular e controle de fatores de risco como pressão arterial elevada e colesterol, podem reduzir significativamente o risco de doenças cardiovasculares (OPAS, [s.d.]). O CARDIÔMETRO, um indicador criado pela Sociedade Brasileira de Cardiologia, monitora o número de mortes por doenças cardiovasculares no Brasil, contribuindo para a conscientização e implementação de medidas de prevenção e tratamento (SBC, [s.d.]).
 
 ## Público-Alvo
 
