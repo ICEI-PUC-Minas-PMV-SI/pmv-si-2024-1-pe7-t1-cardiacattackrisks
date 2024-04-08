@@ -223,17 +223,26 @@ Este conjunto de dados possui 8.763 registros de pacientes em todo o mundo. Os a
 
 # Referências
 
-1 AGÊNCIA BRASIL. Casos de infarto aumentam 25% no Brasil, em 6 anos. Portal R7 [online], publicado em 03 ago. 2023. Disponível em: <https://noticias.r7.com/saude/casos-de-infarto-aumentam-25-no-brasil-em-6-anos-03082023> Acesso em 27 fev. 2024. 
+# Referências
 
-2 BANERJEE, Sourav. Heart Attack Risk Prediction Dataset: Unlocking Predictive Insights with Multifaceted Synthetic Heart Attack Dataset. Kaggle [online], publicado em nov. 2023. Disponível em: <https://www.kaggle.com/datasets/iamsouravbanerjee/heart-attack-prediction-dataset>. Acesso em 29 fev. 2024.
+AGÊNCIA BRASIL. Casos de infarto aumentam 25% no Brasil, em 6 anos. Portal R7 [online], publicado em 03 ago. 2023. Disponível em: <https://noticias.r7.com/saude/casos-de-infarto-aumentam-25-no-brasil-em-6-anos-03082023> Acesso em 27 fev. 2024. 
 
-3 ESTADO DE MINAS. Aumentam casos de infarto em todo o mundo; alerta OMS. Estado de Minas [online], publicado em 25 jul. 2023. Disponível em: <https://www.em.com.br/app/noticia/saude-e-bem-viver/2023/07/25/interna_bem_viver,1524784/aumentam-casos-de-infarto-em-todo-o-mundo-alerta-oms.shtml> Acesso em 27 fev. 2024. 
+SILVA, Miguel Morita Fernandes da. Um brasileiro morre a cada 90 segundos por doença cardiovascular. Disponível em: https://www.crmpr.org.br/Um-brasileiro-morre-a-cada-90-segundos-por-doenca-cardiovascular-13-56898.shtml. Acesso em: 2 abr. 2024.
 
-4 LOURIDI, N.; AMAR, M.; OUAHIDI, B. E. Identification of Cardiovascular Diseases Using Machine Learning. In: 2019 7th Mediterranean Congress of Telecommunications (CMT), Fez, Morocco, 2019. p. 1-6. DOI: 10.1109/CMT.2019.8931411.
+SBC. Sociedade Brasileira de Cardiologia. Disponível em: http://www.cardiometro.com.br/. Acesso em: 07 abr. 2024.
 
-5 PRAKASH, N.; MAHESH, M.; GOUTHAMAN, P. Cardiovascular Disease Risk Assessment using Machine Learning. In: 2023 International Conference on Inventive Computation Technologies (ICICT), Lalitpur, Nepal, 2023. p. 249-256. DOI: 10.1109/ICICT57646.2023.10133957.
+OPAS. Organização Pan-Americana da Saúde. Doenças cardiovasculares. Disponível em: https://www.paho.org/pt/topicos/doencas-cardiovasculares. Acesso em: 07 abr. 2024.
 
-6 BHARATHI, N. N. et al. Heart Attack Prediction Using Artificial Neural Networks. In: 2023 9th International Conference on Advanced Computing and Communication Systems (ICACCS), Coimbatore, India, 2023. p. 304-308. DOI: 10.1109/ICACCS57279.2023.10112664.
+BANERJEE, Sourav. Heart Attack Risk Prediction Dataset: Unlocking Predictive Insights with Multifaceted Synthetic Heart Attack Dataset. Kaggle [online], publicado em nov. 2023. Disponível em: <https://www.kaggle.com/datasets/iamsouravbanerjee/heart-attack-prediction-dataset>. Acesso em 29 fev. 2024.
+
+ESTADO DE MINAS. Aumentam casos de infarto em todo o mundo; alerta OMS. Estado de Minas [online], publicado em 25 jul. 2023. Disponível em: <https://www.em.com.br/app/noticia/saude-e-bem-viver/2023/07/25/interna_bem_viver,1524784/aumentam-casos-de-infarto-em-todo-o-mundo-alerta-oms.shtml> Acesso em 27 fev. 2024. 
+
+LOURIDI, N.; AMAR, M.; OUAHIDI, B. E. Identification of Cardiovascular Diseases Using Machine Learning. In: 2019 7th Mediterranean Congress of Telecommunications (CMT), Fez, Morocco, 2019. p. 1-6. DOI: 10.1109/CMT.2019.8931411.
+
+PRAKASH, N.; MAHESH, M.; GOUTHAMAN, P. Cardiovascular Disease Risk Assessment using Machine Learning. In: 2023 International Conference on Inventive Computation Technologies (ICICT), Lalitpur, Nepal, 2023. p. 249-256. DOI: 10.1109/ICICT57646.2023.10133957.
+
+BHARATHI, N. N. et al. Heart Attack Prediction Using Artificial Neural Networks. In: 2023 9th International Conference on Advanced Computing and Communication Systems (ICACCS), Coimbatore, India, 2023. p. 304-308. DOI: 10.1109/ICACCS57279.2023.10112664.
+
 
 
 
