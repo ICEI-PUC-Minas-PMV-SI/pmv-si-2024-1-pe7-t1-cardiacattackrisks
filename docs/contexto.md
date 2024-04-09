@@ -39,12 +39,32 @@ Toda a população, independente do conhecimento em tecnologia, irá se benefici
 ### 1. Identification of Cardiovascular Diseases Using Machine Learning 
 
 #### Contexto 
-Este estudo aborda a previsão de ataques cardíacos usando redes neurais artificiais. O contexto é a crescente incidência de doenças cardíacas e a necessidade de métodos eficazes de previsão para intervenções precoces.
+
+O estudo realizado por Louridi tem seu contexto central na crescente preocupação com as doenças cardiovasculares (DCV), particularmente em um cenário contemporâneo onde essas condições representam um problema de saúde significativo e fatal em todo o mundo. As doenças cardíacas são consideradas uma das principais causas de mortalidade, e há uma projeção alarmante de aumento no número de mortes atribuídas a essas condições até o ano de 2030, conforme previsto pela Organização Mundial da Saúde (OMS).
+
+O problema em questão é a complexidade no diagnóstico eficiente e preciso das doenças cardíacas. Existem múltiplos fatores que podem contribuir para o desenvolvimento dessas condições, incluindo mudanças no estilo de vida, tabagismo, hábitos alimentares, atividade física, obesidade, diabetes, bem como fatores bioquímicos como pressão sanguínea e glicemia.
+
+As técnicas tradicionais de diagnóstico, tais como ECG, ocultação, e medições de pressão sanguínea, glicemia e colesterol, são geralmente caras e demoradas. 
 
 
 #### Dataset Utilizado 
 
-No estudo de Louridi et al. (2019), foi utilizado um conjunto de dados específico para identificação de doenças cardiovasculares. Este dataset consistiu em 303 instâncias e 13 atributos para a previsão de ataques cardíacos, incluindo idade, sexo, colesterol, pressão sanguínea, frequência cardíaca, histórico familiar e hábitos como fumar e beber. Os dados foram obtidos a partir do repositório de aprendizado de máquina da UCI, contribuído por Robert Detrano, M.D, Ph.D. 
+No estudo de Louridi et al. (2019), utiliza o dataset de doenças cardíacas da UCI (Universidade da Califórnia, Irvine), que contém 303 instâncias com 13 atributos (fatores de risco) para prever pacientes com doenças cardíacas. Aqui estão os atributos do dataset:
+
+*Idade (Age): Idade do paciente em anos.
+*Sexo (Sex): Sexo do paciente (0 = feminino, 1 = masculino).
+*Tipo de Dor no Peito (Chest Pain Type): Tipo de angina relatada pelo paciente (0 = angina típica, 1 = angina atípica, 2 = dor não anginosa, 3 = assintomática).
+*Açúcar no Sangue em Repouso (Resting Blood Sugar): Nível de açúcar no sangue em jejum do paciente (mg/dl).
+*Colesterol (Cholesterol): Medida do colesterol no sangue do paciente (mg/dl).
+*Eletrocardiografia em Repouso (Resting Electrocardiography): Resultados da eletrocardiografia em repouso do paciente (0 = normal, 1 = anormalidade da onda ST-T, 2 = hipertrofia ventricular esquerda).
+*Fumo (Smoking): Indica se o paciente é fumante ou não (0 = não fumante, 1 = fumante).
+*Pressão Arterial em Repouso (Resting Blood Pressure): Pressão arterial em repouso do paciente (mmHg).
+*Máximo de Batimentos Cardíacos (Maximum Heart Rate): Máximo número de batimentos cardíacos alcançados durante o teste de esforço.
+*Angina Induzida por Exercício (Exercise Induced Angina): Indica se o paciente tem angina induzida por exercício (0 = não, 1 = sim).
+*Depressão de ST Induzida pelo Exercício (Exercise Induced ST Depression): Quantidade de depressão do segmento ST induzida pelo exercício.
+*Inclinação do Segmento ST (ST Slope): Inclinação do segmento ST durante o exercício (0 = ascendente, 1 = plano, 2 = descendente).
+*Número de Vasos Principais Coloridos por Fluoroscopy (Number of Major Vessels Colored by Fluoroscopy): Número de vasos principais coloridos durante o procedimento de fluoroscopia (0-3).
+*Resultado (Result): Presença ou ausência de doença cardíaca (0 = ausência, 1 = presença).
 
 #### Abordagens/Algoritmos Utilizados 
 
@@ -62,13 +82,17 @@ As métricas de avaliação utilizadas pelos pesquisadores incluíram especifici
 
 #### Resultados Obtidos 
 
-Os resultados experimentais do estudo de Louridi et al. (2019) indicaram que o algoritmo SVM com kernel linear obteve a melhor precisão, atingindo um valor de 86,8% na identificação de doenças cardiovasculares. 
+Os resultados experimentais do estudo de Louridi et al. (2019) indicaram que o algoritmo SVM com kernel linear obteve a melhor precisão, atingindo um valor de 86,8%.
+O resultado de 86,8% mencionado no estudo de Louridi foi obtido utilizando a métrica de acurácia (accuracy). A acurácia é uma medida que indica a proporção de predições corretas feitas pelo modelo em relação ao total de predições feitas. É uma métrica geralmente utilizada para avaliar o desempenho global de um modelo de classificação.
+
+Portanto, no contexto do estudo, o modelo de SVM (Support Vector Machine) com kernel linear alcançou uma acurácia de 86,8% na tarefa de prever a presença ou ausência de doenças cardíacas nos pacientes, após o processo de pré-processamento dos dados usando a média para preencher os valores ausentes.
 
 Esta pesquisa evidencia a importância do uso de técnicas de aprendizado de máquina na identificação e previsão de doenças cardíacas, fornecendo insights valiosos para a melhoria contínua da detecção precoce e tratamento dessas condições. 
 
 #### Comparação com o Dataset do grupo:
-O estudo utiliza atributos semelhantes aos do conjunto de dados, como idade, sexo, colesterol, pressão sanguínea e histórico familiar.
-As descobertas podem ser comparadas diretamente com o conjunto de dados, ajudando a validar a eficácia do modelo proposto.
+Em geral, podemos dizer que os atributos do seu conjunto de dados são similares aos utilizados no estudo de Louridi et al. (2019), ambos abordando uma ampla gama de fatores relacionados à saúde cardíaca e ao estilo de vida. Isso permite que possamos fazer análises comparativas e utilizarmos métodos semelhantes para prever o risco de ataque cardíaco com base nessas variáveis.
+
+
 
 ### 2. Cardiovascular Disease Risk Assessment using Machine Learning 
 
