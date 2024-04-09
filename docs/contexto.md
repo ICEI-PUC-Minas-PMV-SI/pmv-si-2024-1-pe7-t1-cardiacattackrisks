@@ -204,20 +204,35 @@ Além das técnicas baseadas em Redes Neurais e SVM, o estudo também explorou m
 
 As métricas de avaliação utilizadas para medir o desempenho dos modelos incluíram: 
 
-Matriz de Confusão: 
+- Matriz de Confusão:
 
+Verdadeiros Positivos (TP): Ocorrências corretamente identificadas como verdadeiras e que têm a doença.
+Verdadeiros Negativos (TN): Ocorrências corretamente identificadas como falsas e que não têm a doença.
+Falsos Positivos (FP): Ocorrências incorretamente identificadas como verdadeiras e que têm a doença.
+Falsos Negativos (FN): Ocorrências incorretamente identificadas como falsas e que não têm a doença.
+
+Medidas de Avaliação:
+
+- Precisão: É a proporção de verdadeiros positivos em relação a todas as classificações positivas feitas pelo modelo. A fórmula é:
+
+Precisão =   TP/(TP + FP)
+
+- Revocação (Recall): É a proporção de verdadeiros positivos em relação a todas as instâncias positivas reais. A fórmula é:
+
+  Revocação = TP/(TP+FN)
+
+- F1-Score: É uma média harmônica entre precisão e revocação. É uma métrica que combina ambas as métricas e fornece um equilíbrio entre elas. A fórmula é:
+​
+
+F1-Score = 2×((Precisão * Revocação)/(Precisão + Revocação))
+
+- Acurácia: É a proporção de todas as previsões corretas feitas pelo modelo. A fórmula é:
+
+  Acurácia = (TP+TN)/(TP + TN + FP +FN)
+
+ Essas são as métricas comumente usadas para avaliar a eficácia de modelos de classificação, como as Redes Neurais Artificiais, na detecção de doenças cardíacas neste estudo.
+ No estudo de Bharathi et al. (2023), quando se refere à "precisão" do modelo, geralmente se está falando da métrica de precisão (precision) em um problema de classificação.
  
-
-Esta métrica é uma ferramenta comum para problemas de classificação, fornecendo uma visão geral dos resultados corretos e incorretos das previsões. 
-
-Precisão do Modelo: 
-
- 
-
-A precisão do modelo foi calculada com base na matriz de confusão, representando a proporção de previsões corretas em relação ao total de previsões feitas. 
-
- 
-
 #### Resultados: 
 
 Os resultados obtidos por Bharathi et al. (2023) demonstraram a eficácia das abordagens utilizadas na previsão de ataques cardíacos. As Redes Neurais Artificiais apresentaram uma precisão média de 84% a 88%, enquanto o SVM alcançou uma precisão de 87,5% em um estudo específico. Além disso, métodos de mineração de dados como Naïve Bayes e kmeans obtiveram uma precisão em torno de 93% na previsão de ataques cardíacos. 
