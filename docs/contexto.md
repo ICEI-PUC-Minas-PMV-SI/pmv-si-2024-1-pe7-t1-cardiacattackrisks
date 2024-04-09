@@ -51,20 +51,20 @@ As técnicas tradicionais de diagnóstico, tais como ECG, ocultação, e mediç�
 
 No estudo de Louridi et al. (2019), utiliza o dataset de doenças cardíacas da UCI (Universidade da Califórnia, Irvine), que contém 303 instâncias com 13 atributos (fatores de risco) para prever pacientes com doenças cardíacas. Aqui estão os atributos do dataset:
 
-*Idade (Age): Idade do paciente em anos.
-*Sexo (Sex): Sexo do paciente (0 = feminino, 1 = masculino).
-*Tipo de Dor no Peito (Chest Pain Type): Tipo de angina relatada pelo paciente (0 = angina típica, 1 = angina atípica, 2 = dor não anginosa, 3 = assintomática).
-*Açúcar no Sangue em Repouso (Resting Blood Sugar): Nível de açúcar no sangue em jejum do paciente (mg/dl).
-*Colesterol (Cholesterol): Medida do colesterol no sangue do paciente (mg/dl).
-*Eletrocardiografia em Repouso (Resting Electrocardiography): Resultados da eletrocardiografia em repouso do paciente (0 = normal, 1 = anormalidade da onda ST-T, 2 = hipertrofia ventricular esquerda).
-*Fumo (Smoking): Indica se o paciente é fumante ou não (0 = não fumante, 1 = fumante).
-*Pressão Arterial em Repouso (Resting Blood Pressure): Pressão arterial em repouso do paciente (mmHg).
-*Máximo de Batimentos Cardíacos (Maximum Heart Rate): Máximo número de batimentos cardíacos alcançados durante o teste de esforço.
-*Angina Induzida por Exercício (Exercise Induced Angina): Indica se o paciente tem angina induzida por exercício (0 = não, 1 = sim).
-*Depressão de ST Induzida pelo Exercício (Exercise Induced ST Depression): Quantidade de depressão do segmento ST induzida pelo exercício.
-*Inclinação do Segmento ST (ST Slope): Inclinação do segmento ST durante o exercício (0 = ascendente, 1 = plano, 2 = descendente).
-*Número de Vasos Principais Coloridos por Fluoroscopy (Number of Major Vessels Colored by Fluoroscopy): Número de vasos principais coloridos durante o procedimento de fluoroscopia (0-3).
-*Resultado (Result): Presença ou ausência de doença cardíaca (0 = ausência, 1 = presença).
+- Idade (Age): Idade do paciente em anos.
+- Sexo (Sex): Sexo do paciente (0 = feminino, 1 = masculino).
+- Tipo de Dor no Peito (Chest Pain Type): Tipo de angina relatada pelo paciente (0 = angina típica, 1 = angina atípica, 2 = dor não anginosa, 3 = assintomática).
+- Açúcar no Sangue em Repouso (Resting Blood Sugar): Nível de açúcar no sangue em jejum do paciente (mg/dl).
+- Colesterol (Cholesterol): Medida do colesterol no sangue do paciente (mg/dl).
+- Eletrocardiografia em Repouso (Resting Electrocardiography): Resultados da eletrocardiografia em repouso do paciente (0 = normal, 1 = anormalidade da onda ST-T, 2 = hipertrofia ventricular esquerda).
+- Fumo (Smoking): Indica se o paciente é fumante ou não (0 = não fumante, 1 = fumante).
+- Pressão Arterial em Repouso (Resting Blood Pressure): Pressão arterial em repouso do paciente (mmHg).
+- Máximo de Batimentos Cardíacos (Maximum Heart Rate): Máximo número de batimentos cardíacos alcançados durante o teste de esforço.
+- Angina Induzida por Exercício (Exercise Induced Angina): Indica se o paciente tem angina induzida por exercício (0 = não, 1 = sim).
+- Depressão de ST Induzida pelo Exercício (Exercise Induced ST Depression): Quantidade de depressão do segmento ST induzida pelo exercício.
+- nclinação do Segmento ST (ST Slope): Inclinação do segmento ST durante o exercício (0 = ascendente, 1 = plano, 2 = descendente).
+- Número de Vasos Principais Coloridos por Fluoroscopy (Number of Major Vessels Colored by Fluoroscopy): Número de vasos principais coloridos durante o procedimento de fluoroscopia (0-3).
+- Resultado (Result): Presença ou ausência de doença cardíaca (0 = ausência, 1 = presença).
 
 #### Abordagens/Algoritmos Utilizados 
 
@@ -98,7 +98,9 @@ Em geral, podemos dizer que os atributos do seu conjunto de dados são similares
 
 #### Contexto
 
-A avaliação do risco de DCV é crucial para garantir um diagnóstico e tratamento adequados, permitindo que os pacientes com necessidades críticas tenham acesso prioritário aos médicos e sistemas de saúde. No entanto, a complexidade dos algoritmos utilizados nesse processo muitas vezes dificulta a interpretação dos resultados pelos profissionais de saúde. Nesse sentido, o uso de abordagens de aprendizado de máquina, como a Regressão Logística, tem sido explorado como uma solução promissora para prever o risco de DCV de forma precisa e eficaz.
+O estudo se concentra na detecção precoce de doenças cardiovasculares (DCV), que são uma das principais causas de morte em todo o mundo. A detecção precoce dessas doenças é crucial para um diagnóstico adequado e um tratamento oportuno. Um dos maiores desafios é que muitos métodos e algoritmos para avaliar o risco cardiovascular podem ser complexos, dificultando a interpretação dos resultados pelos profissionais de saúde. Além disso, alguns sistemas exigem treinamento adicional para sua utilização, o que pode ser demorado.
+
+Neste contexto, o estudo desenvolveu um sistema de avaliação de risco cardíaco usando o algoritmo de Regressão Logística, um modelo de aprendizado de máquina que possui alta precisão e é fácil de interpretar. 
 
 #### Dataset Utilizado 
 
@@ -112,13 +114,42 @@ Parâmetros do Modelo:
 Os parâmetros do modelo de Regressão Logística foram ajustados durante o treinamento usando o dataset disponível. Estes incluem os coeficientes que relacionam as variáveis independentes ao risco de DCV, bem como a função de ativação sigmoidal utilizada para calcular as probabilidades.
 
 #### Métricas de Avaliação
-Para avaliar a eficácia do modelo de Regressão Logística na predição do risco de DCV, várias métricas foram empregadas, incluindo a precisão (accuracy), que representa a proporção de previsões corretas em relação ao total de previsões feitas pelo modelo.
+Abaixo estão todas as métricas descritas no estudo de Prakash, Mahesh e Gouthaman (2023):
+
+- Métricas de avaliação do modelo:
+- Acurácia (Accuracy)
+- Sensibilidade (Sensitivity)
+- Especificidade (Specificity)
+- Valor Preditivo Positivo (Positive Predictive Value)
+- Valor Preditivo Negativo (Negative Predictive Value)
+- Área sob a Curva ROC (Area under the ROC Curve)
+- F1-Score
+
+Essas métricas são comumente utilizadas em estudos de classificação, especialmente em problemas de detecção de risco de ataque cardíaco. Elas fornecem uma visão abrangente do desempenho do modelo em prever corretamente os casos positivos (risco de ataque cardíaco) e negativos (sem risco de ataque cardíaco), além de sua capacidade de distinguir entre as duas classes.
+
+Ao analisar o estudo de Prakash, Mahesh e Gouthaman (2023), podemos encontrar detalhes sobre como essas métricas foram calculadas e interpretadas em relação ao desempenho do modelo de Regressão Logística para a detecção de risco de ataque cardíaco. Essas métricas são essenciais para avaliar a eficácia do modelo e sua capacidade de generalização para novos dados.
 
 #### Resultados Obtidos
-Os resultados do estudo indicaram que o modelo de Regressão Logística alcançou uma precisão de 86.89% na predição do risco de DCV. Essa alta precisão sugere que o modelo é capaz de identificar eficientemente pacientes com alto risco de DCV, permitindo a implementação de medidas preventivas e planos de tratamento adequados.
+
+As porcentagens mencionadas na análise comparativa do estudo de Prakash, Mahesh e Gouthaman (2023) referem-se à acurácia dos diferentes modelos de machine learning utilizados para prever o risco de ataque cardíaco. Aqui está a descrição de cada uma dessas porcentagens:
+
+- 78.68%:
+Esta porcentagem refere-se à acurácia do modelo K-Nearest Neighbors (K-NN) na previsão do risco de ataque cardíaco. A acurácia é uma métrica que indica a proporção de previsões corretas feitas pelo modelo em relação ao total de previsões feitas. Portanto, um modelo com uma acurácia de 78.68% significa que ele fez previsões corretas para cerca de 78.68% dos casos em seu conjunto de dados.
+
+- 89.89%:
+Esta porcentagem refere-se à acurácia do modelo de Regressão Logística na previsão do risco de ataque cardíaco. Similarmente à descrição acima, uma acurácia de 89.89% indica que o modelo de Regressão Logística fez previsões corretas para cerca de 89.89% dos casos em seu conjunto de dados.
+
+- 81.97%:
+Esta porcentagem refere-se à acurácia do modelo Support Vector Machine (SVM) na previsão do risco de ataque cardíaco. Mais uma vez, isso significa que o modelo SVM fez previsões corretas para cerca de 81.97% dos casos em seu conjunto de dados.
+Portanto, essas porcentagens representam a capacidade dos modelos de machine learning em fazer previsões precisas em relação ao risco de ataque cardíaco. Uma acurácia mais alta indica um melhor desempenho do modelo em classificar corretamente os casos positivos (risco de ataque cardíaco) e negativos (sem risco de ataque cardíaco).
+
+No estudo de Prakash, Mahesh e Gouthaman (2023), essas porcentagens foram usadas como métricas para comparar e avaliar a eficácia dos diferentes modelos em sua capacidade de detecção de risco de ataque cardíaco.
 
 #### Conclusão
 Em conclusão, o estudo demonstra que a utilização da Regressão Logística para a avaliação do risco de DCV é uma abordagem eficaz e promissora. A alta precisão do modelo sugere sua utilidade prática na identificação precoce e no gerenciamento do risco de DCV. Esse avanço pode contribuir significativamente para a eficiência e eficácia dos sistemas de saúde, garantindo um cuidado mais personalizado e direcionado para pacientes com necessidades específicas relacionadas à DCV.
+
+#### Comparação com o Dataset do grupo:
+Observa-se que há uma sobreposição significativa entre os atributos do dataset que utilizaremos e os atributos geralmente considerados em estudos de detecção de risco de ataque cardíaco. Isso indica que o dataset que estaremos utilizando possui uma ampla gama de variáveis relevantes para a avaliação do risco de ataque cardíaco, semelhante ao dataset utilizado no estudo de Prakash, Mahesh e Gouthaman (2023). Essa semelhança é importante, pois permitirá fazer referência aos resultados e métodos desse estudo ao aplicar análises semelhantes ao do dataset que utilzaremos.
 
 
 ### 3. Heart Attack Prediction Using Artificial Neural Networks 
