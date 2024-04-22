@@ -2,7 +2,35 @@
 Justificar a definição / diferença da questão de pesquisa
 
 # Tipos de dados do dataset
-Qual o tipo de cada um dos atributos?
+
+| Atributo  |  Tipo   | Classificação |
+|-----------|---------|------------|
+|Patient ID |  Qualitativo  |  Polinominal   |
+|Age   |  Quantitativo | Numérico de Razão |
+|Sex   | Qualitativo |   Binominal Simétrico  |
+|Cholesterol  | Quantitativo | Numérico de Razão |
+|Blood Pressure  |  Quantitativo | Numérico de Razão|
+|Heart Rate  | Quantitativo | Numérico de Razão |
+|Diabetes | Qualitativo | Binominal Assimétrico |
+|Family History  | Qualitativo | Binominal Assimétrico |
+|Smoking   | Qualitativo | Binominal Assimétrico |
+|Obesity | Qualitativo | Binominal Assimétrico |
+|Alcohol Consumption  | Qualitativo  | Binominal Assimétrico |
+|Exercise Hours Per Week |  Quantitativo | Numérico Intervalar |
+|Diet    | Qualitativo | Polinominal Ordinal |
+|Previous Heart Problems  | Qualitativo | Binominal Assimétrico |
+|Medication Use  | Qualitativo | Binominal Simétrico |
+|Stress Level  | Quantitativo | Numérico Normalizado |
+|Sedentary Hours Per Day  | Quantitativo | Numérico Intervalar |
+|Income| Quantitativo | Numérico de Razão |
+|BMI   | Quantitativo | Numérico de Razão |
+|Triglycerides | Quantitativo | Numérico de Razão |
+|Physical Activity Days Per Week | Quantitativo | Numérico Intervalar |
+|Sleep Hours Per Day | Quantitativo | Numérico Intervalar |
+|Country  | Qualitativo | Polinominal Não-Ordinal |
+|Continent | Qualitativo | Polinominal Não-Ordinal |
+|Hemisphere  | Qualitativo | Polinominal Não-Ordinal |
+|Heart Attack Risk | Qualitativo | Binominal Assimétrico |
 
 # Outras bases de dados úteis (???)
 Justificar a utilização de outras bases
