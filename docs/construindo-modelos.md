@@ -42,7 +42,11 @@ Nesta etapa, deverão ser descritas todas as técnicas utilizadas para pré-proc
 
 Algumas das etapas podem estar relacionadas à:
 
-* Limpeza de Dados: trate valores ausentes: decida como lidar com dados faltantes, seja removendo linhas, preenchendo com médias, medianas ou usando métodos mais avançados; remova _outliers_: identifique e trate valores que se desviam significativamente da maioria dos dados.
+* Limpeza de Dados
+
+No _dataset_, a coluna cujo atributo corresponde ao ID, não terá valor de análise para os fatores de risco da ocorrência de ataques cardíacos, visto que, nesta, estão representados apenas dados para fim de identificação de pacientes, logo não sendo necessária sua utilização para analisar os dados. A imagem abaixo, demonstra o _dataset_ com a coluna 'Patient ID' excluída. 
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe7-t1-cardiacattackrisks/assets/81273377/cb88b123-207a-4185-b1da-e537edf3f3e6)
 
 * Transformação de Dados: normalize/padronize: torne os dados comparáveis, normalizando ou padronizando os valores para uma escala específica; codifique variáveis categóricas: converta variáveis categóricas em uma forma numérica, usando técnicas como _one-hot encoding_.
 
