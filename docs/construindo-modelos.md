@@ -33,20 +33,26 @@ Ao ser considerada uma pergunta orientada a dados, esta, traz consigo uma aborda
 |Hemisphere  | Qualitativo | Polinominal Não-Ordinal |
 |Heart Attack Risk | Qualitativo | Binominal Assimétrico |
 
-# Outras bases de dados úteis (???)
-Justificar a utilização de outras bases
+# Outras bases de dados úteis 
+
+Considerando os atributos do presente _dataset_, considera-se que o mesmo apresenta dados que são relevantes para ser considerados os riscos para ataque cardíaco. Em primeiro momento, a necessidade de buscar de outros _datasets_ não se faz presente pela variabilidade de elementos que foram considerados na construção do _dataset_ atual. Mas isto por si só não exime a possibilidade de que outras fontes possam ser consideradas, avaliando outros elementos e conteúdos. 
 
 # Preparação dos dados
-
-Nesta etapa, deverão ser descritas todas as técnicas utilizadas para pré-processamento/tratamento dos dados.
-
-Algumas das etapas podem estar relacionadas à:
 
 * Limpeza de Dados
 
 No _dataset_, a coluna cujo atributo corresponde ao ID, não terá valor de análise para os fatores de risco da ocorrência de ataques cardíacos, visto que, nesta, estão representados apenas dados para fim de identificação de pacientes, logo não sendo necessária sua utilização para analisar os dados. A imagem abaixo, demonstra o _dataset_ com a coluna 'Patient ID' excluída. 
 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe7-t1-cardiacattackrisks/assets/81273377/cb88b123-207a-4185-b1da-e537edf3f3e6)
+
+Com relação a dados duplicados e ou a atributos cujos valores estejam nulos, a contagem foi de zero, o que permite concluir que todos os 8763 registros não são nulos.
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe7-t1-cardiacattackrisks/assets/81273377/086d634d-3b75-4bec-a21f-940168d32bec)
+
+A coluna 'Blood Pressure' consta em um mesmo registro, a pressão diastólica e sistólica. Nesse contexto, é importante segregá-las de forma a garantir a melhor visualização dos dados, bem como análise dos mesmos. Assim, dividiu-se em 'Systolic Pressure' e 'Dyastilic Pressure', excluindo a coluna anterior de 'Blood Pressure'.
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe7-t1-cardiacattackrisks/assets/81273377/b6d3f658-670e-4afa-8ce6-9413c40de076)
+
 
 * Transformação de Dados: normalize/padronize: torne os dados comparáveis, normalizando ou padronizando os valores para uma escala específica; codifique variáveis categóricas: converta variáveis categóricas em uma forma numérica, usando técnicas como _one-hot encoding_.
 
