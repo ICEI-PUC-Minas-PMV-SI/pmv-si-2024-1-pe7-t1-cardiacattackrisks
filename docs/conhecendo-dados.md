@@ -189,11 +189,11 @@ Idade
 
 Sexo
 
-![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe7-t1-cardiacattackrisks/assets/81273377/c605cabf-8a9f-4dba-9226-b79b633246d1)
+![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe7-t1-cardiacattackrisks/assets/81273377/0d6ee3a6-3dd3-443d-883c-1bb229532a73)
 
 Pessoas por Países
 
-![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe7-t1-cardiacattackrisks/assets/81273377/2f1683a7-cb21-4059-beda-9ac7ed0af227)
+![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe7-t1-cardiacattackrisks/assets/81273377/71401bfb-674c-4fda-9fe4-bd80f9cee4a5)
 
 Pessoas por Continente 
 
