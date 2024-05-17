@@ -42,7 +42,8 @@ Considerando os atributos do presente _dataset_, considera-se que o mesmo aprese
 * Limpeza de Dados
 
 Para avaliar a limpeza de dados, importamos algumas bibliotecas para auxiliar neste processo, tais como:
-```Phyton
+
+```phyton
 from google.colab import files
 import pandas as pd
 import seaborn as sns
@@ -51,25 +52,50 @@ import plotly.express as px
 import geopandas as gpd
 ```
 
-No _dataset_, a coluna cujo atributo corresponde ao ID, não terá valor de análise para os fatores de risco da ocorrência de ataques cardíacos, visto que, nesta, estão representados apenas dados para fim de identificação de pacientes, logo não sendo necessária sua utilização para analisar os dados. A imagem abaixo, demonstra o _dataset_ com a coluna 'Patient ID' excluída. 
+Atribuir 'data' à referência do datast escolhido:
+```phyton
+data = pd.read_csv ('heart_attack_prediction_dataset.csv')
+data
+```
 
-![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe7-t1-cardiacattackrisks/assets/81273377/cb88b123-207a-4185-b1da-e537edf3f3e6)
+Carregar as primeiras linhas do dataset para visualização
+```phyton
+data.head()
+```
 
-Com relação a dados duplicados e ou a atributos cujos valores estejam nulos, a contagem foi de zero, o que permite concluir que todos os 8763 registros não são nulos.
+Verificação de valores nulos e linhas duplicadas:
+```phyton
+print(f"Total de linhas duplicadas: {data.duplicated().sum()}")
+print("---------------")
+print(f"Total Valores Nulos        : {data.isnull().sum().sum()}")
+```
 
-![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe7-t1-cardiacattackrisks/assets/81273377/ee9ad668-c7a5-4f56-913a-2a21e9aaedf0)
+Optou-se por deletar a coluna 'Patient ID', dado que não impactará a análise dos dados:
+```phyton
+data = data.drop(columns=['Patient ID'])
+```
 
-* Transformação de Dados: normalize/padronize: torne os dados comparáveis, normalizando ou padronizando os valores para uma escala específica; codifique variáveis categóricas: converta variáveis categóricas em uma forma numérica, usando técnicas como _one-hot encoding_.
+Exclusão da coluna 'Blood Pressure' em razão da divisão dos dados nela contidos:
+```phyton
+data = data.drop(columns=['Blood Pressure'])
+```
 
-Como forma de padronização, as colunas que possuem valores cujas casas decimais são grandes, foram reduzidas para apenas uma, facilitando a leitura dos dados.
+* Transformação de Dados:  torne os dados comparáveis, normalizando ou padronizando os valores para uma escala específica; codifique variáveis categóricas: converta variáveis categóricas em uma forma numérica, usando técnicas como _one-hot encoding_.
 
-![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe7-t1-cardiacattackrisks/assets/81273377/67bfae26-050f-4359-b9d6-cbf2dc82494a)
+Para melhor visualização, as os números decimais foram reduzidos a um número após a virgula:
+```phyton
+pd.set_option('display.precision', 1)
+data.head()
+```
 
 * _Feature Engineering_: crie novos atributos que possam ser mais informativos para o modelo; selecione características relevantes e descarte as menos importantes.
 
 A coluna 'Blood Pressure' consta em um mesmo registro, a pressão diastólica e sistólica. Nesse contexto, é importante segregá-las de forma a garantir a melhor visualização dos dados, bem como análise dos mesmos. Assim, cirou-se novos atributos definidos em 'Systolic Pressure' e 'Dyastilic Pressure', excluindo a coluna anterior de 'Blood Pressure'.
 
-![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe7-t1-cardiacattackrisks/assets/81273377/de55d3dc-a34c-4607-8f33-43448aa01dd1)
+```phyton
+data["Systolic Pressure"] = data["Blood Pressure"].apply(lambda x: x.split("/")[0]).astype(int)
+data["Dyastolic Pressure"] = data["Blood Pressure"].apply(lambda x: x.split("/")[1]).astype(int)
+```
 
 * Tratamento de dados desbalanceados: se as classes de interesse forem desbalanceadas, considere técnicas como _oversampling_, _undersampling_ ou o uso de algoritmos que lidam naturalmente com desbalanceamento.
 
