@@ -42,7 +42,7 @@ Considerando os atributos do presente _dataset_, considera-se que o mesmo aprese
 * Limpeza de Dados
 
 Para avaliar a limpeza de dados, importamos algumas bibliotecas para auxiliar neste processo, tais como:
-```phyton
+```Phyton
 import pandas as pd
 import numpy as np
 from sklearn.impute import SimpleImputer
