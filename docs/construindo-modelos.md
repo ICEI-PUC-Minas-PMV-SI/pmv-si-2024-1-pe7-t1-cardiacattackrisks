@@ -43,7 +43,7 @@ Considerando os atributos do presente _dataset_, considera-se que o mesmo aprese
 
 Para avaliar a limpeza de dados, importamos algumas bibliotecas para auxiliar neste processo, tais como:
 
-```phyton
+```python
 from google.colab import files
 import pandas as pd
 import seaborn as sns
@@ -54,43 +54,43 @@ from sklearn.preprocessing import LabelEncoder
 ```
 
 Atribuir 'data' à referência do datast escolhido:
-```phyton
+```python
 data = pd.read_csv ('heart_attack_prediction_dataset.csv')
 data
 ```
 
 Carregar as primeiras linhas do dataset para visualização
-```phyton
+```python
 data.head()
 ```
 
 Verificação de valores nulos e linhas duplicadas:
-```phyton
+```python
 print(f"Total de linhas duplicadas: {data.duplicated().sum()}")
 print("---------------")
 print(f"Total Valores Nulos        : {data.isnull().sum().sum()}")
 ```
 
 Optou-se por deletar a coluna 'Patient ID', dado que não impactará a análise dos dados:
-```phyton
+```python
 data = data.drop(columns=['Patient ID'])
 ```
 
 Exclusão da coluna 'Blood Pressure' em razão da divisão dos dados nela contidos:
-```phyton
+```python
 data = data.drop(columns=['Blood Pressure'])
 ```
 
 * Transformação de Dados:  torne os dados comparáveis, normalizando ou padronizando os valores para uma escala específica; codifique variáveis categóricas: converta variáveis categóricas em uma forma numérica, usando técnicas como _one-hot encoding_.
 
 Para melhor visualização, as os números decimais foram reduzidos a um número após a virgula:
-```phyton
+```python
 pd.set_option('display.precision', 1)
 data.head()
 ```
 
 Também com fim a melhorar a visualização dos dados, atribuiu-se o valor 1 para o sexo Masculino e 0 para o sexo Feminino:
-```phyton
+```python
 le = LabelEncoder()
 data["Sex"] = data["Sex"].agg(le.fit_transform)
 ```
@@ -99,15 +99,20 @@ data["Sex"] = data["Sex"].agg(le.fit_transform)
 
 A coluna 'Blood Pressure' consta em um mesmo registro, a pressão diastólica e sistólica. Nesse contexto, é importante segregá-las de forma a garantir a melhor visualização dos dados, bem como análise dos mesmos. Assim, cirou-se novos atributos definidos em 'Systolic Pressure' e 'Dyastilic Pressure', excluindo a coluna anterior de 'Blood Pressure'.
 
-```phyton
+```python
 data["Systolic Pressure"] = data["Blood Pressure"].apply(lambda x: x.split("/")[0]).astype(int)
 data["Dyastolic Pressure"] = data["Blood Pressure"].apply(lambda x: x.split("/")[1]).astype(int)
+```
+
+Os dados da coluna 'Diet' foram desmembrados em 'Average', 'Healthy' e 'Unheatlhy'.
+```python
+data = pd.get_dummies(data=data, columns=["Diet"])
 ```
 
 * Tratamento de dados desbalanceados: se as classes de interesse forem desbalanceadas, considere técnicas como _oversampling_, _undersampling_ ou o uso de algoritmos que lidam naturalmente com desbalanceamento.
 
 * Separação de dados: divida os dados em conjuntos de treinamento, validação e teste para avaliar o desempenho do modelo de maneira adequada.
-  
+
 * Manuseio de Dados Temporais: se lidar com dados temporais, considere a ordenação adequada e técnicas específicas para esse tipo de dado.
   
 * Redução de Dimensionalidade: aplique técnicas como PCA (Análise de Componentes Principais) se a dimensionalidade dos dados for muito alta.
