@@ -42,7 +42,7 @@ Considerando os atributos do presente _dataset_, considera-se que o mesmo aprese
 * Limpeza de Dados
 
 Para avaliar a limpeza de dados, importamos algumas bibliotecas para auxiliar neste processo, tais como:
-
+```phyton
 import pandas as pd
 import numpy as np
 from sklearn.impute import SimpleImputer
@@ -50,6 +50,7 @@ from sklearn.preprocessing import StandardScaler, OneHotEncoder
 from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
 from sklearn.model_selection import train_test_split
+```
 
 No _dataset_, a coluna cujo atributo corresponde ao ID, não terá valor de análise para os fatores de risco da ocorrência de ataques cardíacos, visto que, nesta, estão representados apenas dados para fim de identificação de pacientes, logo não sendo necessária sua utilização para analisar os dados. A imagem abaixo, demonstra o _dataset_ com a coluna 'Patient ID' excluída. 
 
