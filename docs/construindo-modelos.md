@@ -50,6 +50,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import plotly.express as px
 import geopandas as gpd
+from sklearn.preprocessing import LabelEncoder
 ```
 
 Atribuir 'data' à referência do datast escolhido:
