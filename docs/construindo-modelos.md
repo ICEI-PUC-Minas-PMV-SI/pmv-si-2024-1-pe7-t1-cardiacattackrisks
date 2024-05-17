@@ -91,28 +91,38 @@ data.head()
 
 Também com fim a melhorar a visualização dos dados, atribuiu-se o valor 1 para o sexo Masculino e 0 para o sexo Feminino:
 ```python
-le = LabelEncoder()
-data["Sex"] = data["Sex"].agg(le.fit_transform)
+ordinal_map_sex = {'Male':1, 'Female':0}
+data['Sex'] = data['Sex'].map(ordinal_map_sex)
+```
+
+Os dados da coluna 'Diet' foram transformados em 0, 1 e 2.
+```python
+ordinal_map = {'Healthy':2,'Average':1,'Unhealthy':0}
+data['Diet'] = data['Diet'].map(ordinal_map)
 ```
 
 * _Feature Engineering_: crie novos atributos que possam ser mais informativos para o modelo; selecione características relevantes e descarte as menos importantes.
 
-A coluna 'Blood Pressure' consta em um mesmo registro, a pressão diastólica e sistólica. Nesse contexto, é importante segregá-las de forma a garantir a melhor visualização dos dados, bem como análise dos mesmos. Assim, cirou-se novos atributos definidos em 'Systolic Pressure' e 'Dyastilic Pressure', excluindo a coluna anterior de 'Blood Pressure'.
+A coluna 'Blood Pressure' consta em um mesmo registro, a pressão diastólica e sistólica. Por isto, optamos por segregá-las:
 
 ```python
 data["Systolic Pressure"] = data["Blood Pressure"].apply(lambda x: x.split("/")[0]).astype(int)
 data["Dyastolic Pressure"] = data["Blood Pressure"].apply(lambda x: x.split("/")[1]).astype(int)
 ```
 
-Os dados da coluna 'Diet' foram desmembrados em 'Average', 'Healthy' e 'Unheatlhy'.
-```python
-data = pd.get_dummies(data=data, columns=["Diet"])
-```
-
 * Tratamento de dados desbalanceados: se as classes de interesse forem desbalanceadas, considere técnicas como _oversampling_, _undersampling_ ou o uso de algoritmos que lidam naturalmente com desbalanceamento.
+
 
 * Separação de dados: divida os dados em conjuntos de treinamento, validação e teste para avaliar o desempenho do modelo de maneira adequada.
 
+Conujunto de treinamento:
+```python
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+y_train = y_train.values.reshape(-1, 1)
+y_test = y_test.values.reshape(-1, 1)
+y_test.shape
+```
 * Manuseio de Dados Temporais: se lidar com dados temporais, considere a ordenação adequada e técnicas específicas para esse tipo de dado.
   
 * Redução de Dimensionalidade: aplique técnicas como PCA (Análise de Componentes Principais) se a dimensionalidade dos dados for muito alta.
