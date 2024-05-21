@@ -215,6 +215,7 @@ plt.show()
 ```
 
 Sendo este, o resultado final:
+
 ![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe7-t1-cardiacattackrisks/assets/81273377/02384339-474f-4956-ba32-f03d6f6929cd)
 
 Conclui-se que:
