@@ -137,6 +137,95 @@ Avalie quais etapas são importantes para o contexto dos dados que você está t
 
 # Descrição dos modelos
 
+* Modelo KNN
+
+Considerando o modelo KNN como algoritmo de _machine learning_, este, traz a possibilidade de classificar cada amostra de um conjunto de dados avaliando sua distância em relação aos vizinhos mais próximos. Se os vizinhos mais próximos forem majoritariamente de uma classe, a amostra em questão será classificada nesta categoria.
+
+Neste sentido, apresenta-se o modelo avaliado, abaixo:
+```python
+#Selecionando variáveis importantes pro modelo
+X = data[['Sex', 'Age', 'Cholesterol', 'Heart Rate','Diabetes', 'Family History','Dyastolic Pressure','Systolic Pressure',
+                        'Smoking', 'Obesity','Alcohol Consumption', 'Diet', 'Exercise Hours Per Week',
+                        'Previous Heart Problems', 'Medication Use', 'Triglycerides', 'Sleep Hours Per Day']]
+
+y= data['Heart Attack Risk'].values
+```
+
+É importante, criar um conjunto de dados de treinamento e teste. Sendo que, o test_size=0.2 significa que 20% dos dados serão usados ​​como conjunto de teste, enquanto 80% serão usados ​​como conjunto de treinamento.
+```python
+X_train, X_test, y_train, y_test = train_test_split(X, y,random_state = 1,test_size=0.2)
+```
+
+Em seguida, usamos do StandardScaler para normalizar os dados e deixá-los em uma única escala para facilitar a análise.
+```python
+sc_X = StandardScaler()
+X_train = sc_X.fit_transform(X_train)
+X_test = sc_X.transform(X_test)
+```
+
+Criou-se quatro possibilidades de vizinhos para avaliar qual a melhor alternativa. Escolheu-se 3, 5, 7 e 12 vizinhos.
+```python
+classifier_3 = KNeighborsClassifier(n_neighbors=3)
+classifier_5 = KNeighborsClassifier(n_neighbors=5)
+classifier_7 = KNeighborsClassifier(n_neighbors=7)
+classifier_12 = KNeighborsClassifier(n_neighbors=12)
+```
+
+Assim, treinamos o modelo KNN relacionado ao cenário de treinamento.
+```python
+classifier_3.fit(X_train, y_train)
+classifier_5.fit(X_train, y_train)
+classifier_7.fit(X_train, y_train)
+classifier_12.fit(X_train, y_train)
+```
+
+E então, criou-se o algoritmo para fazer a predição dos resultados dos testes.
+```python
+y_pred_3 = classifier_3.predict(X_test)
+y_pred_5 = classifier_5.predict(X_test)
+y_pred_7 = classifier_7.predict(X_test)
+y_pred_12 = classifier_12.predict(X_test)
+```
+
+Por fim, escolheu-se as métricas de avaliação das performances dos cenários do modelo criado.
+```python
+cm_KNN = confusion_matrix(y_test, y_pred_3)
+print (cm_KNN)
+print(accuracy_score(y_test, y_pred_3))
+
+cm_KNN = confusion_matrix(y_test, y_pred_5)
+print (cm_KNN)
+print(accuracy_score(y_test, y_pred_5))
+
+cm_KNN = confusion_matrix(y_test, y_pred_7)
+print (cm_KNN)
+print(accuracy_score(y_test, y_pred_7))
+
+cm_KNN = confusion_matrix(y_test, y_pred_12)
+print (cm_KNN)
+print(accuracy_score(y_test, y_pred_12))
+
+cm_KNN = confusion_matrix(y_test, y_pred_5)
+acc_KNN = accuracy_score(y_test, y_pred_5)
+sns.heatmap(cm_KNN, annot=True, fmt='d', cmap='Reds')
+plt.xlabel('Precisão')
+plt.ylabel('Atual')
+plt.title('Confusion Matrix')
+plt.show()
+```
+
+Sendo este, o resultado final:
+![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe7-t1-cardiacattackrisks/assets/81273377/02384339-474f-4956-ba32-f03d6f6929cd)
+
+Conclui-se que:
+* Verdadeiros Positivos (142): São indivíduos com previsão correta de risco de ataque cardíaco.
+* Verdadeiros Negativos (847): Estes são indivíduos corretamente previstos como não correndo risco de ataque cardíaco.
+* Falsos Positivos (295): São indivíduos com previsão incorreta de risco de ataque cardíaco.
+* Falsos Negativos (469): São indivíduos com previsão incorreta de não correrem risco de ataque cardíaco.
+
+A precisão de 0,564 indica que quando o modelo prevê que um indivíduo corre risco de ter um ataque cardíaco, ele está correto em cerca de 56,4% das vezes.
+
+_
 Nesta seção, conhecendo os dados e de posse dos dados preparados, é hora de descrever os algoritmos de aprendizado de máquina selecionados para a construção dos modelos propostos. Inclua informações abrangentes sobre cada algoritmo implementado, aborde conceitos fundamentais, princípios de funcionamento, vantagens/limitações e justifique a escolha de cada um dos algoritmos. 
 
 Explore aspectos específicos, como o ajuste dos parâmetros livres de cada algoritmo. Lembre-se de experimentar parâmetros diferentes e principalmente, de justificar as escolhas realizadas.
