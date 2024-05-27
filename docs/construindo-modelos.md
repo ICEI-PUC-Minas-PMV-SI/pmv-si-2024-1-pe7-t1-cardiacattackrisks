@@ -237,6 +237,39 @@ Como parte da comprovação de construção dos modelos, um vídeo de demonstra�
 
 ## Métricas utilizadas
 
+* Modelo KNN
+
+Para o Modelo KNN, dentre as possibilidades de utilização de métricas, tem-se: distância euclidiana, distância de Manhattan, distância de Minkowski e distância de Hamming. Sendo a distância euclidiana a que mede a distância entre dois pontos (de consulta e o de medição), e dada sua facilidade de aplicação, escolheu-se esta, para avaliação métrica do modelo proposto. Os dados seguem abaixo:
+
+```python
+def dist_euclidiana(p1, p2):
+# Calcula a distância euclidiana entre dois pontos no espaço multidimensional.
+  p1 = np.array(p1)
+  p2 = np.array(p2)
+
+# Calcula a diferença entre os pontos
+  diferenca = p1 - p2
+
+# Eleva ao quadrado cada elemento da diferença
+  quadrado_diferenca = diferenca ** 2
+
+# Soma os elementos quadrados
+  soma_quadrados = quadrado_diferenca.sum()
+
+# Calcula a raiz quadrada da soma dos quadrados
+  distancia = math.sqrt(soma_quadrados)
+
+  return distancia
+
+point_a = [1, 2, 3]
+point_b = [4, 5, 6]
+distance = dist_euclidiana(point_a, point_b)
+print("Distância entre os pontos:", distance)
+```
+
+Sendo assim, o valor encontrado foi de: *5.196152422706632*, considerada uma distância curta e válida entre os pontos.
+
+_
 Nesta seção, as métricas utilizadas para avaliar os modelos desenvolvidos deverão ser apresentadas (p. ex.: acurácia, precisão, recall, F1-Score, MSE etc.). A escolha de cada métrica deverá ser justificada, pois esta escolha é essencial para avaliar de forma mais assertiva a qualidade do modelo construído. 
 
 ## Discussão dos resultados obtidos
