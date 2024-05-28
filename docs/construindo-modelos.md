@@ -515,35 +515,49 @@ Como parte da comprovação de construção dos modelos, um vídeo de demonstra�
 
 * Modelo KNN
 
-Para o Modelo KNN, dentre as possibilidades de utilização de métricas, tem-se: distância euclidiana, distância de Manhattan, distância de Minkowski e distância de Hamming. Sendo a distância euclidiana a que mede a distância entre dois pontos (de consulta e o de medição), e dada sua facilidade de aplicação, escolheu-se esta, para avaliação métrica do modelo proposto. Os dados seguem abaixo:
+Para o Modelo KNN, avaliou-se as três métricas de precisão, recall e F1 Score.
 
 ```python
-def dist_euclidiana(p1, p2):
-# Calcula a distância euclidiana entre dois pontos no espaço multidimensional.
-  p1 = np.array(p1)
-  p2 = np.array(p2)
+# Métricas Modelo KNN
 
-# Calcula a diferença entre os pontos
-  diferenca = p1 - p2
+def matriz_confusao(y_test, y_predit_11):
 
-# Eleva ao quadrado cada elemento da diferença
-  quadrado_diferenca = diferenca ** 2
+  # Recriando Matriz de Confusão
+  matriz_confusao = confusion_matrix(y_test, y_predit_11)
 
-# Soma os elementos quadrados
-  soma_quadrados = quadrado_diferenca.sum()
+  # Extraindo valores da matriz
+  VP = matriz_confusao[0, 0]
+  FN = matriz_confusao[0, 1]
+  FP = matriz_confusao[1, 0]
+  VN = matriz_confusao[1, 1]
 
-# Calcula a raiz quadrada da soma dos quadrados
-  distancia = math.sqrt(soma_quadrados)
+  # Cálculo das métricas
+  acuracia = (VP + VN) / (VP + VN + FP + FN)
+  precisao = VP / (VP + FP)
+  revocacao = VP / (VP + FN)
+  f1_score = 2 * (precisao * revocacao) / (precisao + revocacao)
 
-  return distancia
+# Returnando as métricas e a matriz
+  return matriz_confusao, acuracia, precisao, revocacao, f1_score
 
-point_a = [1, 2, 3]
-point_b = [4, 5, 6]
-distance = dist_euclidiana(point_a, point_b)
-print("Distância entre os pontos:", distance)
+# Retornando os valores
+matriz_confusao_personalizada, acuracia, precisao, revocacao, f1_score = matriz_confusao(y_test, y_pred_11)
+
+# Imprimindo os resultados
+print("Matriz de Confusão Personalizada:")
+print(matriz_confusao_personalizada)
+print("\nMetricas Personalizadas:")
+print(f"Acurácia: {acuracia}")
+print(f"Precisão: {precisao}")
+print(f"Revocação: {revocacao}")
+print(f"F1-Score: {f1_score}")
 ```
 
-Sendo assim, o valor encontrado foi de: *5.196152422706632*, considerada uma distância curta e válida entre os pontos.
+O resultado foi impresso abaixo:
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe7-t1-cardiacattackrisks/assets/81273377/f7802633-e15f-4a30-9ea0-51c5d388c9c7)
+
+Nesse aspecto, avalia-se que a taxa de precisão indica que de 100 avalialções, o modelo indica que **64%** deles, tenha um risco para ocorrência de ataque cardíaco.
 
 ____
 Nesta seção, as métricas utilizadas para avaliar os modelos desenvolvidos deverão ser apresentadas (p. ex.: acurácia, precisão, recall, F1-Score, MSE etc.). A escolha de cada métrica deverá ser justificada, pois esta escolha é essencial para avaliar de forma mais assertiva a qualidade do modelo construído. 
