@@ -31,45 +31,84 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import precision_score
 
 data = pd.read_csv ('heart_attack_prediction_dataset.csv')
+data.head()
 
 # Deletar coluna ID
 data = data.drop(columns=['Patient ID'])
 
 # Dados duplicados e nulos
-
 print(f"Total de linhas duplicadas: {data.duplicated().sum()}")
 print("---------------")
 print(f"Total Valores Nulos        : {data.isnull().sum().sum()}")
 
 # Edição da Pressão Sanguinea
-
 data["Systolic Pressure"] = data["Blood Pressure"].apply(lambda x: x.split("/")[0]).astype(int)
 data["Dyastolic Pressure"] = data["Blood Pressure"].apply(lambda x: x.split("/")[1]).astype(int)
+data.head()
 
 # Deletar Blood Pressure
 data = data.drop(columns=['Blood Pressure'])
+data.head()
+
+# Deletar Continent, Hemisphere, Country
+data = data.drop(columns=['Continent', 'Hemisphere', 'Country'])
 
 #Redução de casas decimais para uma após a vírgula
-
 pd.set_option('display.precision', 1)
 
 #Transformando dados de 'Diet'
-
 ordinal_map = {'Healthy':2,'Average':1,'Unhealthy':0}
 data['Diet'] = data['Diet'].map(ordinal_map)
 
 #Transformando Male = 1 e Female = 0
+ordinal_map_sex = {'Male':1, 'Female':0}
+data['Sex'] = data['Sex'].map(ordinal_map_sex)
+
+#Validação Cruzada
+
+from sklearn.model_selection import cross_val_score
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.preprocessing import StandardScaler
+from sklearn.pipeline import Pipeline
+
+# Carregar os dados
+data = pd.read_csv('heart_attack_prediction_dataset.csv')
+
+#Transformando dados de 'Diet'
+ordinal_map = {'Healthy':2,'Average':1,'Unhealthy':0}
+data['Diet'] = data['Diet'].map(ordinal_map)
 
 ordinal_map_sex = {'Male':1, 'Female':0}
 data['Sex'] = data['Sex'].map(ordinal_map_sex)
 
-#Treinamento dos dados - KNN
+data["Systolic Pressure"] = data["Blood Pressure"].apply(lambda x: x.split("/")[0]).astype(int)
+data["Dyastolic Pressure"] = data["Blood Pressure"].apply(lambda x: x.split("/")[1]).astype(int)
 
+data = data.drop(columns=['Patient ID'])
+data = data.drop(columns=['Blood Pressure'])
+data = data.drop(columns=['Continent', 'Hemisphere', 'Country'])
+
+pd.set_option('display.precision', 1)
+
+# Definir features e target
+X = data.drop('Heart Attack Risk', axis=1)
+y = data['Heart Attack Risk']
+# Criar um pipeline com pré-processamento e modelo
+pipeline = Pipeline([
+    ('scaler', StandardScaler()),  # Padronização dos dados
+    ('knn', KNeighborsClassifier())  # Modelo KNN
+])
+# Realizar a validação cruzada
+scores = cross_val_score(pipeline, X, y, cv=5)  # 5 folds
+# Imprimir os resultados
+print("Acurácia Média: {:.2f}".format(scores.mean()))
+print("Desvio Padrão dos Scores: {:.2f}".format(scores.std()))
+
+#Treinamento dos dados - KNN
 #Selecionando variáveis importantes pro modelo
 X = data[['Sex', 'Age', 'Cholesterol', 'Heart Rate','Diabetes', 'Family History','Dyastolic Pressure','Systolic Pressure',
                         'Smoking', 'Obesity','Alcohol Consumption', 'Diet', 'Exercise Hours Per Week',
-                        'Previous Heart Problems', 'Medication Use', 'Triglycerides', 'Sleep Hours Per Day']]
-
+                        'Previous Heart Problems', 'Medication Use', 'Triglycerides', 'Sleep Hours Per Day', 'Income', 'BMI', 'Physical Activity Days Per Week']]
 y= data['Heart Attack Risk'].values
 
 # 1 - Criando um conjunto de dados pra treinamento e teste
@@ -77,35 +116,262 @@ y= data['Heart Attack Risk'].values
 
 X_train, X_test, y_train, y_test = train_test_split(X, y,random_state = 1,test_size=0.2)
 
-# 2 - Uso do StandadScaler como forma de normalizar os dados numa mesa escala pra facilitar análises
+# Reduzindo a Dimensionalidade
 
+from sklearn.decomposition import PCA
+# Inicializar o objeto PCA com o número desejado de componentes
+pca = PCA(n_components=2)  # Define o número de componentes principais desejados
+# Aplicar PCA aos dados de treinamento (assumindo que X_train já está definido)
+X_train_pca = pca.fit_transform(X_train)
+# Converter para DataFrame para uma melhor visualização
+X_train_pca_df = pd.DataFrame(data=X_train_pca,
+                              columns=['Principal Component 1', 'Principal Component 2'])
+# Exibir as primeiras linhas para visualização
+print(X_train_pca_df.head())
+# Exibir a nova forma dos dados após a redução de dimensionalidade
+print("Forma dos dados após a redução de dimensionalidade:", X_train_pca_df.shape)
+# Exibir a variância explicada por cada componente
+print("Variância explicada por cada componente:", pca.explained_variance_ratio_)
+      
+# 2 - Uso do StandadScaler como forma de normalizar os dados numa mesa escala pra facilitar análises
 sc_X = StandardScaler()
 X_train = sc_X.fit_transform(X_train)
 X_test = sc_X.transform(X_test)
 
 # 3 - Seleção da quantidade de vizinhos. Usamos quatro valores pra decidir ao final qual é o melhor
-
+classifier_1 = KNeighborsClassifier(n_neighbors=1)
+classifier_2 = KNeighborsClassifier(n_neighbors=2)
 classifier_3 = KNeighborsClassifier(n_neighbors=3)
+classifier_4 = KNeighborsClassifier(n_neighbors=4)
 classifier_5 = KNeighborsClassifier(n_neighbors=5)
+classifier_6 = KNeighborsClassifier(n_neighbors=6)
 classifier_7 = KNeighborsClassifier(n_neighbors=7)
+classifier_8 = KNeighborsClassifier(n_neighbors=8)
+classifier_9 = KNeighborsClassifier(n_neighbors=9)
+classifier_10 = KNeighborsClassifier(n_neighbors=10)
+classifier_11 = KNeighborsClassifier(n_neighbors=11)
 classifier_12 = KNeighborsClassifier(n_neighbors=12)
+classifier_13 = KNeighborsClassifier(n_neighbors=13)
+classifier_14 = KNeighborsClassifier(n_neighbors=14)
+classifier_15 = KNeighborsClassifier(n_neighbors=15)
+classifier_16 = KNeighborsClassifier(n_neighbors=16)
+classifier_17 = KNeighborsClassifier(n_neighbors=17)
+classifier_18 = KNeighborsClassifier(n_neighbors=18)
+classifier_19 = KNeighborsClassifier(n_neighbors=19)
+classifier_20 = KNeighborsClassifier(n_neighbors=20)
+classifier_21 = KNeighborsClassifier(n_neighbors=21)
+classifier_22 = KNeighborsClassifier(n_neighbors=22)
+classifier_23 = KNeighborsClassifier(n_neighbors=23)
+classifier_24 = KNeighborsClassifier(n_neighbors=24)
+classifier_25 = KNeighborsClassifier(n_neighbors=25)
+classifier_26 = KNeighborsClassifier(n_neighbors=26)
+classifier_27 = KNeighborsClassifier(n_neighbors=27)
+classifier_28 = KNeighborsClassifier(n_neighbors=28)
+classifier_29 = KNeighborsClassifier(n_neighbors=29)
+classifier_30 = KNeighborsClassifier(n_neighbors=30)
+classifier_31 = KNeighborsClassifier(n_neighbors=31)
 
 # 4 - Treinando o modelo KNN com os cenários de teste feito no passo 1
 
+classifier_1.fit(X_train, y_train)
+classifier_2.fit(X_train, y_train)
 classifier_3.fit(X_train, y_train)
+classifier_4.fit(X_train, y_train)
 classifier_5.fit(X_train, y_train)
+classifier_6.fit(X_train, y_train)
 classifier_7.fit(X_train, y_train)
+classifier_8.fit(X_train, y_train)
+classifier_9.fit(X_train, y_train)
+classifier_10.fit(X_train, y_train)
+classifier_11.fit(X_train, y_train)
 classifier_12.fit(X_train, y_train)
+classifier_13.fit(X_train, y_train)
+classifier_14.fit(X_train, y_train)
+classifier_15.fit(X_train, y_train)
+classifier_16.fit(X_train, y_train)
+classifier_17.fit(X_train, y_train)
+classifier_18.fit(X_train, y_train)
+classifier_19.fit(X_train, y_train)
+classifier_20.fit(X_train, y_train)
+classifier_21.fit(X_train, y_train)
+classifier_22.fit(X_train, y_train)
+classifier_23.fit(X_train, y_train)
+classifier_24.fit(X_train, y_train)
+classifier_25.fit(X_train, y_train)
+classifier_26.fit(X_train, y_train)
+classifier_27.fit(X_train, y_train)
+classifier_28.fit(X_train, y_train)
+classifier_29.fit(X_train, y_train)
+classifier_30.fit(X_train, y_train)
+classifier_31.fit(X_train, y_train)
 
 # 5 - Para fazer predições dos resultados dos testes
 
+y_pred_1 = classifier_1.predict(X_test)
+y_pred_2 = classifier_2.predict(X_test)
 y_pred_3 = classifier_3.predict(X_test)
+y_pred_4 = classifier_4.predict(X_test)
 y_pred_5 = classifier_5.predict(X_test)
+y_pred_6 = classifier_6.predict(X_test)
 y_pred_7 = classifier_7.predict(X_test)
+y_pred_8 = classifier_8.predict(X_test)
+y_pred_9 = classifier_9.predict(X_test)
+y_pred_10 = classifier_10.predict(X_test)
+y_pred_11 = classifier_11.predict(X_test)
 y_pred_12 = classifier_12.predict(X_test)
+y_pred_13 = classifier_13.predict(X_test)
+y_pred_14 = classifier_14.predict(X_test)
+y_pred_15 = classifier_15.predict(X_test)
+y_pred_16 = classifier_16.predict(X_test)
+y_pred_17 = classifier_17.predict(X_test)
+y_pred_18 = classifier_18.predict(X_test)
+y_pred_19 = classifier_19.predict(X_test)
+y_pred_20 = classifier_20.predict(X_test)
+y_pred_21 = classifier_21.predict(X_test)
+y_pred_22 = classifier_22.predict(X_test)
+y_pred_23 = classifier_23.predict(X_test)
+y_pred_24 = classifier_24.predict(X_test)
+y_pred_25 = classifier_25.predict(X_test)
+y_pred_26 = classifier_26.predict(X_test)
+y_pred_27 = classifier_27.predict(X_test)
+y_pred_28 = classifier_28.predict(X_test)
+y_pred_29 = classifier_29.predict(X_test)
+y_pred_30 = classifier_30.predict(X_test)
+y_pred_31 = classifier_31.predict(X_test)
 
 # 6 - Métricas de performance do modelo KNN
 # accuracy_score calcula a precisão do modelo
+
+cm_KNN = confusion_matrix(y_test, y_pred_1)
+print (cm_KNN)
+print(accuracy_score(y_test, y_pred_1))
+
+cm_KNN = confusion_matrix(y_test, y_pred_2)
+print (cm_KNN)
+print(accuracy_score(y_test, y_pred_2))
+
+cm_KNN = confusion_matrix(y_test, y_pred_3)
+print (cm_KNN)
+print(accuracy_score(y_test, y_pred_3))
+
+cm_KNN = confusion_matrix(y_test, y_pred_4)
+print (cm_KNN)
+print(accuracy_score(y_test, y_pred_4))
+
+cm_KNN = confusion_matrix(y_test, y_pred_5)
+print (cm_KNN)
+print(accuracy_score(y_test, y_pred_5))
+
+cm_KNN = confusion_matrix(y_test, y_pred_6)
+print (cm_KNN)
+print(accuracy_score(y_test, y_pred_6))
+
+cm_KNN = confusion_matrix(y_test, y_pred_7)
+print (cm_KNN)
+print(accuracy_score(y_test, y_pred_7))
+
+cm_KNN = confusion_matrix(y_test, y_pred_8)
+print (cm_KNN)
+print(accuracy_score(y_test, y_pred_8))
+
+cm_KNN = confusion_matrix(y_test, y_pred_9)
+print (cm_KNN)
+print(accuracy_score(y_test, y_pred_9))
+
+cm_KNN = confusion_matrix(y_test, y_pred_10)
+print (cm_KNN)
+print(accuracy_score(y_test, y_pred_10))
+
+cm_KNN = confusion_matrix(y_test, y_pred_11)
+print (cm_KNN)
+print(accuracy_score(y_test, y_pred_11))
+
+cm_KNN = confusion_matrix(y_test, y_pred_12)
+print (cm_KNN)
+print(accuracy_score(y_test, y_pred_12))
+
+cm_KNN = confusion_matrix(y_test, y_pred_13)
+print (cm_KNN)
+print(accuracy_score(y_test, y_pred_13))
+
+cm_KNN = confusion_matrix(y_test, y_pred_14)
+print (cm_KNN)
+print(accuracy_score(y_test, y_pred_14))
+
+cm_KNN = confusion_matrix(y_test, y_pred_15)
+print (cm_KNN)
+print(accuracy_score(y_test, y_pred_15))
+
+cm_KNN = confusion_matrix(y_test, y_pred_16)
+print (cm_KNN)
+print(accuracy_score(y_test, y_pred_16))
+
+cm_KNN = confusion_matrix(y_test, y_pred_17)
+print (cm_KNN)
+print(accuracy_score(y_test, y_pred_17))
+
+cm_KNN = confusion_matrix(y_test, y_pred_18)
+print (cm_KNN)
+print(accuracy_score(y_test, y_pred_18))
+
+cm_KNN = confusion_matrix(y_test, y_pred_19)
+print (cm_KNN)
+print(accuracy_score(y_test, y_pred_19))
+
+cm_KNN = confusion_matrix(y_test, y_pred_20)
+print (cm_KNN)
+print(accuracy_score(y_test, y_pred_20))
+
+cm_KNN = confusion_matrix(y_test, y_pred_21)
+print (cm_KNN)
+print(accuracy_score(y_test, y_pred_21))
+
+cm_KNN = confusion_matrix(y_test, y_pred_22)
+print (cm_KNN)
+print(accuracy_score(y_test, y_pred_22))
+
+cm_KNN = confusion_matrix(y_test, y_pred_23)
+print (cm_KNN)
+print(accuracy_score(y_test, y_pred_23))
+
+cm_KNN = confusion_matrix(y_test, y_pred_24)
+print (cm_KNN)
+print(accuracy_score(y_test, y_pred_24))
+
+cm_KNN = confusion_matrix(y_test, y_pred_25)
+print (cm_KNN)
+print(accuracy_score(y_test, y_pred_25))
+
+cm_KNN = confusion_matrix(y_test, y_pred_26)
+print (cm_KNN)
+print(accuracy_score(y_test, y_pred_26))
+
+cm_KNN = confusion_matrix(y_test, y_pred_27)
+print (cm_KNN)
+print(accuracy_score(y_test, y_pred_27))
+
+cm_KNN = confusion_matrix(y_test, y_pred_28)
+print (cm_KNN)
+print(accuracy_score(y_test, y_pred_28))
+
+cm_KNN = confusion_matrix(y_test, y_pred_29)
+print (cm_KNN)
+print(accuracy_score(y_test, y_pred_29))
+
+cm_KNN = confusion_matrix(y_test, y_pred_30)
+print (cm_KNN)
+print(accuracy_score(y_test, y_pred_30))
+
+cm_KNN = confusion_matrix(y_test, y_pred_31)
+print (cm_KNN)
+print(accuracy_score(y_test, y_pred_31))
+
+# 7 - Métricas de performance do modelo KNN - SÓ ÍMPARES
+# accuracy_score calcula a precisão do modelo
+
+cm_KNN = confusion_matrix(y_test, y_pred_1)
+print (cm_KNN)
+print(accuracy_score(y_test, y_pred_1))
 
 cm_KNN = confusion_matrix(y_test, y_pred_3)
 print (cm_KNN)
@@ -119,12 +385,71 @@ cm_KNN = confusion_matrix(y_test, y_pred_7)
 print (cm_KNN)
 print(accuracy_score(y_test, y_pred_7))
 
-cm_KNN = confusion_matrix(y_test, y_pred_12)
+cm_KNN = confusion_matrix(y_test, y_pred_9)
 print (cm_KNN)
-print(accuracy_score(y_test, y_pred_12))
+print(accuracy_score(y_test, y_pred_9))
 
-cm_KNN = confusion_matrix(y_test, y_pred_5)
-acc_KNN = accuracy_score(y_test, y_pred_5)
+cm_KNN = confusion_matrix(y_test, y_pred_11)
+print (cm_KNN)
+print(accuracy_score(y_test, y_pred_11))
+
+cm_KNN = confusion_matrix(y_test, y_pred_13)
+print (cm_KNN)
+print(accuracy_score(y_test, y_pred_13))
+
+cm_KNN = confusion_matrix(y_test, y_pred_15)
+print (cm_KNN)
+print(accuracy_score(y_test, y_pred_15))
+
+cm_KNN = confusion_matrix(y_test, y_pred_17)
+print (cm_KNN)
+print(accuracy_score(y_test, y_pred_17))
+
+cm_KNN = confusion_matrix(y_test, y_pred_19)
+print (cm_KNN)
+print(accuracy_score(y_test, y_pred_19))
+
+cm_KNN = confusion_matrix(y_test, y_pred_21)
+print (cm_KNN)
+print(accuracy_score(y_test, y_pred_21))
+
+cm_KNN = confusion_matrix(y_test, y_pred_23)
+print (cm_KNN)
+print(accuracy_score(y_test, y_pred_23))
+
+cm_KNN = confusion_matrix(y_test, y_pred_25)
+print (cm_KNN)
+print(accuracy_score(y_test, y_pred_25))
+
+cm_KNN = confusion_matrix(y_test, y_pred_27)
+print (cm_KNN)
+print(accuracy_score(y_test, y_pred_27))
+
+cm_KNN = confusion_matrix(y_test, y_pred_29)
+print (cm_KNN)
+print(accuracy_score(y_test, y_pred_29))
+
+cm_KNN = confusion_matrix(y_test, y_pred_31)
+print (cm_KNN)
+print(accuracy_score(y_test, y_pred_31))
+
+# MODELO KNN - 11 vizinhos
+classifier_11 = KNeighborsClassifier(n_neighbors=11)
+
+# MODELO KNN - Treinando o modelo KNN com 11 vizinhos.
+classifier_11.fit(X_train, y_train)
+
+# MODELO KNN - Para fazer predições dos resultados dos testes de 11 vizinhos
+y_pred_11 = classifier_11.predict(X_test)
+
+# MODELO KNN - Métricas de performance do modelo
+
+cm_KNN = confusion_matrix(y_test, y_pred_11)
+print (cm_KNN)
+print(accuracy_score(y_test, y_pred_11))
+
+cm_KNN = confusion_matrix(y_test, y_pred_11)
+acc_KNN = accuracy_score(y_test, y_pred_11)
 sns.heatmap(cm_KNN, annot=True, fmt='d', cmap='Reds')
 plt.xlabel('Precisão')
 plt.ylabel('Atual')
@@ -133,15 +458,47 @@ plt.show()
 
 """**INTERPRETAÇÃO**
 
-Verdadeiros Positivos (142): São indivíduos com previsão correta de
+Verdadeiros Positivos (83): São indivíduos com previsão correta de
 risco de ataque cardíaco.
 
-Verdadeiros Negativos (847): Estes são indivíduos corretamente previstos como não correndo risco de ataque cardíaco.
+Verdadeiros Negativos (976): Estes são indivíduos corretamente previstos como não correndo risco de ataque cardíaco.
 
-Falsos Positivos (295): São indivíduos com previsão incorreta de risco de ataque cardíaco.
+Falsos Positivos (166): São indivíduos com previsão incorreta de risco de ataque cardíaco.
 
-Falsos Negativos (469): São indivíduos com previsão incorreta de não correrem risco de ataque cardíaco.
+Falsos Negativos (628): São indivíduos com previsão incorreta de não correrem risco de ataque cardíaco.
 
-A precisão de 0,564 indica que quando o modelo prevê que um indivíduo corre risco de ter um ataque cardíaco, **ele está correto em cerca de 56,4% das vezes.**
+A precisão de 0,604 indica que quando o modelo prevê que um indivíduo corre risco de ter um ataque cardíaco, **ele está correto em cerca de 60,4% das vezes.**
 """
+# Métricas Modelo KNN
 
+def matriz_confusao(y_test, y_predit_11):
+
+  # Recriando Matriz de Confusão
+  matriz_confusao = confusion_matrix(y_test, y_predit_11)
+
+  # Extraindo valores da matriz
+  VP = matriz_confusao[0, 0]
+  FN = matriz_confusao[0, 1]
+  FP = matriz_confusao[1, 0]
+  VN = matriz_confusao[1, 1]
+
+  # Cálculo das métricas
+  acuracia = (VP + VN) / (VP + VN + FP + FN)
+  precisao = VP / (VP + FP)
+  revocacao = VP / (VP + FN)
+  f1_score = 2 * (precisao * revocacao) / (precisao + revocacao)
+
+# Returnando as métricas e a matriz
+  return matriz_confusao, acuracia, precisao, revocacao, f1_score
+
+# Retornando os valores
+matriz_confusao_personalizada, acuracia, precisao, revocacao, f1_score = matriz_confusao(y_test, y_pred_11)
+
+# Imprimindo os resultados
+print("Matriz de Confusão Personalizada:")
+print(matriz_confusao_personalizada)
+print("\nMetricas Personalizadas:")
+print(f"Acurácia: {acuracia}")
+print(f"Precisão: {precisao}")
+print(f"Revocação: {revocacao}")
+print(f"F1-Score: {f1_score}")
