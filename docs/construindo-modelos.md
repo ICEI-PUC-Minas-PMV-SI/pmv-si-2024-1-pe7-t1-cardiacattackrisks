@@ -123,11 +123,79 @@ y_train = y_train.values.reshape(-1, 1)
 y_test = y_test.values.reshape(-1, 1)
 y_test.shape
 ```
-* Manuseio de Dados Temporais: se lidar com dados temporais, considere a ordenação adequada e técnicas específicas para esse tipo de dado.
   
 * Redução de Dimensionalidade: aplique técnicas como PCA (Análise de Componentes Principais) se a dimensionalidade dos dados for muito alta.
 
+Reduzindo a Dimensionalidade:
+```python
+from sklearn.decomposition import PCA
+
+# Inicializar o objeto PCA com o número desejado de componentes
+pca = PCA(n_components=2)  # Define o número de componentes principais desejados
+
+# Aplicar PCA aos dados de treinamento (assumindo que X_train já está definido)
+X_train_pca = pca.fit_transform(X_train)
+
+# Converter para DataFrame para uma melhor visualização
+X_train_pca_df = pd.DataFrame(data=X_train_pca, 
+                              columns=['Principal Component 1', 'Principal Component 2'])
+
+# Exibir as primeiras linhas para visualização
+print(X_train_pca_df.head())
+
+# Exibir a nova forma dos dados após a redução de dimensionalidade
+print("Forma dos dados após a redução de dimensionalidade:", X_train_pca_df.shape)
+
+# Exibir a variância explicada por cada componente
+print("Variância explicada por cada componente:", pca.explained_variance_ratio_)
+```
+
+Após a redução da dimensionalidade, chegou-se ao resultado:
+```python
+   Principal Component 1  Principal Component 2
+0               -1.1e+00                    0.2
+1                5.4e-01                    1.0
+2               -2.3e-01                   -0.5
+3                1.4e-01                   -0.7
+4               -4.2e-02                    0.2
+Forma dos dados após a redução de dimensionalidade: (6134, 2)
+Variância explicada por cada componente: [0.08351793 0.05333054]
+```
+
 * Validação Cruzada: utilize validação cruzada para avaliar o desempenho do modelo de forma mais robusta.
+
+Realizamos a validação cruzada da seguinte forma:
+```python
+from sklearn.model_selection import cross_val_score
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.preprocessing import StandardScaler
+from sklearn.pipeline import Pipeline
+
+# Carregando os dados
+data = pd.read_csv('heart_attack_prediction_dataset.csv')
+X = data.drop('Heart Attack Risk', axis=1)
+y = data['Heart Attack Risk']
+
+# Criamos um pipeline  modelo
+pipeline = Pipeline([
+    ('scaler', StandardScaler()),  # Padronização dos dados
+    ('clf', RandomForestClassifier())  # Modelo RandomForest
+])
+
+# Realização da validação cruzada
+scores = cross_val_score(pipeline, X, y, cv=5)  # 5 folds
+print("Acurácia Média: {:.2f}".format(scores.mean()))
+print("Desvio Padrão dos Scores: {:.2f}".format(scores.std()))
+```python
+
+O resultado impresso foi:
+
+```python
+Acurácia Média: 0.63
+Desvio Padrão dos Scores: 0.00
+```
+
+O que nos indica que a acurácia média foi de 63% com um desvio padrão de 0, signficando que o modelo é estável.
 
 * Monitoramento Contínuo: atualize e adapte o pré-processamento conforme necessário ao longo do tempo, especialmente se os dados ou as condições do problema mudarem.
 
