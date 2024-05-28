@@ -186,8 +186,7 @@ pipeline = Pipeline([
 scores = cross_val_score(pipeline, X, y, cv=5)  # 5 folds
 print("Acurácia Média: {:.2f}".format(scores.mean()))
 print("Desvio Padrão dos Scores: {:.2f}".format(scores.std()))
-```python
-
+```
 O resultado impresso foi:
 
 ```python
