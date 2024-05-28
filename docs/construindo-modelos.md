@@ -487,8 +487,7 @@ plt.xlabel('Precisão')
 plt.ylabel('Atual')
 plt.title('Confusion Matrix')
 plt.show()
-```python
-
+```
 Dessa forma, a matriz de confusão obtida é:
 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe7-t1-cardiacattackrisks/assets/81273377/4da91f01-e122-40b6-abad-c6e1d218d28b)
