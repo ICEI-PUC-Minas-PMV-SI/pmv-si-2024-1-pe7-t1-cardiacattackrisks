@@ -3,7 +3,7 @@ import numpy as np
 from sklearn.linear_model import LogisticRegression
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import classification_report, accuracy_score, confusion_matrix
+from sklearn.metrics import classification_report, accuracy_score, confusion_matrix, recall_score, f1_score
 
 # Importando o dataset do CSV
 data = pd.read_csv('heart_attack_prediction_dataset.csv')
@@ -49,7 +49,8 @@ X_train, X_test, y_train, y_test = train_test_split(
     X_scaled, y, test_size=0.20, random_state=42)
 
 # Criar modelo
-logreg_model = LogisticRegression(random_state=16)
+# logreg_model = LogisticRegression(random_state=42)
+logreg_model = LogisticRegression()
 logreg_model.fit(X_train, y_train)
 
 # Fazer previsões
@@ -59,3 +60,5 @@ y_pred = logreg_model.predict(X_test)
 print("Precisão:", accuracy_score(y_test, y_pred))
 print("Matrix de confusão:\n", confusion_matrix(y_test, y_pred))
 print("Classificação:\n", classification_report(y_test, y_pred))
+# print("Recall: ", recall_score(y_test, y_pred))
+# print("F1 Score: ", f1_score(y_test, y_pred))
