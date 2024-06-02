@@ -602,6 +602,74 @@ A Matriz de Confusão é apresentada abaixo:
 
   ![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe7-t1-cardiacattackrisks/assets/81273377/5b2b6b84-d303-4ba8-ab43-8a6045bfb734)
 
+* MODELO NAIVE BAYES
+
+No Modelo Naive Bayes, foi utulizada foi utilizada a SMOTE, como técnica para aumentar o número de casos do conjunto.
+
+```python
+# Aplicar SMOTE
+smote = SMOTE(random_state=42)
+X_res, y_res = smote.fit_resample(X_scaled, y)
+
+# Dividir os dados em conjunto de treinamento e teste
+X_train_res, X_test_res, y_train_res, y_test_res = train_test_split(X_res, y_res, test_size=0.2, random_state=42)
+
+# Treinar o modelo Naive Bayes
+naive_bayes_model_res = GaussianNB()
+naive_bayes_model_res.fit(X_train_res, y_train_res)
+
+# Fazer previsões e avaliar o modelo
+y_pred_res = naive_bayes_model_res.predict(X_test_res)
+print("Precisão:", accuracy_score(y_test_res, y_pred_res))
+print("Matriz de confusão:\n", confusion_matrix(y_test_res, y_pred_res))
+print("Classificação:\n", classification_report(y_test_res, y_pred_res))
+``
+
+Os atributos foram selecionados para avalição do modelo.
+
+```python
+# Inserir novos dados para previsão
+novos_dados = pd.DataFrame({
+    'Age': [20],  # Exemplo: 50 anos
+    'Sex': [0],  # 0 para feminino
+    'Cholesterol': [120],  # Exemplo: 220 mg/dL
+    'Heart Rate': [75],  # Exemplo: 75 bpm
+    'Diabetes': [0],  # Sem diabetes
+    'Family History': [1],  # Histórico familiar positivo
+    'Smoking': [1],  # Fumante
+    'Obesity': [1],  # Obeso
+    'Alcohol Consumption': [2],  # Consumo de álcool (por exemplo, 2 unidades)
+    'Exercise Hours Per Week': [1],  # 1 hora de exercício por semana
+    'Diet': [0],  # Dieta não saudável
+    'Previous Heart Problems': [0],  # Sem problemas cardíacos prévios
+    'Medication Use': [1],  # Uso de medicação
+    'Stress Level': [4],  # Nível de estresse (por exemplo, 4)
+    'Sedentary Hours Per Day': [8],  # 8 horas sedentárias por dia
+    'Income': [45000],  # Renda anual (por exemplo, 45.000)
+    'BMI': [28],  # Índice de Massa Corporal (por exemplo, 28)
+    'Triglycerides': [180],  # Triglicerídeos (por exemplo, 180 mg/dL)
+    'Physical Activity Days Per Week': [2],  # 2 dias de atividade física por semana
+    'Sleep Hours Per Day': [6],  # 6 horas de sono por dia
+    'Systolic Pressure': [130],  # Pressão sistólica (por exemplo, 130 mmHg)
+    'Dyastolic Pressure': [85]  # Pressão diastólica (por exemplo, 85 mmHg)
+})
+
+# Normalizar os novos dados
+novos_dados_scaled = scaler.transform(novos_dados)
+
+# Fazer a previsão
+previsao = naive_bayes_model_res.predict(novos_dados_scaled)
+previsao_proba = naive_bayes_model_res.predict_proba(novos_dados_scaled)
+
+# Mostrar os resultados
+print("\nPrevisão de risco de ataque cardíaco (0 = Baixo, 1 = Alto):", previsao[0])
+print("Probabilidades:", previsao_proba[0])
+```
+
+O resultado final, obtido neste modelo foi:
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe7-t1-cardiacattackrisks/assets/81273377/2e0d77e0-d5a6-4d3a-a7e2-df38075e6c33)
+
 
 # Avaliação dos modelos criados
 
@@ -676,6 +744,12 @@ Os resultados para as métricas do Modelo Randon Forest são:4
 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe7-t1-cardiacattackrisks/assets/81273377/7e650bae-529f-4acc-a976-21f67c9fe6bc)
 
+* MODELO NAIVE BAYES
+
+Para o modelo Naive Bayes, considerou-se também a avaliação de métricas dos modelos anrteriores.
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe7-t1-cardiacattackrisks/assets/81273377/8ac2b418-2532-4930-a9b6-86491fcbb99d)
+
 
 ## Discussão dos resultados obtidos
 
@@ -686,6 +760,8 @@ No Modelo MSE (Mean Squared Error), a acurácia se encontrou em **51%**, indica 
 No modelo de Regressão Logística, uma acurácia de **52%** e uma precisão de 64% para um modelo de regressão logística sugerem um desempenho moderado na tarefa de classificação do conjunto de dados. A acurácia de 52% indica que o modelo está prevendo corretamente a classe alvo para aproximadamente metade dos exemplos no conjunto de dados de teste. A precisão de 64% indica que, entre todas as instâncias que o modelo previu como positivas, 64% delas realmente são positivas. Isso sugere que o modelo está realizando um trabalho melhor na identificação correta dos verdadeiros positivos, em comparação com a taxa de acurácia geral. 
 
 No modelo Randon Forest, uma acurácia de **64%** indica um desempenho moderado na tarefa de classificação do conjunto de dados. O Random Forest é uma técnica de aprendizado de máquina baseada em árvores de decisão, que utiliza uma combinação de múltiplas árvores de decisão para fazer previsões. Uma acurácia de 64% sugere que o modelo está prevendo corretamente a classe alvo para cerca de dois terços dos exemplos no conjunto de dados de teste. Isso indica uma capacidade razoável do modelo em distinguir entre as diferentes classes ou categorias do problema em questão.
+
+No modelo Naive Bayes, uma acurácia de **57%** sugere um desempenho razoável na tarefa de classificação do conjunto de dados. O Naive Bayes é um modelo probabilístico simples, mas poderoso, que é frequentemente utilizado em problemas de classificação, especialmente quando se lida com conjuntos de dados de texto ou com características categóricas. Uma acurácia de 57% indica que o modelo está prevendo corretamente a classe alvo para mais da metade dos exemplos no conjunto de dados de teste.
 
 
 # Pipeline de pesquisa e análise de dados
@@ -709,6 +785,7 @@ Regressão Linear: A função `train_linear_regression` treina um modelo de regr
 Regressão Logística: A função `` treina um modelo de regessão logística com base nas variáveis preditoras. 
 KNN: a função `classifier_1.fit(X_train, y_train)` treina um modelo de classificação consirando um númeo de vizinhos.
 Randon Forest: A função `rf_model` treina o modelo randon forest.
+Naive Bayes: A função `naive_bayes_model_res` treina um modelo.
 
 7. Avaliação
 Modelo SVM: A função `evaluate_model` avalia o modelo SVM usando o conjunto de teste, calculando a precisão, a matriz de confusão e o relatório de classificação.
@@ -716,3 +793,4 @@ Regressão Linear: A função `evaluate_model` avalia o modelo de regressão lin
 Regressão Logística: A função `svm_model` avalia o modelo de regessão logística.
 KNN: A função ` classifier_1.predict(X_test)` é usada para avaliar a predição do modelo KNN, considerano um número de vizinhos.
 Randon Forest: A função `best_model` avalia o modelo randon forest.
+Naive Bayes: A função `y_pred_res` avalia o desempenho do modelo. 
