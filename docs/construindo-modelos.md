@@ -606,26 +606,18 @@ Considerando o primeiro cenário, de um conjunto de teste de 20%, foi calculado 
 
 ## Discussão dos resultados obtidos
 
-No Modelo KNN, os resultados obtidos obtiveram uma acurácia de **60,4%**. Sua simplicidade e flexibilidade o tornam uma escolha interessante. No entanto, sua eficácia pode ser limitada em conjuntos de dados de alta dimensionalidade ou com uma grande quantidade de ruído. Isto fica notório quando analisados os números de vizinhos distintos. Em última análise, a eficiência do KNN depende da escolha apropriada do parâmetro k (quantidade de vizinhos) e da natureza subjacente dos dados. Para aplicações onde a interpretabilidade é crucial ou onde a generalização é um desafio, o KNN pode ser uma escolha valiosa, tal qual como no dataset avaliado. Apesar de alguns desafios, o modelo KNN tem o potencial de contribuir significativamente para a previsão de ataques cardíacos neste conjunto de dados, fornecendo insights
+No Modelo KNN, os resultados obtidos obtiveram uma acurácia de **60,4%**. Sua simplicidade e flexibilidade o tornam uma escolha interessante. No entanto, sua eficácia pode ser limitada em conjuntos de dados de alta dimensionalidade ou com uma grande quantidade de ruído. Isto fica notório quando analisados os números de vizinhos distintos. Em última análise, a eficiência do KNN depende da escolha apropriada do parâmetro k (quantidade de vizinhos) e da natureza subjacente dos dados. Para aplicações onde a interpretabilidade é crucial ou onde a generalização é um desafio, o KNN pode ser uma escolha valiosa, tal qual como no dataset avaliado. Apesar de alguns desafios, o modelo KNN tem o potencial de contribuir significativamente para a previsão de ataques cardíacos neste conjunto de dados, fornecendo insights.
+
+No Modelo MSE (Mean Squared Error), a acurácia se encontrou em **51%**, indica que o modelo está prevendo corretamente a classe alvo para cerca de metade dos exemplos no conjunto de dados de teste. Enquanto isso, uma precisão de 64% sugere que o modelo está fazendo um trabalho relativamente bom na identificação correta dos verdadeiros positivos em relação ao total de instâncias classificadas como positivas pelo modelo. Por outro lado, o MSE (Mean Squared Error) de 0.2321 é uma medida de erro que quantifica a média dos quadrados das diferenças entre os valores previstos pelo modelo e os valores reais do conjunto de dados de teste. Um valor de MSE mais baixo indica que o modelo está fazendo previsões mais precisas, pois os erros entre as previsões e os valores reais são menores em magnitude.
+
+No modelo de Regressão Logística, uma acurácia de **52%** e uma precisão de 64% para um modelo de regressão logística sugerem um desempenho moderado na tarefa de classificação do conjunto de dados. A acurácia de 52% indica que o modelo está prevendo corretamente a classe alvo para aproximadamente metade dos exemplos no conjunto de dados de teste. A precisão de 64% indica que, entre todas as instâncias que o modelo previu como positivas, 64% delas realmente são positivas. Isso sugere que o modelo está realizando um trabalho melhor na identificação correta dos verdadeiros positivos, em comparação com a taxa de acurácia geral. 
 
 
 # Pipeline de pesquisa e análise de dados
 
-1. Objetivo
-O objetivo é identificar e prever a ocorrência de ataques cardíacos e a predisposição ao acomentimento cardíaco.
+## Pipeline 
 
-2. Pré-processamento
-Carregar o Dataset: Leitura dos dados do dataset. Limpeza de dados: Exclisão de colunas (Patient Id, Blood Pressure). Feature Engineering: Criar atributos (Systolic Pressure e Dyastolic Pressure). Dimensionalidade: redução da dimensionalidade usando PCA. Escalonamento: Normalização dos dados numéricos utilizando StandardScaler. Codificação de Categorias: Transformação de variáveis categóricas usando OneHotEncoder.
-
-3. Treinamento
-KNeighborsClassifier: ajustar o modelo com os parâmetros de KNN. Random Forest Classifier: ajustar o modelo com os parâmetros. Regressão Logística: Ajuste do modelo com regularização e número máximo de iterações.
-
-3. Avaliação
-Divisão de Dados: Separação dos dados em conjuntos de treino e teste. Treinamento e Previsão: Ajuste dos modelos e previsão no conjunto de teste. Métricas de Desempenho: Cálculo de acurácia, precisão, recall, F1-Score, ROC AUC, matriz de confusão e relatório de classificação.
-
-## Pipeline SVM
-
-Esta pipeline foi desenvolvida para realizar análises e previsões em um conjunto de dados relacionado ao risco de ataque cardíaco utilizando o algoritmo SVM. Ela inclui as seguintes etapas:
+Esta pipeline foi desenvolvida para realizar análises e previsões em um conjunto de dados relacionado ao risco de ataque cardíaco. Ela inclui as seguintes etapas:
 
 1. Carregamento de Dados
 A função `load_data` é responsável por carregar os dados do arquivo CSV heart_attack_prediction_dataset.csv e retornar um DataFrame Pandas contendo os dados.
