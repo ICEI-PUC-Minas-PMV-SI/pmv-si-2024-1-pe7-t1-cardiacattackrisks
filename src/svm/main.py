@@ -5,6 +5,8 @@ from sklearn.model_selection import train_test_split, GridSearchCV
 from sklearn.preprocessing import StandardScaler, LabelEncoder
 from sklearn.svm import SVC
 from sklearn.metrics import classification_report, accuracy_score, confusion_matrix
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import mean_squared_error
 
 # Importa dataset
 data = pd.read_csv('heart_attack_prediction_dataset.csv')
@@ -69,3 +71,19 @@ y_pred = svm_model.predict(X_test)
 print("Precisão:", accuracy_score(y_test, y_pred))
 print("Matrix de confusão:\n", confusion_matrix(y_test, y_pred))
 print("Classificação:\n", classification_report(y_test, y_pred))
+
+# Dividir os dados em conjunto de treinamento e conjunto de teste
+from sklearn.model_selection import train_test_split
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=0)
+
+# Treinar um modelo de regressão linear
+model = LinearRegression()
+model.fit(X_train, y_train)
+
+# Fazer previsões no conjunto de teste
+y_pred = model.predict(X_test)
+
+# Calcular o MSE
+mse = mean_squared_error(y_test, y_pred)
+print("MSE:", mse)
