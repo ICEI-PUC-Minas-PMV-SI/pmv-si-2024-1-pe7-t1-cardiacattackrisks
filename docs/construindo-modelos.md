@@ -606,7 +606,8 @@ Considerando o primeiro cenário, de um conjunto de teste de 20%, foi calculado 
 
 ## Discussão dos resultados obtidos
 
-Nesta seção, discuta os resultados obtidos pelos modelos construídos, no contexto prático em que os dados se inserem, promovendo uma compreensão abrangente e aprofundada da qualidade de cada um deles. Lembre-se de relacionar os resultados obtidos ao problema identificado, a questão de pesquisa levantada e estabelecendo relação com os objetivos previamente propostos. 
+No Modelo KNN, os resultados obtidos obtiveram uma acurácia de **60,4%**. Sua simplicidade e flexibilidade o tornam uma escolha interessante. No entanto, sua eficácia pode ser limitada em conjuntos de dados de alta dimensionalidade ou com uma grande quantidade de ruído. Isto fica notório quando analisados os números de vizinhos distintos. Em última análise, a eficiência do KNN depende da escolha apropriada do parâmetro k (quantidade de vizinhos) e da natureza subjacente dos dados. Para aplicações onde a interpretabilidade é crucial ou onde a generalização é um desafio, o KNN pode ser uma escolha valiosa, tal qual como no dataset avaliado. Apesar de alguns desafios, o modelo KNN tem o potencial de contribuir significativamente para a previsão de ataques cardíacos neste conjunto de dados, fornecendo insights
+
 
 # Pipeline de pesquisa e análise de dados
 
