@@ -110,9 +110,6 @@ data["Systolic Pressure"] = data["Blood Pressure"].apply(lambda x: x.split("/")[
 data["Dyastolic Pressure"] = data["Blood Pressure"].apply(lambda x: x.split("/")[1]).astype(int)
 ```
 
-* Tratamento de dados desbalanceados: se as classes de interesse forem desbalanceadas, considere técnicas como _oversampling_, _undersampling_ ou o uso de algoritmos que lidam naturalmente com desbalanceamento.
-
-
 * Separação de dados: divida os dados em conjuntos de treinamento, validação e teste para avaliar o desempenho do modelo de maneira adequada.
 
 Conujunto de treinamento:
@@ -196,15 +193,9 @@ Desvio Padrão dos Scores: 0.00
 
 O que nos indica que a acurácia média foi de 63% com um desvio padrão de 0, signficando que o modelo é estável.
 
-* Monitoramento Contínuo: atualize e adapte o pré-processamento conforme necessário ao longo do tempo, especialmente se os dados ou as condições do problema mudarem.
-
-* Entre outras....
-
-Avalie quais etapas são importantes para o contexto dos dados que você está trabalhando, pois a qualidade dos dados e a eficácia do pré-processamento desempenham um papel fundamental no sucesso de modelo(s) de aprendizado de máquina. É importante entender o contexto do problema e ajustar as etapas de preparação de dados de acordo com as necessidades específicas de cada projeto.
-
 # Descrição dos modelos
 
-* Modelo KNN
+* MODELO KNN
 
 Considerando o modelo KNN como algoritmo de _machine learning_, este, traz a possibilidade de classificar cada amostra de um conjunto de dados avaliando sua distância em relação aos vizinhos mais próximos. Se os vizinhos mais próximos forem majoritariamente de uma classe, a amostra em questão será classificada nesta categoria.
 
@@ -501,12 +492,51 @@ risco de ataque cardíaco.
 A precisão de 0,604 indica que quando o modelo prevê que um indivíduo corre risco de ter um ataque cardíaco, **ele está correto em cerca de 60,4% das vezes.**
 
 **Video de apresentação**: https://youtu.be/yTDmvu9SLxM
-___
-Nesta seção, conhecendo os dados e de posse dos dados preparados, é hora de descrever os algoritmos de aprendizado de máquina selecionados para a construção dos modelos propostos. Inclua informações abrangentes sobre cada algoritmo implementado, aborde conceitos fundamentais, princípios de funcionamento, vantagens/limitações e justifique a escolha de cada um dos algoritmos. 
 
-Explore aspectos específicos, como o ajuste dos parâmetros livres de cada algoritmo. Lembre-se de experimentar parâmetros diferentes e principalmente, de justificar as escolhas realizadas.
+* MODELO DE REGRESSÃO LOGÍSTICA
 
-Como parte da comprovação de construção dos modelos, um vídeo de demonstração com todas as etapas de pré-processamento e de execução dos modelos deverá ser entregue. Este vídeo poderá ser do tipo _screencast_ e é imprescindível a narração contemplando a demonstração de todas as etapas realizadas.
+Na construção do modelo de regressão logística, há a técnica de aprendizado de máquina voltado para problemas de classificação. Ele é utilizado para prever a probabilidade de um evento ocorrer, com base em um conjunto de variáveis independentes. Uma vez treinado, o modelo pode ser usado para fazer previsões sobre novos dados, atribuindo probabilidades às diferentes classes. Nesse sentido, a construção do modelo segue o código abaixo:
+
+```python
+# Conjunto de teste 20% e Kernel RBF
+X_train, X_test, y_train, y_test = train_test_split(
+    X_scaled, y, test_size=0.20, random_state=42)
+
+svm_model = SVC(kernel='rbf', class_weight='balanced')
+     
+# Criar modelo
+svm_model = SVC(kernel='linear')
+svm_model.fit(X_train, y_train)
+
+# Fazer previsões
+y_pred = svm_model.predict(X_test)
+
+# Calculo e metricas
+print("Precisão:", accuracy_score(y_test, y_pred))
+print("Matrix de confusão:\n", confusion_matrix(y_test, y_pred))
+print("Classificação:\n", classification_report(y_test, y_pred))
+# print("Recall: ", recall_score(y_test, y_pred))
+# print("F1 Score: ", f1_score(y_test, y_pred))
+```
+O resultado obtido com o conjunto de treinamentos de 80% e de teste wem 20% foi:
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe7-t1-cardiacattackrisks/assets/81273377/e4264f1b-5215-4aec-abd6-b3791ef57ce3)
+
+Percebe-se a acurácia e m **51%**. Nesse sentido, em seguida, mudamos os valores de conjunto de teste para 45%:
+
+```python
+
+X_train, X_test, y_train, y_test = train_test_split(
+    X_scaled, y, test_size=0.45, random_state=42)
+
+svm_model = SVC(kernel='rbf', class_weight='balanced')
+```
+
+O resultado foi:
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe7-t1-cardiacattackrisks/assets/81273377/700ef765-04cd-4112-9f1d-55735be4b2e3)
+
+Neste caso, a acurácia ficou em **52%**
 
 # Avaliação dos modelos criados
 
@@ -556,10 +586,17 @@ O resultado foi impresso abaixo:
 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe7-t1-cardiacattackrisks/assets/81273377/f7802633-e15f-4a30-9ea0-51c5d388c9c7)
 
-Nesse aspecto, avalia-se que a taxa de precisão indica que de 100 avalialções, o modelo indica que **64%** deles, tenha um risco para ocorrência de ataque cardíaco.
+Nesse aspecto, avalia-se que a taxa de precisão indica que de 100 avalialções, o modelo indica que **60,4%** deles, tenha um risco para ocorrência de ataque cardíaco.
 
-____
-Nesta seção, as métricas utilizadas para avaliar os modelos desenvolvidos deverão ser apresentadas (p. ex.: acurácia, precisão, recall, F1-Score, MSE etc.). A escolha de cada métrica deverá ser justificada, pois esta escolha é essencial para avaliar de forma mais assertiva a qualidade do modelo construído. 
+* MODELO DE REGRESSÃO LOGÍSTICA
+
+Tal qual para o modelo KNN, as métricas de avaliação do modelo de Regressão Logística foi semelhante. Considerando o primeiro cenário, de um conjunto de teste de 20%, os resultados são apresentados abaixo:
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe7-t1-cardiacattackrisks/assets/81273377/ea7d90de-0636-43c1-b0b5-2807fcd8bc59)
+
+Em seguida, testando as mesmas métrica no segundo cenário de um conjunto de treinamento em 45%, os resultados foram de:
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe7-t1-cardiacattackrisks/assets/81273377/929b474d-ed83-42be-82ac-21e8173f26d0)
 
 ## Discussão dos resultados obtidos
 
@@ -567,4 +604,14 @@ Nesta seção, discuta os resultados obtidos pelos modelos construídos, no cont
 
 # Pipeline de pesquisa e análise de dados
 
-Em pesquisa e experimentação em sistemas de informação, um pipeline de pesquisa e análise de dados refere-se a um conjunto organizado de processos e etapas que um profissional segue para realizar a coleta, preparação, análise e interpretação de dados durante a fase de pesquisa e desenvolvimento de modelos. Esse pipeline é essencial para extrair _insights_ significativos, entender a natureza dos dados e, construir modelos de aprendizado de máquina eficazes. 
+1. Objetivo
+O objetivo é identificar e prever a ocorrência de ataques cardíacos e a predisposição ao acomentimento cardíaco.
+
+2. Pré-processamento
+Carregar o Dataset: Leitura dos dados do dataset. Escalonamento: Normalização dos dados numéricos utilizando StandardScaler. Codificação de Categorias: Transformação de variáveis categóricas usando OneHotEncoder.
+
+3. Treinamento
+KNeighborsClassifier: ajustar o modelo com os parâmetros de KNN. Random Forest Classifier: ajustar o modelo com os parâmetros. Regressão Logística: Ajuste do modelo com regularização e número máximo de iterações.
+
+3. Avaliação
+Divisão de Dados: Separação dos dados em conjuntos de treino e teste. Treinamento e Previsão: Ajuste dos modelos e previsão no conjunto de teste. Métricas de Desempenho: Cálculo de acurácia, precisão, recall, F1-Score, ROC AUC, matriz de confusão e relatório de classificação.
