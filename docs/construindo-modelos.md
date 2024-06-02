@@ -622,3 +622,28 @@ KNeighborsClassifier: ajustar o modelo com os parâmetros de KNN. Random Forest 
 
 3. Avaliação
 Divisão de Dados: Separação dos dados em conjuntos de treino e teste. Treinamento e Previsão: Ajuste dos modelos e previsão no conjunto de teste. Métricas de Desempenho: Cálculo de acurácia, precisão, recall, F1-Score, ROC AUC, matriz de confusão e relatório de classificação.
+
+## Pipeline SVM
+
+Esta pipeline foi desenvolvida para realizar análises e previsões em um conjunto de dados relacionado ao risco de ataque cardíaco utilizando o algoritmo SVM. Ela inclui as seguintes etapas:
+
+1. Carregamento de Dados
+A função `load_data` é responsável por carregar os dados do arquivo CSV heart_attack_prediction_dataset.csv e retornar um DataFrame Pandas contendo os dados.
+
+2. Limpeza de Dados
+A função `clean_data` realiza a limpeza dos dados, removendo colunas desnecessárias, tratando valores nulos e duplicados. Além disso, realiza transformações nos dados, como a separação da pressão sanguínea em duas colunas, diastólica e sistólica, e a transformação de variáveis categóricas em numéricas.
+
+3. Pré-processamento de Dados
+A função `preprocess_data` separa as variáveis preditoras da variável a ser prevista, normalizando as variáveis preditoras usando a função StandardScaler da biblioteca sklearn.
+
+4. Treinamento do Modelo SVM
+A função `train_svm` treina um modelo de Support Vector Machine (SVM) usando um kernel radial e pesos balanceados para lidar com classes desbalanceadas.
+
+5. Avaliação do Modelo SVM
+A função `evaluate_model` avalia o modelo SVM usando o conjunto de teste, calculando a precisão, a matriz de confusão e o relatório de classificação.
+
+6. Treinamento do Modelo de Regressão Linear
+A função `train_linear_regression` treina um modelo de regressão linear usando as variáveis preditoras e a variável alvo.
+
+7. Avaliação do Modelo de Regressão Linear
+A função `evaluate_model` avalia o modelo de regressão linear usando o conjunto de teste, calculando o erro quadrático médio (MSE).
