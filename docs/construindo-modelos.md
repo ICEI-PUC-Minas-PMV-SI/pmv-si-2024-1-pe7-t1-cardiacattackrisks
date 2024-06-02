@@ -538,6 +538,71 @@ O resultado foi:
 
 Neste caso, a acurácia ficou em **52%**
 
+* MODELO RANDON FOREST
+
+No Modelo Randon Forest, no pré-processamento de dados, consideramos:
+
+```python
+# Remover colunas não necessárias para o modelo
+data_model = data.drop(columns=['Patient ID', 'Country', 'Continent', 'Hemisphere'])
+
+# Codificar variáveis categóricas
+label_encoder = LabelEncoder()
+data_model['Sex'] = label_encoder.fit_transform(data_model['Sex'])
+data_model['Diet'] = label_encoder.fit_transform(data_model['Diet'])
+
+# Separar a coluna de pressão arterial em duas colunas separadas
+data_model[['Systolic_BP', 'Diastolic_BP']] = data_model['Blood Pressure'].str.split('/', expand=True).astype(float)
+
+# Remover a coluna original de pressão arterial
+data_model = data_model.drop(columns=['Blood Pressure'])
+
+# Converter colunas relevantes para valores numéricos
+data_model['Heart Rate'] = pd.to_numeric(data_model['Heart Rate'], errors='coerce')
+data_model['Income'] = pd.to_numeric(data_model['Income'], errors='coerce')
+data_model['Triglycerides'] = pd.to_numeric(data_model['Triglycerides'], errors='coerce')
+data_model['Physical Activity Days Per Week'] = pd.to_numeric(data_model['Physical Activity Days Per Week'], errors='coerce')
+
+# Preencher valores ausentes com a média
+data_model = data_model.fillna(data_model.mean())
+
+# Exibir as primeiras linhas do dataframe processado para verificação
+data_model.head()
+```
+Em seguida, definiu-se o conjunto de treinamento de dados
+
+```python
+# Separar variáveis de entrada (X) e saída (y)
+X = data_model.drop(columns=['Heart Attack Risk'])
+y = data_model['Heart Attack Risk']
+
+# Divisão dos dados em treino e teste
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Verificar os tamanhos dos conjuntos
+print("Tamanho do conjunto de treino:", X_train.shape)
+print("Tamanho do conjunto de teste:", X_test.shape)
+```
+
+Cujo resultado foi:
+
+```python
+# Matriz de Confusão
+conf_matrix = confusion_matrix(y_test, y_pred_simple)
+
+plt.figure(figsize=(10, 7))
+sns.heatmap(conf_matrix, annot=True, fmt='d', cmap='Blues', xticklabels=['No Risk', 'Risk'], yticklabels=['No Risk', 'Risk'])
+plt.xlabel('Predito')
+plt.ylabel('Verdadeiro')
+plt.title('Matriz de Confusão do Modelo de Random Forest')
+plt.show()
+```
+
+A Matriz de Cobnfusão é apresentada abaixo:
+
+  ![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe7-t1-cardiacattackrisks/assets/81273377/5b2b6b84-d303-4ba8-ab43-8a6045bfb734)
+
+
 # Avaliação dos modelos criados
 
 ## Métricas utilizadas
@@ -598,10 +663,18 @@ Em seguida, testando as mesmas métrica no segundo cenário de um conjunto de tr
 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe7-t1-cardiacattackrisks/assets/81273377/929b474d-ed83-42be-82ac-21e8173f26d0)
 
+
+* MODELO MSE
+  
 Considerando o primeiro cenário, de um conjunto de teste de 20%, foi calculado o resultado do MSE (que é uma medida do erro do modelo na previsão de classes), obtendo o seguinte resultado:
 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe7-t1-cardiacattackrisks/assets/81273042/8c1a3211-f7fc-4130-aa1a-3b3038d93de5)
 
+* MODELO RANDON FOREST
+
+Os resultados para as métricas do Modelo Randon Forest são:4
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe7-t1-cardiacattackrisks/assets/81273377/7e650bae-529f-4acc-a976-21f67c9fe6bc)
 
 
 ## Discussão dos resultados obtidos
@@ -611,6 +684,8 @@ No Modelo KNN, os resultados obtidos obtiveram uma acurácia de **60,4%**. Sua s
 No Modelo MSE (Mean Squared Error), a acurácia se encontrou em **51%**, indica que o modelo está prevendo corretamente a classe alvo para cerca de metade dos exemplos no conjunto de dados de teste. Enquanto isso, uma precisão de 64% sugere que o modelo está fazendo um trabalho relativamente bom na identificação correta dos verdadeiros positivos em relação ao total de instâncias classificadas como positivas pelo modelo. Por outro lado, o MSE (Mean Squared Error) de 0.2321 é uma medida de erro que quantifica a média dos quadrados das diferenças entre os valores previstos pelo modelo e os valores reais do conjunto de dados de teste. Um valor de MSE mais baixo indica que o modelo está fazendo previsões mais precisas, pois os erros entre as previsões e os valores reais são menores em magnitude.
 
 No modelo de Regressão Logística, uma acurácia de **52%** e uma precisão de 64% para um modelo de regressão logística sugerem um desempenho moderado na tarefa de classificação do conjunto de dados. A acurácia de 52% indica que o modelo está prevendo corretamente a classe alvo para aproximadamente metade dos exemplos no conjunto de dados de teste. A precisão de 64% indica que, entre todas as instâncias que o modelo previu como positivas, 64% delas realmente são positivas. Isso sugere que o modelo está realizando um trabalho melhor na identificação correta dos verdadeiros positivos, em comparação com a taxa de acurácia geral. 
+
+No modelo Randon Forest, uma acurácia de **64%** indica um desempenho moderado na tarefa de classificação do conjunto de dados. O Random Forest é uma técnica de aprendizado de máquina baseada em árvores de decisão, que utiliza uma combinação de múltiplas árvores de decisão para fazer previsões. Uma acurácia de 64% sugere que o modelo está prevendo corretamente a classe alvo para cerca de dois terços dos exemplos no conjunto de dados de teste. Isso indica uma capacidade razoável do modelo em distinguir entre as diferentes classes ou categorias do problema em questão.
 
 
 # Pipeline de pesquisa e análise de dados
@@ -633,9 +708,11 @@ Modelo SVM: A função `train_svm` treina um modelo de Support Vector Machine (S
 Regressão Linear: A função `train_linear_regression` treina um modelo de regressão linear usando as variáveis preditoras e a variável alvo.
 Regressão Logística: A função `` treina um modelo de regessão logística com base nas variáveis preditoras. 
 KNN: a função `classifier_1.fit(X_train, y_train)` treina um modelo de classificação consirando um númeo de vizinhos.
+Randon Forest: A função `rf_model` treina o modelo randon forest.
 
 7. Avaliação
 Modelo SVM: A função `evaluate_model` avalia o modelo SVM usando o conjunto de teste, calculando a precisão, a matriz de confusão e o relatório de classificação.
 Regressão Linear: A função `evaluate_model` avalia o modelo de regressão linear usando o conjunto de teste, calculando o erro quadrático médio (MSE).
 Regressão Logística: A função `svm_model` avalia o modelo de regessão logística.
-KNN: A função ` classifier_1.predict(X_test)` é usada para avaliar a predição do modelo KNN, considerano um número de vizinhos. 
+KNN: A função ` classifier_1.predict(X_test)` é usada para avaliar a predição do modelo KNN, considerano um número de vizinhos.
+Randon Forest: A função `best_model` avalia o modelo randon forest.
