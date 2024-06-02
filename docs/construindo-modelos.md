@@ -636,14 +636,14 @@ A função `clean_data` realiza a limpeza dos dados, removendo colunas desnecess
 3. Pré-processamento de Dados
 A função `preprocess_data` separa as variáveis preditoras da variável a ser prevista, normalizando as variáveis preditoras usando a função StandardScaler da biblioteca sklearn.
 
-4. Treinamento do Modelo SVM
-A função `train_svm` treina um modelo de Support Vector Machine (SVM) usando um kernel radial e pesos balanceados para lidar com classes desbalanceadas.
+5. Treinamento
+Modelo SVM: A função `train_svm` treina um modelo de Support Vector Machine (SVM) usando um kernel radial e pesos balanceados para lidar com classes desbalanceadas.
+Regressão Linear: A função `train_linear_regression` treina um modelo de regressão linear usando as variáveis preditoras e a variável alvo.
+Regressão Logística: A função `` treina um modelo de regessão logística com base nas variáveis preditoras. 
+KNN: a função `classifier_1.fit(X_train, y_train)` treina um modelo de classificação consirando um númeo de vizinhos.
 
-5. Avaliação do Modelo SVM
-A função `evaluate_model` avalia o modelo SVM usando o conjunto de teste, calculando a precisão, a matriz de confusão e o relatório de classificação.
-
-6. Treinamento do Modelo de Regressão Linear
-A função `train_linear_regression` treina um modelo de regressão linear usando as variáveis preditoras e a variável alvo.
-
-7. Avaliação do Modelo de Regressão Linear
-A função `evaluate_model` avalia o modelo de regressão linear usando o conjunto de teste, calculando o erro quadrático médio (MSE).
+7. Avaliação
+Modelo SVM: A função `evaluate_model` avalia o modelo SVM usando o conjunto de teste, calculando a precisão, a matriz de confusão e o relatório de classificação.
+Regressão Linear: A função `evaluate_model` avalia o modelo de regressão linear usando o conjunto de teste, calculando o erro quadrático médio (MSE).
+Regressão Logística: A função `svm_model` avalia o modelo de regessão logística.
+KNN: A função ` classifier_1.predict(X_test)` é usada para avaliar a predição do modelo KNN, considerano um número de vizinhos. 
