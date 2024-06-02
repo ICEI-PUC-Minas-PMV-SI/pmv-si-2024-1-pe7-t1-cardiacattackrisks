@@ -598,6 +598,12 @@ Em seguida, testando as mesmas métrica no segundo cenário de um conjunto de tr
 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe7-t1-cardiacattackrisks/assets/81273377/929b474d-ed83-42be-82ac-21e8173f26d0)
 
+Considerando o primeiro cenário, de um conjunto de teste de 20%, foi calculado o resultado do MSE (que é uma medida do erro do modelo na previsão de classes), obtendo o seguinte resultado:
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe7-t1-cardiacattackrisks/assets/81273042/8c1a3211-f7fc-4130-aa1a-3b3038d93de5)
+
+
+
 ## Discussão dos resultados obtidos
 
 Nesta seção, discuta os resultados obtidos pelos modelos construídos, no contexto prático em que os dados se inserem, promovendo uma compreensão abrangente e aprofundada da qualidade de cada um deles. Lembre-se de relacionar os resultados obtidos ao problema identificado, a questão de pesquisa levantada e estabelecendo relação com os objetivos previamente propostos. 
