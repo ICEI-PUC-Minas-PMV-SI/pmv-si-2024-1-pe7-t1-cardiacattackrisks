@@ -598,7 +598,7 @@ plt.title('Matriz de Confusão do Modelo de Random Forest')
 plt.show()
 ```
 
-A Matriz de Cobnfusão é apresentada abaixo:
+A Matriz de Confusão é apresentada abaixo:
 
   ![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe7-t1-cardiacattackrisks/assets/81273377/5b2b6b84-d303-4ba8-ab43-8a6045bfb734)
 
