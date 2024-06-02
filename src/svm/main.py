@@ -1,7 +1,8 @@
 import pandas as pd
 import numpy as np
-from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import StandardScaler
+from sklearn.utils import class_weight
+from sklearn.model_selection import train_test_split, GridSearchCV
+from sklearn.preprocessing import StandardScaler, LabelEncoder
 from sklearn.svm import SVC
 from sklearn.metrics import classification_report, accuracy_score, confusion_matrix
 from sklearn.linear_model import LinearRegression
@@ -57,20 +58,19 @@ X_scaled = scaler.fit_transform(X)
 # Dividir conjunto de dados
 # Conjunto de treinamento: 80% - Conjunto de teste 20%
 X_train, X_test, y_train, y_test = train_test_split(
-    X_scaled, y, test_size=0.2, random_state=42)
+    X_scaled, y, test_size=0.20, random_state=42)
 
 # Criar modelo SVM usando um kernel linear
-svm_model = SVC(kernel='linear')
+svm_model = SVC(kernel='rbf', class_weight='balanced')
 svm_model.fit(X_train, y_train)
 
-# Executar treinamento
+# Fazer previsões
 y_pred = svm_model.predict(X_test)
 
 # Calculo e metricas
 print("Precisão:", accuracy_score(y_test, y_pred))
 print("Matrix de confusão:\n", confusion_matrix(y_test, y_pred))
 print("Classificação:\n", classification_report(y_test, y_pred))
-
 
 # Dividir os dados em conjunto de treinamento e conjunto de teste
 from sklearn.model_selection import train_test_split
