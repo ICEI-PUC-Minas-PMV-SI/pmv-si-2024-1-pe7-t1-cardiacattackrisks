@@ -608,7 +608,7 @@ Nesta seção, discuta os resultados obtidos pelos modelos construídos, no cont
 O objetivo é identificar e prever a ocorrência de ataques cardíacos e a predisposição ao acomentimento cardíaco.
 
 2. Pré-processamento
-Carregar o Dataset: Leitura dos dados do dataset. Escalonamento: Normalização dos dados numéricos utilizando StandardScaler. Codificação de Categorias: Transformação de variáveis categóricas usando OneHotEncoder.
+Carregar o Dataset: Leitura dos dados do dataset. Limpeza de dados: Exclisão de colunas (Patient Id, Blood Pressure). Feature Engineering: Criar atributos (Systolic Pressure e Dyastolic Pressure). Dimensionalidade: redução da dimensionalidade usando PCA. Escalonamento: Normalização dos dados numéricos utilizando StandardScaler. Codificação de Categorias: Transformação de variáveis categóricas usando OneHotEncoder.
 
 3. Treinamento
 KNeighborsClassifier: ajustar o modelo com os parâmetros de KNN. Random Forest Classifier: ajustar o modelo com os parâmetros. Regressão Logística: Ajuste do modelo com regularização e número máximo de iterações.
