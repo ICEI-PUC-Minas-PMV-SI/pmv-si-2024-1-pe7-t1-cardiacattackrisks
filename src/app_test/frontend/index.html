@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>Previsão de Ataque Cardíaco</title>
+    <style>
+        .container {
+            max-width: 500px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4">Previsão de Ataque Cardíaco</h1>
+        <form id="predictionForm">
+            <div class="form-group">
+                <label for="age">Idade</label>
+                <input type="number" class="form-control" id="age" name="age" required>
+            </div>
+            <div class="form-group">
+                <label for="sex">Sexo</label>
+                <select class="form-control" id="sex" name="sex" required>
+                    <option value="">Selecione</option>
+                    <option value="Male">Masculino</option>
+                    <option value="Female">Feminino</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="cholesterol">Nível de Colesterol</label>
+                <input type="number" class="form-control" id="cholesterol" name="cholesterol" required>
+            </div>
+            <div class="form-group">
+                <label for="triglycerides">Nível de Triglicerídeos</label>
+                <input type="number" class="form-control" id="triglycerides" name="triglycerides" required>
+            </div>
+            <div class="form-group">
+                <label for="bloodPressure">Pressão Arterial</label>
+                <input type="text" class="form-control" id="bloodPressure" name="bloodPressure" placeholder="120/80" pattern="^\d{1,3}/\d{1,3}$" required>
+            </div>
+            <div class="form-group">
+                <label for="heartRate">Frequência Cardíaca</label>
+                <input type="number" class="form-control" id="heartRate" name="heartRate" required>
+            </div>
+            <div class="form-group">
+                <label for="diabetes">Diabetes</label>
+                <select class="form-control" id="diabetes" name="diabetes" required>
+                    <option value="0">Não</option>
+                    <option value="1">Sim</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="familyHistory">Histórico Familiar de Doenças Cardíacas</label>
+                <select class="form-control" id="familyHistory" name="familyHistory" required>
+                    <option value="0">Não</option>
+                    <option value="1">Sim</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="smoking">Fumante</label>
+                <select class="form-control" id="smoking" name="smoking" required>
+                    <option value="0">Não</option>
+                    <option value="1">Sim</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="obesity">Obesidade</label>
+                <input type="number" class="form-control" id="obesity" name="obesity" required>
+            </div>
+            <div class="form-group">
+                <label for="alcoholConsumption">Consumo de Álcool</label>
+                <input type="number" class="form-control" id="alcoholConsumption" name="alcoholConsumption" required>
+            </div>
+            <div class="form-group">
+                <label for="diet">Dieta</label>
+                <select class="form-control" id="diet" name="diet" required>
+                    <option value="Healthy">Saudável</option>
+                    <option value="Average">Média</option>
+                    <option value="Unhealthy">Não Saudável</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="exerciseHoursPerWeek">Horas de Exercício por Semana</label>
+                <input type="number" class="form-control" id="exerciseHoursPerWeek" name="exerciseHoursPerWeek" required>
+            </div>
+            <div class="form-group">
+                <label for="previousHeartProblems">Problemas Cardíacos Anteriores</label>
+                <select class="form-control" id="previousHeartProblems" name="previousHeartProblems" required>
+                    <option value="0">Não</option>
+                    <option value="1">Sim</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="medicationUse">Uso de Medicamentos</label>
+                <select class="form-control" id="medicationUse" name="medicationUse" required>
+                    <option value="0">Não</option>
+                    <option value="1">Sim</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="sleepHours">Horas de Sono por Dia</label>
+                <input type="number" class="form-control" id="sleepHours" name="sleepHours" required>
+            </div>
+            <div class="form-group">
+                <label for="bmi">IMC</label>
+                <input type="number" class="form-control" id="bmi" name="bmi" required>
+            </div>
+            <div class="form-group">
+                <label for="physicalActivityDaysPerWeek">Dias de Atividade Física por Semana</label>
+                <input type="number" class="form-control" id="physicalActivityDaysPerWeek" name="physicalActivityDaysPerWeek" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Prever</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
