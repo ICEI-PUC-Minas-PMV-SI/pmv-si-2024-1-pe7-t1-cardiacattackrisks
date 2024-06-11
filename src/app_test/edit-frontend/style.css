@@ -1,0 +1,32 @@
+
+
+body{
+    background-color: #A7A7A7
+}
+
+.container {
+    max-width: 500px;
+}
+
+.title{
+    color: white;
+    background-color: #8D0000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+
+.idade{
+    padding-top: 20px;
+    
+}
+
+.form-group{
+    font-weight: bold;
+}
