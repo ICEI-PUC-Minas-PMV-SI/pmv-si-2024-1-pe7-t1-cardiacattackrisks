@@ -18,8 +18,5 @@ BMI
 Triglycerides
 Physical Activity Days Per Week
 Sleep Hours Per Day
-Country
-Continent
-Hemisphere
 Systolic Blood Pressure
 Diastolic Blood Pressure

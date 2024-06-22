@@ -1,0 +1,29 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: ./api.dockerfile
+    container_name: api
+    networks:
+      - flasknetwork
+    ports:
+      - "8000:5000"
+  
+  web:
+    build:
+      context: .
+      dockerfile: ./web.dockerfile
+    container_name: web
+    networks:
+      - flasknetwork
+    ports: 
+      - "8001:80"
+    volumes:
+      - ./Web:/usr/share/nginx/html
+    depends_on:
+      - "api"
+    links:
+      - "api:api"
+networks:
+  flasknetwork:
+    driver: bridge

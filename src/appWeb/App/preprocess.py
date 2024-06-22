@@ -10,9 +10,9 @@ def binary_encoder(column, positive_value):
     return column.apply(lambda x: 1 if x == positive_value else 0)
 
 data['Sex'] = binary_encoder(data['Sex'], 'Male')
-data['Country'] = binary_encoder(data['Country'], 'Argentina')
-data['Continent'] = binary_encoder(data['Continent'], 'South America')
-data['Hemisphere'] = binary_encoder(data['Hemisphere'], 'Southern')
+# data['Country'] = binary_encoder(data['Country'], 'Argentina')
+# data['Continent'] = binary_encoder(data['Continent'], 'South America')
+# data['Hemisphere'] = binary_encoder(data['Hemisphere'], 'Southern')
 data['Diet'] = binary_encoder(data['Diet'], 'Average')
 
 # Separar a coluna 'Blood Pressure' em duas colunas: 'Systolic Blood Pressure' e 'Diastolic Blood Pressure'
@@ -22,6 +22,11 @@ data['Diastolic Blood Pressure'] = blood_pressure_split[1].astype(float)
 
 # Remover a coluna original 'Blood Pressure'
 data = data.drop(['Blood Pressure'], axis=1)
+
+# Remover as colunas 'Country', 'Continent' e 'Hemisphere'
+data = data.drop(['Country'], axis=1)
+data = data.drop(['Continent'], axis=1)
+data = data.drop(['Hemisphere'], axis=1)
 
 # Separar os dados em características (features) e rótulos (labels)
 X = data.drop(['Patient ID', 'Heart Attack Risk'], axis=1)

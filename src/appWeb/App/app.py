@@ -1,15 +1,15 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 import joblib
 import numpy as np
 import pandas as pd
-from flask_cors import CORS
 
 app = Flask(__name__)
 CORS(app, resources={r"/predict": {"origins": "*"}})
 
 
 # Carregar o modelo treinado e o scaler
-model = joblib.load('knn_heart_attack_model.pkl')
+model_knn = joblib.load('knn_heart_attack_model.pkl')
 scaler = joblib.load('scaler.pkl')
 
 # Carregar a lista das colunas esperadas
@@ -33,9 +33,9 @@ def predict():
 
         # Conversão para variáveis binárias
         df['Sex'] = df['Sex'].apply(lambda x: 1 if x == 'Male' else 0)
-        df['Country'] = df['Country'].apply(lambda x: 1 if x == 'Argentina' else 0)
-        df['Continent'] = df['Continent'].apply(lambda x: 1 if x == 'South America' else 0)
-        df['Hemisphere'] = df['Hemisphere'].apply(lambda x: 1 if x == 'Southern' else 0)
+        # df['Country'] = df['Country'].apply(lambda x: 1 if x == 'Argentina' else 0)
+        # df['Continent'] = df['Continent'].apply(lambda x: 1 if x == 'South America' else 0)
+        # df['Hemisphere'] = df['Hemisphere'].apply(lambda x: 1 if x == 'Southern' else 0)
         df['Diet'] = df['Diet'].apply(lambda x: 1 if x == 'Average' else 0)
 
         # Garantir que as colunas estejam na ordem correta
@@ -45,7 +45,7 @@ def predict():
         df_scaled = scaler.transform(df)
 
         # Fazer a previsão
-        prediction = model.predict(df_scaled)
+        prediction = model_knn.predict(df_scaled)
         output = int(prediction[0])
 
         # Retornar a resposta em JSON
@@ -55,4 +55,5 @@ def predict():
         return jsonify({'error': str(e)}), 500
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)
+    # app.run(host="0.0.0.0", port=5000, debug=False)
