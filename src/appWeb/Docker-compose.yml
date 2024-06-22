@@ -1,8 +1,6 @@
 services:
   api:
-    build:
-      context: .
-      dockerfile: ./api.dockerfile
+    image: willianmfaria/puc_minas:flask
     container_name: api
     networks:
       - flasknetwork
@@ -10,16 +8,12 @@ services:
       - "8000:5000"
   
   web:
-    build:
-      context: .
-      dockerfile: ./web.dockerfile
+    image: willianmfaria/puc_minas:nginx
     container_name: web
     networks:
       - flasknetwork
     ports: 
       - "8001:80"
-    volumes:
-      - ./Web:/usr/share/nginx/html
     depends_on:
       - "api"
     links:

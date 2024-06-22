@@ -106,7 +106,7 @@ document.getElementById("predictionForm").addEventListener("submit", function (e
         "Sedentary Hours Per Day": parseInt(sedentaryHoursPerDay)
     };
 
-    fetch('http://localhost:8000/predict', {
+    fetch('http://heartattackriskprediction.azurewebsites.net:5000/predict', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

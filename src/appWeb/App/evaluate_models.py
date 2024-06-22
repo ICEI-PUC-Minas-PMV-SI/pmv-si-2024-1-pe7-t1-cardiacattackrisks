@@ -51,7 +51,7 @@ X_train, X_test, y_train, y_test = train_test_split(X_scaled, y, test_size=0.3, 
 for name, short_name, model in models:
     # Carregar o modelo treinado e o scaler, se existirem
     try:
-        model = joblib.load(short_name+'_heart_attack_model_.pkl')
+        model = joblib.load(short_name+'_heart_attack_model.pkl')
         scaler = joblib.load('scaler.pkl')
         print("Modelos carregados com sucesso.")
     except FileNotFoundError:
