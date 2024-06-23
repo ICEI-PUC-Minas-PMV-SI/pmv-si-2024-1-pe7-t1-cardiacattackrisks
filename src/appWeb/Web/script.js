@@ -104,10 +104,10 @@ document.getElementById("predictionForm").addEventListener("submit", function (e
         // Hemisphere: hemisphere,
         "Medication Use": parseInt(medicationUse),
         "Previous Heart Problems": parseInt(previousHeartProblems),
-        "Sedentary Hours Per Day": parseInt(sedentaryHoursPerDay),
+        "Sedentary Hours Per Day": parseInt(sedentaryHoursPerDay)
     };
 
-    const URL = int(model) == 0 ? 'http://localhost:5000/predict' : 'http://localhost:5000/predict/svm'
+    const URL = int(model) == 0 ? 'http://localhost:8000/predict' : 'http://localhost:8000/predict/svm'
 
     fetch(URL, {
         method: 'POST',
