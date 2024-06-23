@@ -106,7 +106,7 @@ document.getElementById("predictionForm").addEventListener("submit", function (e
         "Sedentary Hours Per Day": parseInt(sedentaryHoursPerDay)
     };
 
-    fetch('http://heartattackriskprediction.azurewebsites.net:5000/predict', {
+    fetch('https://heartattackriskprediction.azurewebsites.net/predict', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -115,14 +115,17 @@ document.getElementById("predictionForm").addEventListener("submit", function (e
     })
         .then(response => response.json())
         .then(result => {
-            const risk = result['Heart Attack Risk'];
+            const risk_knn = result['Heart Attack Risk (KNN)'];
+            const risk_svm = result['Heart Attack Risk (SVM)'];
             let message;
 
-            if (risk === 1) {
-                message = "Risco alto de ataque cardíaco! Consulte seu médico.";
-            } else {
-                message = "Risco baixo de ataque cardíaco. Continue se cuidando!";
-            }
+            // if (risk_knn === 1 && risk_svm === 1) {
+            //     message = "Risco alto de ataque cardíaco! Consulte seu médico.";
+            // } else {
+            //     message = "Risco baixo de ataque cardíaco. Continue se cuidando!";
+            // }
+
+            message = "Risco de ataque cardíaco (KNN): " + risk_knn === 1 ? "Sim" : "Não" + "\\n" + "Risco de ataque cardíaco (SVM): " + risk_svm === 1 ? "Sim" : "Não";
 
             // Exibir o prompt com a mensagem
             alert(message);

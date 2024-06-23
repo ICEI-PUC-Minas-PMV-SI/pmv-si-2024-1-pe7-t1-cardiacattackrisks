@@ -1,10 +1,13 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template, redirect, url_for
 from flask_cors import CORS
 import joblib
 import numpy as np
 import pandas as pd
 
-app = Flask(__name__)
+app = Flask(__name__,
+            static_url_path='', 
+            static_folder='Static',
+            template_folder='Templates')
 CORS(app, resources={r"/predict": {"origins": "*"}})
 
 
@@ -16,6 +19,12 @@ scaler = joblib.load('scaler.pkl')
 # Carregar a lista das colunas esperadas
 with open('expected_columns.txt', 'r') as f:
     expected_columns = [line.strip() for line in f]
+
+@app.route('/')
+def index():
+   print('Request for index page received')
+#    return render_template('index.html')
+   return redirect(url_for('static', filename='index.html'))
 
 @app.route('/predict', methods=['POST'])
 def predict():
@@ -47,7 +56,7 @@ def predict():
 
         # Fazer a previsão
         prediction_knn = model_knn.predict(df_scaled)
-        output_knn = int(prediction[0])
+        output_knn = int(prediction_knn[0])
 
         prediction_svm = model_svm.predict(df_scaled)
         output_svm = int(prediction_svm[0])

@@ -1,23 +1,8 @@
 services:
   api:
-    image: willianmfaria/puc_minas:flask
+    image: willianmfaria/puc_minas:gunicorn
     container_name: api
     networks:
       - flasknetwork
     ports:
-      - "8000:5000"
-  
-  web:
-    image: willianmfaria/puc_minas:nginx
-    container_name: web
-    networks:
-      - flasknetwork
-    ports: 
-      - "8001:80"
-    depends_on:
-      - "api"
-    links:
-      - "api:api"
-networks:
-  flasknetwork:
-    driver: bridge
+      - "8000:8000"
