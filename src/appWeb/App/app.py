@@ -47,7 +47,7 @@ def predict():
 
         # Fazer a previsão
         prediction_knn = model_knn.predict(df_scaled)
-        output_knn = int(prediction[0])
+        output_knn = int(prediction_knn[0])
 
         prediction_svm = model_svm.predict(df_scaled)
         output_svm = int(prediction_svm[0])
