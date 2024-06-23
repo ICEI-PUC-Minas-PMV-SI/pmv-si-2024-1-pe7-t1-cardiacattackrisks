@@ -83,6 +83,7 @@ document.getElementById("predictionForm").addEventListener("submit", function (e
     const medicationUse = document.getElementById("medicationUse").value;
     const previousHeartProblems = document.getElementById("previousHeartProblems").value;
     const sedentaryHoursPerDay = document.getElementById("sedentaryHoursPerDay").value;
+    const model = document.getElementById("model").value;
 
     // Definir um valor padrão para "income"
     
@@ -114,6 +115,7 @@ document.getElementById("predictionForm").addEventListener("submit", function (e
         "Sedentary Hours Per Day": parseInt(sedentaryHoursPerDay)
     };
 
+
     fetch('http://localhost:5000/predict', {
         method: 'POST',
         headers: {
@@ -139,3 +141,4 @@ document.getElementById("predictionForm").addEventListener("submit", function (e
         alert("Ocorreu um erro ao tentar prever o risco.");
     });
 });
+
