@@ -1,3 +1,15 @@
+document.getElementById("height").addEventListener("input", calculateBMI);
+document.getElementById("weight").addEventListener("input", calculateBMI);
+
+function calculateBMI() {
+    const height = parseFloat(document.getElementById("height").value);
+    const weight = parseFloat(document.getElementById("weight").value);
+    if (height && weight) {
+        const bmi = (weight / (height * height)).toFixed(1);
+        document.getElementById("bmi").value = bmi;
+    }
+}
+
 document.getElementById("testar").addEventListener("click", function () {
     const exampleData = {
         age: 60,
@@ -7,20 +19,17 @@ document.getElementById("testar").addEventListener("click", function () {
         diabetes: 1,
         familyHistory: 1,
         smoking: 0,
-        obesity: 1,
         alcoholConsumption: 0,
         exerciseHoursPerWeek: 3,
         diet: "Healthy",
         stressLevel: 5,
         bloodPressure: "130/85",
-        income: 60000,
+        height: 1.75,
+        weight: 75,
         bmi: 27.5,
         triglycerides: 190,
         physicalActivityDaysPerWeek: 3,
         sleepHoursPerDay: 7,
-        // country: "USA",
-        // continent: "North America",
-        // hemisphere: "Northern",
         medicationUse: 1,
         previousHeartProblems: 1,
         sedentaryHoursPerDay: 6
@@ -33,23 +42,22 @@ document.getElementById("testar").addEventListener("click", function () {
     document.getElementById("diabetes").value = exampleData.diabetes;
     document.getElementById("familyHistory").value = exampleData.familyHistory;
     document.getElementById("smoking").value = exampleData.smoking;
-    document.getElementById("obesity").value = exampleData.obesity;
     document.getElementById("alcoholConsumption").value = exampleData.alcoholConsumption;
     document.getElementById("exerciseHoursPerWeek").value = exampleData.exerciseHoursPerWeek;
     document.getElementById("diet").value = exampleData.diet;
     document.getElementById("stressLevel").value = exampleData.stressLevel;
     document.getElementById("bloodPressure").value = exampleData.bloodPressure;
-    document.getElementById("income").value = exampleData.income;
+    document.getElementById("height").value = exampleData.height;
+    document.getElementById("weight").value = exampleData.weight;
     document.getElementById("bmi").value = exampleData.bmi;
     document.getElementById("triglycerides").value = exampleData.triglycerides;
     document.getElementById("physicalActivityDaysPerWeek").value = exampleData.physicalActivityDaysPerWeek;
     document.getElementById("sleepHoursPerDay").value = exampleData.sleepHoursPerDay;
-    document.getElementById("country").value = exampleData.country;
-    document.getElementById("continent").value = exampleData.continent;
-    document.getElementById("hemisphere").value = exampleData.hemisphere;
     document.getElementById("medicationUse").value = exampleData.medicationUse;
     document.getElementById("previousHeartProblems").value = exampleData.previousHeartProblems;
     document.getElementById("sedentaryHoursPerDay").value = exampleData.sedentaryHoursPerDay;
+
+    calculateBMI(); // Calcular IMC
 });
 
 document.getElementById("predictionForm").addEventListener("submit", function (event) {
@@ -62,23 +70,25 @@ document.getElementById("predictionForm").addEventListener("submit", function (e
     const diabetes = document.getElementById("diabetes").value;
     const familyHistory = document.getElementById("familyHistory").value;
     const smoking = document.getElementById("smoking").value;
-    const obesity = document.getElementById("obesity").value;
     const alcoholConsumption = document.getElementById("alcoholConsumption").value;
     const diet = document.getElementById("diet").value;
     const stressLevel = document.getElementById("stressLevel").value;
     const bloodPressure = document.getElementById("bloodPressure").value.split("/");
-    const income = document.getElementById("income").value;
+    const height = parseFloat(document.getElementById("height").value);
+    const weight = parseFloat(document.getElementById("weight").value);
     const bmi = document.getElementById("bmi").value;
     const triglycerides = document.getElementById("triglycerides").value;
     const physicalActivityDaysPerWeek = document.getElementById("physicalActivityDaysPerWeek").value;
     const sleepHoursPerDay = document.getElementById("sleepHoursPerDay").value;
-    // const country = document.getElementById("country").value;
-    // const continent = document.getElementById("continent").value;
-    // const hemisphere = document.getElementById("hemisphere").value;
     const medicationUse = document.getElementById("medicationUse").value;
     const previousHeartProblems = document.getElementById("previousHeartProblems").value;
     const sedentaryHoursPerDay = document.getElementById("sedentaryHoursPerDay").value;
     const model = document.getElementById("model").value;
+
+    // Definir um valor padrão para "income"
+    
+    // Calcular obesidade com base no IMC
+    const obesity = bmi >= 30 ? 1 : 0;
 
     const data = {
         Age: parseInt(age),
@@ -88,50 +98,47 @@ document.getElementById("predictionForm").addEventListener("submit", function (e
         Diabetes: parseInt(diabetes),
         "Family History": parseInt(familyHistory),
         Smoking: parseInt(smoking),
-        Obesity: parseInt(obesity),
+        Obesity: obesity,
         "Alcohol Consumption": parseInt(alcoholConsumption),
         Diet: diet,
         "Stress Level": parseInt(stressLevel),
         "Systolic Blood Pressure": parseInt(bloodPressure[0]),
         "Diastolic Blood Pressure": parseInt(bloodPressure[1]),
-        Income: parseInt(income),
+        Height: height,
+        Weight: weight,
         BMI: parseFloat(bmi),
         Triglycerides: parseInt(triglycerides),
         "Physical Activity Days Per Week": parseInt(physicalActivityDaysPerWeek),
         "Sleep Hours Per Day": parseInt(sleepHoursPerDay),
-        // Country: country,
-        // Continent: continent,
-        // Hemisphere: hemisphere,
         "Medication Use": parseInt(medicationUse),
         "Previous Heart Problems": parseInt(previousHeartProblems),
         "Sedentary Hours Per Day": parseInt(sedentaryHoursPerDay)
     };
 
-    const URL = int(model) == 0 ? 'http://localhost:8000/predict' : 'http://localhost:8000/predict/svm'
 
-    fetch(URL, {
+    fetch('http://localhost:5000/predict', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify(data)
     })
-        .then(response => response.json())
-        .then(result => {
-            const risk = result['Heart Attack Risk'];
-            let message;
+    .then(response => response.json())
+    .then(result => {
+        const risk = result['Heart Attack Risk'];
+        let message;
 
-            if (risk === 1) {
-                message = "Risco alto de ataque cardíaco! Consulte seu médico.";
-            } else {
-                message = "Risco baixo de ataque cardíaco. Continue se cuidando!";
-            }
+        if (risk === 1) {
+            message = "Risco alto de ataque cardíaco! Consulte seu médico.";
+        } else {
+            message = "Risco baixo de ataque cardíaco. Continue se cuidando!";
+        }
 
-            // Exibir o prompt com a mensagem
-            alert(message);
-        })
-        .catch(error => {
-            console.error('Erro:', error);
-            alert("Ocorreu um erro ao tentar prever o risco.");
-        });
+        alert(message);
+    })
+    .catch(error => {
+        console.error('Erro:', error);
+        alert("Ocorreu um erro ao tentar prever o risco.");
+    });
 });
+

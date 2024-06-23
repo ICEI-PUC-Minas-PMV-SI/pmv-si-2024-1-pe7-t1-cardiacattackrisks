@@ -27,6 +27,7 @@ data = data.drop(['Blood Pressure'], axis=1)
 data = data.drop(['Country'], axis=1)
 data = data.drop(['Continent'], axis=1)
 data = data.drop(['Hemisphere'], axis=1)
+data = data.drop(['Income'], axis=1)
 
 # Separar os dados em características (features) e rótulos (labels)
 X = data.drop(['Patient ID', 'Heart Attack Risk'], axis=1)
