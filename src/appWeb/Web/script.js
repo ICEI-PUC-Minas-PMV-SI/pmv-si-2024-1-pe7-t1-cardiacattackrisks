@@ -78,6 +78,7 @@ document.getElementById("predictionForm").addEventListener("submit", function (e
     const medicationUse = document.getElementById("medicationUse").value;
     const previousHeartProblems = document.getElementById("previousHeartProblems").value;
     const sedentaryHoursPerDay = document.getElementById("sedentaryHoursPerDay").value;
+    const model = document.getElementById("model").value;
 
     const data = {
         Age: parseInt(age),
@@ -106,7 +107,9 @@ document.getElementById("predictionForm").addEventListener("submit", function (e
         "Sedentary Hours Per Day": parseInt(sedentaryHoursPerDay)
     };
 
-    fetch('http://localhost:8000/predict', {
+    const URL = int(model) == 0 ? 'http://localhost:8000/predict' : 'http://localhost:8000/predict/svm'
+
+    fetch(URL, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
