@@ -18,9 +18,6 @@ document.getElementById("testar").addEventListener("click", function () {
         triglycerides: 190,
         physicalActivityDaysPerWeek: 3,
         sleepHoursPerDay: 7,
-        // country: "USA",
-        // continent: "North America",
-        // hemisphere: "Northern",
         medicationUse: 1,
         previousHeartProblems: 1,
         sedentaryHoursPerDay: 6
@@ -44,9 +41,6 @@ document.getElementById("testar").addEventListener("click", function () {
     document.getElementById("triglycerides").value = exampleData.triglycerides;
     document.getElementById("physicalActivityDaysPerWeek").value = exampleData.physicalActivityDaysPerWeek;
     document.getElementById("sleepHoursPerDay").value = exampleData.sleepHoursPerDay;
-    document.getElementById("country").value = exampleData.country;
-    document.getElementById("continent").value = exampleData.continent;
-    document.getElementById("hemisphere").value = exampleData.hemisphere;
     document.getElementById("medicationUse").value = exampleData.medicationUse;
     document.getElementById("previousHeartProblems").value = exampleData.previousHeartProblems;
     document.getElementById("sedentaryHoursPerDay").value = exampleData.sedentaryHoursPerDay;
@@ -72,9 +66,6 @@ document.getElementById("predictionForm").addEventListener("submit", function (e
     const triglycerides = document.getElementById("triglycerides").value;
     const physicalActivityDaysPerWeek = document.getElementById("physicalActivityDaysPerWeek").value;
     const sleepHoursPerDay = document.getElementById("sleepHoursPerDay").value;
-    // const country = document.getElementById("country").value;
-    // const continent = document.getElementById("continent").value;
-    // const hemisphere = document.getElementById("hemisphere").value;
     const medicationUse = document.getElementById("medicationUse").value;
     const previousHeartProblems = document.getElementById("previousHeartProblems").value;
     const sedentaryHoursPerDay = document.getElementById("sedentaryHoursPerDay").value;
@@ -98,9 +89,6 @@ document.getElementById("predictionForm").addEventListener("submit", function (e
         Triglycerides: parseInt(triglycerides),
         "Physical Activity Days Per Week": parseInt(physicalActivityDaysPerWeek),
         "Sleep Hours Per Day": parseInt(sleepHoursPerDay),
-        // Country: country,
-        // Continent: continent,
-        // Hemisphere: hemisphere,
         "Medication Use": parseInt(medicationUse),
         "Previous Heart Problems": parseInt(previousHeartProblems),
         "Sedentary Hours Per Day": parseInt(sedentaryHoursPerDay)
@@ -127,11 +115,11 @@ document.getElementById("predictionForm").addEventListener("submit", function (e
 
             message = "Risco de ataque cardíaco (KNN): " + risk_knn === 1 ? "Sim" : "Não" + "\\n" + "Risco de ataque cardíaco (SVM): " + risk_svm === 1 ? "Sim" : "Não";
 
-            // Exibir o prompt com a mensagem
-            alert(message);
-        })
-        .catch(error => {
-            console.error('Erro:', error);
-            alert("Ocorreu um erro ao tentar prever o risco.");
-        });
+        // Exibir o prompt com a mensagem
+        alert(message);
+    })
+    .catch(error => {
+        console.error('Erro:', error);
+        alert("Ocorreu um erro ao tentar prever o risco.");
+    });
 });
