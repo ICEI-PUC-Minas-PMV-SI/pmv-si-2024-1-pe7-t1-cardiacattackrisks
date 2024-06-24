@@ -82,10 +82,7 @@ document.getElementById("predictionForm").addEventListener("submit", function (e
     const sleepHoursPerDay = document.getElementById("sleepHoursPerDay").value;
     const medicationUse = document.getElementById("medicationUse").value;
     const previousHeartProblems = document.getElementById("previousHeartProblems").value;
-    const sedentaryHoursPerDay = document.getElementById("sedentaryHoursPerDay").value;
-    const model = document.getElementById("model").value;
-
-    // Definir um valor padrão para "income"
+    const sedentaryHoursPerDay = document.getElementById("sedentaryHoursPerDay").value
     
     // Calcular obesidade com base no IMC
     const obesity = bmi >= 30 ? 1 : 0;
@@ -128,14 +125,25 @@ document.getElementById("predictionForm").addEventListener("submit", function (e
             const risk_knn = result['Heart Attack Risk (KNN)'];
             const risk_svm = result['Heart Attack Risk (SVM)'];
             let message;
+            let count = risk_knn + risk_svm;
+            let resulfin;
+            
+            if (count === 0 ){
+                resulfin = "Não foi detectado risco de ataque cardíaco.";
+            }
+            else if (count === 1){
+                resulfin = "Foi detectado risco moderado de ataque cardíaco.";
+            }
+            else if (count === 2) { 
+                resulfin = "Foi detectado risco alto de ataque cardíaco."}
+            else {
+                resulfin= "Resultado inconclusivo"};
 
-            // if (risk_knn === 1 && risk_svm === 1) {
-            //     message = "Risco alto de ataque cardíaco! Consulte seu médico.";
-            // } else {
-            //     message = "Risco baixo de ataque cardíaco. Continue se cuidando!";
-            // }
 
-            message = "Risco de ataque cardíaco (KNN): " + risk_knn === 1 ? "Sim" : "Não" + "\\n" + "Risco de ataque cardíaco (SVM): " + risk_svm === 1 ? "Sim" : "Não";
+            message = "Risco de ataque cardíaco (KNN): " + (risk_knn === 1 ? "Sim" : "Não") + "\n" + 
+                        "Risco de ataque cardíaco (SVM): " + (risk_svm === 1 ? "Sim" : "Não") + "\n" + "\n" +
+                        "Conclusão Final: " + resulfin + "\n"+ "\n" +
+                        "Os resultados aqui arepsentados não são conclusivos, consulte um médico para uma avaliação mais precisa.";
 
         // Exibir o prompt com a mensagem
         alert(message);
