@@ -3,6 +3,10 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.svm import SVC
+from sklearn.ensemble import RandomForestClassifier
+import seaborn as sns
+from sklearn.linear_model import LogisticRegression
+from sklearn.naive_bayes import GaussianNB
 from sklearn.metrics import classification_report, confusion_matrix
 import joblib
 
@@ -16,12 +20,10 @@ def binary_encoder(column, positive_value):
 models = [
     ('KNeighbors Classifier', 'knn', KNeighborsClassifier(n_neighbors=5)),  
     ('Support Vector Machine', 'svm', SVC(random_state=42)),
+    ('Random Forest', 'rf', RandomForestClassifier(n_estimators=100, random_state=42))
 ]
 
 data['Sex'] = binary_encoder(data['Sex'], 'Male')
-# data['Country'] = binary_encoder(data['Country'], 'Argentina')
-# data['Continent'] = binary_encoder(data['Continent'], 'South America')
-# data['Hemisphere'] = binary_encoder(data['Hemisphere'], 'Southern')
 data['Diet'] = binary_encoder(data['Diet'], 'Average')
 
 # Separar a coluna 'Blood Pressure' em duas colunas: 'Systolic Blood Pressure' e 'Diastolic Blood Pressure'

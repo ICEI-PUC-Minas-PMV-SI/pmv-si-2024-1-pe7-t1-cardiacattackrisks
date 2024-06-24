@@ -124,23 +124,26 @@ document.getElementById("predictionForm").addEventListener("submit", function (e
         .then(result => {
             const risk_knn = result['Heart Attack Risk (KNN)'];
             const risk_svm = result['Heart Attack Risk (SVM)'];
+            const risk_rf= result['Heart Attack Risk (RF)'];
             let message;
             let count = risk_knn + risk_svm;
             let resulfin;
             
+            
             if (count === 0 ){
                 resulfin = "Não foi detectado risco de ataque cardíaco.";
             }
-            else if (count === 1){
+            else if (count === 1 || count === 2){
                 resulfin = "Foi detectado risco moderado de ataque cardíaco.";
             }
-            else if (count === 2) { 
+            else if (count === 3) { 
                 resulfin = "Foi detectado risco alto de ataque cardíaco."}
             else {
                 resulfin= "Resultado inconclusivo"};
 
 
             message = "Risco de ataque cardíaco (KNN): " + (risk_knn === 1 ? "Sim" : "Não") + "\n" + 
+            "Risco de ataque cardíaco (RF): " + (risk_rf === 1 ? "Sim" : "Não") + "\n" +
                         "Risco de ataque cardíaco (SVM): " + (risk_svm === 1 ? "Sim" : "Não") + "\n" + "\n" +
                         "Conclusão Final: " + resulfin + "\n"+ "\n" +
                         "Os resultados aqui arepsentados não são conclusivos, consulte um médico para uma avaliação mais precisa.";

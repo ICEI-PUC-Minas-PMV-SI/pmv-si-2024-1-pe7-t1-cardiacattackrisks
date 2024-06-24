@@ -14,7 +14,8 @@ CORS(app, resources={r"/predict": {"origins": "*"}})
 # Carregar o modelo treinado e o scaler
 model_knn = joblib.load('knn_heart_attack_model.pkl')
 model_svm = joblib.load('svm_heart_attack_model.pkl')
-scaler = joblib.load('scaler.pkl')
+model_rf = joblib.load('rf_heart_attack_model.pkl')
+scaler = joblib.load('scaler.pkl') 
  
 # Carregar a lista das colunas esperadas
 with open('expected_columns.txt', 'r') as f:
@@ -60,9 +61,12 @@ def predict():
  
         prediction_svm = model_svm.predict(df_scaled)
         output_svm = int(prediction_svm[0])
- 
+
+        prediction_rf = model_rf.predict(df_scaled)
+        output_rf = int(prediction_rf[0])
+
         # Retornar a resposta em JSON
-        return jsonify({'Heart Attack Risk (KNN)': output_knn, 'Heart Attack Risk (SVM)': output_svm})
+        return jsonify({'Heart Attack Risk (KNN)': output_knn, 'Heart Attack Risk (SVM)': output_svm, 'Heart Attack Risk (RF)': output_rf})
     except Exception as e:
         app.logger.error(f"Erro ao fazer a previsão: {e}")
         return jsonify({'error': str(e)}), 500
