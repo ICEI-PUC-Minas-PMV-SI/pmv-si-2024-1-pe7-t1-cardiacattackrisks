@@ -732,11 +732,21 @@ Em seguida, testando as mesmas métrica no segundo cenário de um conjunto de tr
 ![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe7-t1-cardiacattackrisks/assets/81273377/929b474d-ed83-42be-82ac-21e8173f26d0)
 
 
-* MODELO MSE
+* MODELO SVM
   
-Considerando o primeiro cenário, de um conjunto de teste de 20%, foi calculado o resultado do MSE (que é uma medida do erro do modelo na previsão de classes), obtendo o seguinte resultado:
+Considerando o primeiro cenário, de um conjunto de teste de 20%, foi calculado o resultado do SVM (que é uma medida do erro do modelo na previsão de classes), obtendo o seguinte resultado:
 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe7-t1-cardiacattackrisks/assets/81273042/8c1a3211-f7fc-4130-aa1a-3b3038d93de5)
+
+O modelo possui precisão de 60,4% da amostra para risco para ocorrência de ataque cardíaco.
+
+O recall para a Classe 0 é de 54%, enquanto para a Classe 1 é de 46%. Isso significa que o modelo está identificando 54% dos casos reais de Classe 0 corretamente e 46% dos casos reais de Classe 1 corretamente.
+
+Para a Classe 0, o f1-score é 0.59, enquanto para a Classe 1, é 0.40. Assim, fica claro que o modelo esta performando melhor para a Classe 0 (não ataque cardíaco) do que para a Classe 1 (ataque cardíaco).
+
+O modelo SVM parece ter um desempenho desequilibrado entre as classes, com melhor desempenho na previsão da Classe 0 em comparação com a Classe 1. Alem disso, a acurácia de 51% indica que o modelo está pouco melhor do que uma previsao aleatória de 50%.
+
+Somando todas as metricas anteriores, fica claro que o f1-score baixo para a Classe 1 (0.40) sugere que o modelo tem dificuldade em prever corretamente os casos de ataque cardíaco. Isso torna o modelo limitado para esse tipo de previsão, uma vez que esse tipo de analise e crítica e resultados incorretos nesse ponto tem um grande impacto na vida do usuario.
 
 * MODELO RANDON FOREST
 
