@@ -113,7 +113,7 @@ document.getElementById("predictionForm").addEventListener("submit", function (e
     };
 
 
-    fetch('http://localhost:5000/predict', {
+    fetch('https://heartattackriskprediction.azurewebsites.net/predict', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
