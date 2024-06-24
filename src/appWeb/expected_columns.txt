@@ -1,0 +1,21 @@
+Age
+Sex
+Cholesterol
+Heart Rate
+Diabetes
+Family History
+Smoking
+Obesity
+Alcohol Consumption
+Exercise Hours Per Week
+Diet
+Previous Heart Problems
+Medication Use
+Stress Level
+Sedentary Hours Per Day
+BMI
+Triglycerides
+Physical Activity Days Per Week
+Sleep Hours Per Day
+Systolic Blood Pressure
+Diastolic Blood Pressure

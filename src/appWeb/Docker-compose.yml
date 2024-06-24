@@ -1,0 +1,8 @@
+services:
+  api:
+    image: willianmfaria/puc_minas:gunicorn
+    container_name: api
+    networks:
+      - flasknetwork
+    ports:
+      - "8000:8000"

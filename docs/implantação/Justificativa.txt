@@ -1,0 +1,1 @@
+Dentre os provedores testados: Azure, AWS e Google Cloud foi escolhido o Azure por conta do desempenho satisfatório, facilidade de implantação, compatibilidade com o Docker e principalmente a parceria com a PUC Minas.
