@@ -8,24 +8,7 @@ Após a implantação, realize testes que mostrem o correto funcionamento da apl
 
 Nesta seção, um vídeo de, no máximo, 5 minutos onde deverá ser descrito o escopo todo do projeto, um resumo do trabalho desenvolvido, incluindo a comprovação de que a implantação foi realizada e, as conclusões alcançadas.
 
-## Estrutura do Projeto
 
-```plaintext
-.
-├── src
-│   ├── appWeb
-│   │   ├── index.html
-│   │   ├── style.css
-│   │   ├── script.js
-│   │   ├── app.py
-│   │   ├── requirements.txt
-│   │   ├── knn_heart_attack_model.pkl
-│   │   ├── svm_heart_attack_model.pkl
-│   │   ├── scaler.pkl
-│   │   ├── expected_columns.txt
-│   │   ├── preprocess.py
-│   │   ├── evaluate_model.py
-│   │   ├── processed_heart_attack_prediction_dataset.csv
-│   ├── docs
-│   ├── help
-│   ├── presentation
+## Descrição da Solução
+
+A solução consiste em uma aplicação web para previsão de risco de ataque cardíaco. Utilizamos modelos de machine learning (KNN, Random Forest e SVM) para fazer as previsões com base em dados de saúde fornecidos pelos usuários. A aplicação inclui um front-end em HTML, CSS e JavaScript e um back-end em Flask (Python).
