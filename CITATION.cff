@@ -1,29 +1,28 @@
 cff-version: 1.0.1
 message: Please cite this software using these metadata.
-title:
-authors:
-  - family-names:
-    given-names:
-  - family-names:
-    given-names:
-  - family-names:
-    given-names:
-  - family-names:
-    given-names:
-  - family-names:
-    given-names:
-  - family-names:
-    given-names:
-  - family-names:
-    given-names:
-  - name-suffix: Professor XXXX
+title: Predição de Ataques Cardíacos
+authors: 
+  - family-names: Gabriel Martins
+    given-names: Santana
+  - family-names: Marcio Alves de Oliveira
+    given-names: Junior
+  - family-names: Mateus de Oliveira e
+    given-names: Silveira
+  - family-names: Santos
+    given-names: Valéria Aparecida
+  - family-names: Vitor Miranda Batista
+    given-names: Pereira
+  - family-names: Willian de Medeiros
+    given-names: Faria
+  - name-suffix: Professora
     affiliation: PUC Minas
-    family-names:
-    given-names:
+    family-names: Nardin
+    given-names: Luciana de 
 keywords:
-  -
-  -
+  - ataques cardíacos;
+  - predição;
+  - sistemas de informação.
 repository-code:
 license: CC-BY-4.0
 version: 1.0.0
-date-released: 2023-06-30
+date-released: 2025-06-26
