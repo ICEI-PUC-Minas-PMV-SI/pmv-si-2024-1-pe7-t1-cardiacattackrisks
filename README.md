@@ -6,7 +6,7 @@
 
 `SEMESTRE: 7º`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+O presente trabalho traz em seu escopo, com base nos preceitos de aprendizado de máquina, a realização de uma correta predição, subsidiada por fatores de risco, para a ocorrência de ataques cardíacos. 
 
 ## Integrantes
 
