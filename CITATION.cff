@@ -2,18 +2,18 @@ cff-version: 1.0.1
 message: Please cite this software using these metadata.
 title: Predição de Ataques Cardíacos
 authors: 
-  - family-names: Santana
-    given-names: Gabriel Martins
-  - family-names: Junior 
-    given-names: Marcio Alves de Oliveira
-  - family-names: Silveira 
-    given-names: Mateus de Oliveira e
-  - family-names: Valéria Aparecida
-    given-names: Santos
-  - family-names: Pereira
-    given-names: Vitor Miranda Batista
-  - family-names: Faria
-    given-names:  Willian de Medeiros
+  - family-names: Martins Santana
+    given-names: Gabriel 
+  - family-names: Alves de Oliveira Junior 
+    given-names: Marcio 
+  - family-names: de Oliveira e Silveira 
+    given-names: Mateus 
+  - family-names: Aparecida Santos
+    given-names: Valéria
+  - family-names: Miranda Batista Pereira
+    given-names: Vitor 
+  - family-names: de Medeiros Faria
+    given-names:  Willian 
   - name-suffix: Professora
     affiliation: PUC Minas
     family-names: De Nardin
